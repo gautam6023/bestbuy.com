@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Human BBY";
+  background-color: #ffffff;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: "Human BBY";
+  /* src: url(https://www.bestbuy.ca/BBYHumanFontfiles/HumanBBY-55Regular-Web.eot); */
+  src: url(../src/assets/fonts/HumanBBY-55Regular-Web.eot);
+  src: url(https://www.bestbuy.ca/BBYHumanFontfiles/HumanBBY-55Regular-Web.woff2)
+      format("woff2"),
+    url(../src/assets/fonts/HumanBBY-55Regular-Web.woff) format("woff"),
+    url(../src/assets/fonts/Human-BBY-Web-55Regular.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@font-face {
+  font-family: "Human BBY";
+  src: url(../src/assets/fonts/Human-BBY-Web-65-Medium.eot);
+  src: url(../src/assets/fonts/Human-BBY-Web-65-Medium.woff2) format("woff2"),
+    url(../src/assets/fonts/Human-BBY-Web-65-Medium.woff) format("woff"),
+    url(../src/assets/fonts/Human-BBY-Web-65-Medium.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Human BBY";
+  src: url(../src/assets/fonts/HumanBBY-75Bold-Web.eot);
+  src: url(../src/assets/fonts/HumanBBY-75Bold-Web.woff2) format("woff2"),
+    url(../src/assets/fonts/HumanBBY-75Bold-Web.woff) format("woff"),
+    url(../src/assets/fonts/HumanBBY-75Bold-Web.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+}
+.flex {
   display: flex;
-  flex-direction: column;
+}
+
+.flexCenter {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
