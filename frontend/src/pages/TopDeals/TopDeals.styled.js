@@ -114,7 +114,14 @@ export const TopDealsDiv = styled.div`
       }
     }
     .courosol {
-      flex-grow: 1;
+      /* flex-grow: 1; */
+      /* width: 60%; */
+      border: 1px solid red;
+      box-sizing: border-box;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 `;

@@ -1,6 +1,54 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useState, Component } from "react";
+import { useEffect } from "react";
+import axios from "axios";
+import SliderComp from "./SliderComp";
+
 const CourosalContainer = ({ className, title, desc, logo }) => {
+  const [data, setData] = useState([]);
+
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
+  useEffect(() => {
+    async function data() {
+      let { data } = await axios.get("http://localhost:8080/deal");
+      console.log(data);
+      setData([...data]);
+    }
+    data();
+  }, []);
   return (
     <div className={className}>
       <div className="detailsOfCourosol">
@@ -8,7 +56,9 @@ const CourosalContainer = ({ className, title, desc, logo }) => {
         <p className="title">{title}</p>
         <p className="desc">{desc}</p>
       </div>
-      <div className="courosol"></div>
+      <div className="courosol">
+        <SliderComp {...settings} />
+      </div>
     </div>
   );
 };

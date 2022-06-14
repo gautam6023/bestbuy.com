@@ -73,7 +73,7 @@ const ShopDealsByCategory = ({ className }) => {
     <div className={className}>
       {data.map((el, i) => {
         return (
-          <div>
+          <div key={i}>
             <img src={el.imgUrl} alt="" />
             <p>{el.title}</p>
           </div>

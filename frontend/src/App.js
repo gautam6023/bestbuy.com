@@ -14,6 +14,10 @@ import "./assets/fonts/HumanBBY-75Bold-Web.ttf";
 import "./assets/fonts/HumanBBY-75Bold-Web.woff";
 import "./assets/fonts/HumanBBY-75Bold-Web.woff2";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+// import { SimpleSlider } from "./components/topDeals/CourosalContainer";
 function App() {
   return (
     <div className="App">
