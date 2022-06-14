@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const TopDealsDiv = styled.div`
   /* border: 1px solid black; */
   width: 67%;
+  padding: 50px 0;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -77,6 +78,43 @@ export const TopDealsDiv = styled.div`
           text-decoration: underline;
         }
       }
+    }
+  }
+
+  .courosalContainer {
+    border: 1px solid black;
+    height: 400px;
+    background-image: url("https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/blt8e1e4ddccfad34af/61d5f9d095fe2513b569c488/global-topdeals-20220107-showcase-bg-m.jpg?width=5760&quality=80&auto=webp");
+    background-size: cover;
+    border-radius: 8px;
+    display: flex;
+
+    & > div {
+      border: 1px solid white;
+    }
+    .detailsOfCourosol {
+      width: 40%;
+      box-sizing: border-box;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      color: #ffffff;
+      gap: 15px;
+      img {
+        width: 200px;
+      }
+      .title {
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: bold;
+      }
+      .desc {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    .courosol {
+      flex-grow: 1;
     }
   }
 `;

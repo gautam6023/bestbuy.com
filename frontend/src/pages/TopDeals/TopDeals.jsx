@@ -4,7 +4,7 @@ import TopDealsImage from "../../assets/image/Icon.png";
 import QuickPage from "../../assets/image/quick.png";
 import FeaturedTopDeals from "../../components/topDeals/FeaturedTopDeals";
 import ShopDealsByCategory from "../../components/topDeals/ShopDealsByCategory";
-
+import CourosalContainer from "../../components/topDeals/CourosalContainer";
 let futureDeals = [
   {
     imgUrl:
@@ -36,6 +36,12 @@ let futureDeals = [
     link: "Shop Deals",
   },
 ];
+
+let courosal = {
+  logo: "https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/bltc70b31bb92ddfced/61d60327191c5560467de5a2/global-topdeals-20220107-showcase-logo-m-en.png",
+  title: "Don't miss out on these great deals.",
+  desc: "Find incredible savings on must-have tech essentials and more.",
+};
 const TopDeals = () => {
   return (
     <TopDealsDiv>
@@ -54,6 +60,7 @@ const TopDeals = () => {
         <p className="titleOfComp">Shop deals by category</p>
         <ShopDealsByCategory className="shpByCate" />
       </div>
+      <CourosalContainer className="courosalContainer" {...courosal} />
     </TopDealsDiv>
   );
 };
