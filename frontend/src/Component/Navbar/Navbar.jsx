@@ -3,17 +3,16 @@ import SearchIcon from "@mui/icons-material/Search";
 import StoreMallDirectoryIcon from "@mui/icons-material/StoreMallDirectory";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import Menu from "../Menu";
+import Menu from "./Menu";
 
-import RightStart from "../RightStart"
-import styles from './navbar.module.css'
+import RightStart from "./RightStart";
+import styles from "../../styles/Navbar.module.css";
 function Navbar() {
   const [flag, setFlag] = useState(false);
   const [flag1, setFlag1] = useState(false);
   const [flag2, setFlag2] = useState(false);
 
   const [flag3, setFlag3] = useState(false);
-
 
   const handlerChange = () => {
     console.log(flag);
@@ -43,7 +42,6 @@ function Navbar() {
     setFlag2(false);
     setFlag(false);
   };
-  
 
   return (
     <div
@@ -223,11 +221,12 @@ function Navbar() {
           height: "40px",
         }}
       >
-        <div style={{ marginLeft: "140px", marginTop: "5px"   }}>
+        <div style={{ marginLeft: "140px", marginTop: "5px" }}>
           <div
             style={{
               backgroundColor: "#003da6",
-              color: "white", position:"relative"
+              color: "white",
+              position: "relative",
             }}
             onClick={handlerChange}
           >
@@ -238,255 +237,253 @@ function Navbar() {
                 style={{
                   width: "15px",
                   height: "15px",
-                  margin:"-3px",
+                  margin: "-3px",
                   backgroundColor: "#003da6",
                 }}
                 src="https://pngroyale.com/wp-content/uploads/2022/03/Up-Arrow-PNG-Image-with-Transparent-Background-.png"
-
               />
             ) : (
               <img
                 style={{
                   width: "15px",
                   height: "15px",
-                  margin:"-3px",
+                  margin: "-3px",
                   backgroundColor: "#003da6",
                 }}
                 src="https://www.freeiconspng.com/thumbs/arrow-down-icon-png/black-arrow-down-icon-png-16.png"
-
               />
             )}{" "}
           </div>
           {flag ? (
             <div
               style={{
-                    backgroundColor: "white",
+                backgroundColor: "white",
                 width: "200px",
                 height: "320px",
-                overflowX:"hidden",
-                overflowY:"scroll",
-                position:"absolute",
-                paddingTop:"9px",
-                textAlign:"left",
-              lineHeight:"2",
-                fontWeight:"300",
-                paddingLeft:"9px"
+                overflowX: "hidden",
+                overflowY: "scroll",
+                position: "absolute",
+                paddingTop: "9px",
+                textAlign: "left",
+                lineHeight: "2",
+                fontWeight: "300",
+                paddingLeft: "9px",
               }}
             >
-                          <b style={{fontSize:"12px"}}> Shop by Category</b>
-                        <div style={{display:"flex", justifyContent:"space-between"}}>  <p style={{    lineHeight: "1.3"}} >Computers, Tablets, & Accessories  </p>    <img
-                style={{
-                  width: "15px",
-                  height: "16px",
-                 
-                  marginTop: "8px"
-                }}
-                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
-              />  </div>
-                 <div style={{display:"flex", justifyContent:"space-between"}}>  <p style={{    lineHeight: "1.3"}}>Cell Phones and Accessories</p>   <img
-                style={{
-                 width: "15px",
-                  height: "16px",
-                 
-                  marginTop: "8px"
-                
-                
-                }}
-                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
-              />  </div>    
-                  <div style={{display:"flex", justifyContent:"space-between"}}> 
-                  <p style={{    lineHeight: "1.3"}} >Office Supplies & Ink</p>
-                      <img
-                style={{
-                 width: "15px",
-                  height: "16px",
-                 
-                  marginTop: "8px"
-                
-                
-                }}
-                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
-              />  </div>          
-             <div style={{display:"flex", justifyContent:"space-between"}}> 
-             <p style={{    lineHeight: "1.3"}} >TV & Home Theatre</p>
-                      <img
-                style={{
-                 width: "15px",
-                  height: "16px",
-                 
-                  marginTop: "8px"
-                
-                
-                }}
-                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
-              />  </div>   
-                <div style={{display:"flex", justifyContent:"space-between"}}> 
-             <p style={{    lineHeight: "1.3"}} >Headphones, Speakers ,& Audio</p>
-                      <img
-                style={{
-                 width: "15px",
-                  height: "16px",
-                 
-                  marginTop: "8px"
-                
-                
-                }}
-                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
-              />  </div>  
-                <div style={{display:"flex", justifyContent:"space-between"}}> 
-             <p style={{    lineHeight: "1.3"}} >Cameras & Camcorders</p>
-                      <img
-                style={{
-                 width: "15px",
-                  height: "16px",
-                 
-                  marginTop: "8px"
-                
-                
-                }}
-                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
-              />  </div> 
-                    <div style={{display:"flex", justifyContent:"space-between"}}> 
-             <p style={{    lineHeight: "1.3"}} >Car Tech and GPS</p>
-                      <img
-                style={{
-                 width: "15px",
-                  height: "16px",
-                 
-                  marginTop: "8px"
-                
-                
-                }}
-                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
-              />  </div> 
-    <div style={{display:"flex", justifyContent:"space-between"}}> 
-             <p style={{    lineHeight: "1.3"}} >Appliances</p>
-                      <img
-                style={{
-                 width: "15px",
-                  height: "16px",
-                 
-                  marginTop: "8px"
-                
-                
-                }}
-                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
-              />  </div> 
-                <div style={{display:"flex", justifyContent:"space-between"}}> 
-             <p style={{    lineHeight: "1.3"}} >Smart Home</p>
-                      <img
-                style={{
-                 width: "15px",
-                  height: "16px",
-                 
-                  marginTop: "8px"
-                
-                
-                }}
-                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
-              />  </div>
-  <div style={{display:"flex", justifyContent:"space-between"}}> 
-             <p style={{    lineHeight: "1.3"}} >Home Living</p>
-                      <img
-                style={{
-                 width: "15px",
-                  height: "16px",
-                 
-                  marginTop: "8px"
-                
-                
-                }}
-                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
-              />  </div>
-<div style={{display:"flex", justifyContent:"space-between"}}> 
-             <p style={{    lineHeight: "1.3"}} >Baby & Maternity</p>
-                      <img
-                style={{
-                 width: "15px",
-                  height: "16px",
-                 
-                  marginTop: "8px"
-                
-                
-                }}
-                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
-              />  </div>
+              <b style={{ fontSize: "12px" }}> Shop by Category</b>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                {" "}
+                <p style={{ lineHeight: "1.3" }}>
+                  Computers, Tablets, & Accessories{" "}
+                </p>{" "}
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
 
-<div style={{display:"flex", justifyContent:"space-between"}}> 
-             <p style={{    lineHeight: "1.3"}} >Video Games & VR</p>
-                      <img
-                style={{
-                 width: "15px",
-                  height: "16px",
-                 
-                  marginTop: "8px"
-                
-                
-                }}
-                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
-              />  </div>
-              <div style={{display:"flex", justifyContent:"space-between"}}> 
-             <p style={{    lineHeight: "1.3"}} >Wearable Technology</p>
-                      <img
-                style={{
-                 width: "15px",
-                  height: "16px",
-                 
-                  marginTop: "8px"
-                
-                
-                }}
-                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
-              />  </div>
-                <div style={{display:"flex", justifyContent:"space-between"}}> 
-             <p style={{    lineHeight: "1.3"}} >Health & Fitness</p>
-                      <img
-                style={{
-                 width: "15px",
-                  height: "16px",
-                 
-                  marginTop: "8px"
-                
-                
-                }}
-                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
-              />  </div>
-                  <div style={{display:"flex", justifyContent:"space-between"}}> 
-             <p style={{    lineHeight: "1.3"}} >Sports, Recreation, & Transportation</p>
-                      <img
-                style={{
-                 width: "15px",
-                  height: "16px",
-                 
-                  marginTop: "8px"
-                
-                
-                }}
-                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
-              />  </div>
-                    <div style={{display:"flex", justifyContent:"space-between"}}> 
-             <p style={{    lineHeight: "1.3"}} >Movies & Music</p>
-                      <img
-                style={{
-                 width: "15px",
-                  height: "16px",
-                 
-                  marginTop: "8px"
-                
-                
-                }}
-                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
-              />  </div>
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                {" "}
+                <p style={{ lineHeight: "1.3" }}>
+                  Cell Phones and Accessories
+                </p>{" "}
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>Office Supplies & Ink</p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>TV & Home Theatre</p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  Headphones, Speakers ,& Audio
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>Cameras & Camcorders</p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>Car Tech and GPS</p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>Appliances</p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>Smart Home</p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>Home Living</p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>Baby & Maternity</p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>Video Games & VR</p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>Wearable Technology</p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>Health & Fitness</p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  Sports, Recreation, & Transportation
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>Movies & Music</p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
             </div>
-            
           ) : null}
         </div>
 
-     <div style={{ marginTop: "5px"   }}>
+        <div style={{ marginTop: "5px" }}>
           <div
             style={{
               backgroundColor: "#003da6",
-              color: "white", position:"relative"
+              color: "white",
+              position: "relative",
             }}
             onClick={handlerChange1}
           >
@@ -497,7 +494,7 @@ function Navbar() {
                 style={{
                   width: "15px",
                   height: "15px",
-                  margin:"-3px",
+                  margin: "-3px",
                   backgroundColor: "#003da6",
                 }}
                 src="https://pngroyale.com/wp-content/uploads/2022/03/Up-Arrow-PNG-Image-with-Transparent-Background-.png"
@@ -507,12 +504,10 @@ function Navbar() {
                 style={{
                   width: "15px",
                   height: "15px",
-                  margin:"-3px",
+                  margin: "-3px",
                   backgroundColor: "#003da6",
                 }}
                 src="https://www.freeiconspng.com/thumbs/arrow-down-icon-png/black-arrow-down-icon-png-16.png"
-
-               
               />
             )}{" "}
           </div>
@@ -522,29 +517,528 @@ function Navbar() {
                 backgroundColor: "white",
                 width: "200px",
                 height: "320px",
-                overflowX:"hidden",
-                overflowY:"scroll",
-                position:"absolute",
-                paddingTop:"9px",
-                textAlign:"left",
-                lineHeight:"-.5",
-                fontSize:"13px",
-                paddingLeft:"9px"
-
+                overflowX: "hidden",
+                overflowY: "scroll",
+                position: "absolute",
+                paddingTop: "9px",
+                textAlign: "left",
+                lineHeight: "2",
+                fontWeight: "300",
+                paddingLeft: "9px",
               }}
             >
-            
- 
+               <b style={{ fontSize: "12px" }}>Popular Brands</b>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                {" "}
+                <p style={{ lineHeight: "1.3" }}>
+                  Acer{" "}
+                </p>{" "}
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
 
-<RightStart/>
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                {" "}
+                <p style={{ lineHeight: "1.3" }}>
+                  Amazon
+                </p>{" "}
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>Apple</p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>Asus</p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  Beats By Dr.Dre
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  Bose
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  Breville
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  Canon
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  Dell
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  Dyson
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  Fitbit
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  GE
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  Google
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  GoPro
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  HP
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  Insignia
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  Instant Pot
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  JBL
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  KitchenAid
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  Lenovo
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  LG
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  Logitech
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  Microsoft
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  Nintendo
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  NVIDIA
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                Panasonic
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                Philips
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  PlayStation
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                 Samsung
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                 Seagate
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                 Sharp
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  Sony
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  Toshiba
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  Ultimates Ears
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  WhirlPool
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <p style={{ lineHeight: "1.3" }}>
+                  Xbox
+                </p>
+                <img
+                  style={{
+                    width: "15px",
+                    height: "16px",
+
+                    marginTop: "8px",
+                  }}
+                  src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+                />{" "}
+              </div>
             </div>
           ) : null}
         </div>
-        <div style={{ marginTop: "5px"   }}>
+        <div style={{ marginTop: "5px" }}>
           <div
             style={{
               backgroundColor: "#003da6",
-              color: "white", position:"relative"
+              color: "white",
+              position: "relative",
             }}
             onClick={handlerChange2}
           >
@@ -555,22 +1049,20 @@ function Navbar() {
                 style={{
                   width: "15px",
                   height: "15px",
-                  margin:"-3px",
+                  margin: "-3px",
                   backgroundColor: "#003da6",
                 }}
                 src="https://pngroyale.com/wp-content/uploads/2022/03/Up-Arrow-PNG-Image-with-Transparent-Background-.png"
-
               />
             ) : (
               <img
                 style={{
                   width: "15px",
                   height: "15px",
-                  margin:"-3px",
+                  margin: "-3px",
                   backgroundColor: "#003da6",
                 }}
                 src="https://www.freeiconspng.com/thumbs/arrow-down-icon-png/black-arrow-down-icon-png-16.png"
-
               />
             )}{" "}
           </div>
@@ -580,28 +1072,28 @@ function Navbar() {
                 backgroundColor: "white",
                 width: "200px",
                 height: "120px",
-                overflowX:"hidden",
-                overflowY:"scroll",
-                position:"absolute",
-                paddingTop:"9px",
-                textAlign:"left",
-              lineHeight:"2",
-                fontWeight:"300",
-                paddingLeft:"9px"
+                overflowX: "hidden",
+                overflowY: "scroll",
+                position: "absolute",
+                paddingTop: "9px",
+                textAlign: "left",
+                lineHeight: "2",
+                fontWeight: "300",
+                paddingLeft: "9px",
               }}
             >
-       <div>Top Deals </div>
-       <div>Best Buys Outlet </div>
-
+              <div>Top Deals </div>
+              <div>Best Buys Outlet </div>
             </div>
           ) : null}
         </div>
 
-        <div style={{ marginTop: "5px"   }}>
+        <div style={{ marginTop: "5px" }}>
           <div
             style={{
               backgroundColor: "#003da6",
-              color: "white", position:"relative"
+              color: "white",
+              position: "relative",
             }}
             onClick={handlerChange3}
           >
@@ -612,19 +1104,17 @@ function Navbar() {
                 style={{
                   width: "15px",
                   height: "15px",
-                  margin:"-3px",
+                  margin: "-3px",
                   backgroundColor: "#003da6",
                 }}
                 src="https://pngroyale.com/wp-content/uploads/2022/03/Up-Arrow-PNG-Image-with-Transparent-Background-.png"
-
-               
               />
             ) : (
               <img
                 style={{
                   width: "15px",
                   height: "15px",
-                  margin:"-3px",
+                  margin: "-3px",
                   backgroundColor: "#003da6",
                 }}
                 src="https://www.freeiconspng.com/thumbs/arrow-down-icon-png/black-arrow-down-icon-png-16.png"
@@ -637,27 +1127,26 @@ function Navbar() {
                 backgroundColor: "white",
                 width: "200px",
                 height: "120px",
-                overflowX:"hidden",
-                overflowY:"scroll",
-                position:"absolute",
-                paddingTop:"9px",
-                textAlign:"left",
-              lineHeight:"2",
-                fontWeight:"300",
-                paddingLeft:"9px"
+                overflowX: "hidden",
+                overflowY: "scroll",
+                position: "absolute",
+                paddingTop: "9px",
+                textAlign: "left",
+                lineHeight: "2",
+                fontWeight: "300",
+                paddingLeft: "9px",
               }}
             >
-       <div>Geek Squad Services </div>
-       <div>In-Home Advisor </div>
-<div>Best Buy Business</div>
-<div>Best Buy Health</div>
-<div>Trade-In Program</div>
-<div>Electronics Recycling</div>
+              <div>Geek Squad Services </div>
+              <div>In-Home Advisor </div>
+              <div>Best Buy Business</div>
+              <div>Best Buy Health</div>
+              <div>Trade-In Program</div>
+              <div>Electronics Recycling</div>
             </div>
           ) : null}
         </div>
       </div>
-
     </div>
   );
 }
