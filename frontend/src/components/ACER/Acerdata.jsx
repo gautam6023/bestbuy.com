@@ -4,6 +4,19 @@ import Aceritem from "./Aceritem"
 import data from "../../acer.json"
 import styled from 'styled-components'
 
+const A=styled.div`
+display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    margin-top: 20px;
+    // overflow: hidden;
+    // border-style: inset;
+    // border-width: 1px;
+    width:80%;
+`
 
 const Head=styled.div`
 text-align:left;
@@ -45,6 +58,9 @@ const Acerdata = ()=>{
     console.log(data.imgUrl)
         return(
             <>
+            <A>
+                <hr />
+            </A>
             <Head id="h1">
     
             <H1>Acer Products</H1>
