@@ -1,0 +1,66 @@
+.cartParent{
+    border: 1px solid black;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.cartLeft{
+    border: 1px solid black;
+    flex: 7;
+}
+.cartRight{
+    border: 1px solid black;
+   flex: 3;
+   padding:16px;
+   width: 30%;
+   box-sizing: border-box;
+   margin-right: 100px;
+}
+.cartSearch{
+  border-bottom: 1px solid grey;
+}
+.tableTop{
+    font-size: 14px;
+    width: 100%;
+    text-align: left;
+}
+.tableLeft{
+    font-weight: 400;
+    text-align: left;
+    padding: 0 0 8px;
+    margin: 0;
+}
+.checkoutBtn{
+    position: relaive;
+    padding: 0.938rem 1.5rem;
+    -webkit-transition: background-color .2s ease-out;
+    transition: background-color .2s ease-out;
+    color: #1d252c;
+    width: 90%;
+    height: auto;
+    font-weight:600;
+    font-size: .875rem;
+    background-color: #ffce00;
+    border: none;
+
+
+}
+.paypalCheck{
+    display: block;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: #fff;
+    font-style: italic;
+    font-weight: 200;
+    margin: auto;
+    width:90%;
+    padding: 6px;
+    background-color: #009cde;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    box-shadow: none;
+    height: 48px;
+    min-width: 150px;
+}
+
