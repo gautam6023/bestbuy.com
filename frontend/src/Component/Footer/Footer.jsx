@@ -1,19 +1,22 @@
 import React from "react";
-import styles from "../../styles/Footer.module.css";
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import PinterestIcon from '@mui/icons-material/Pinterest';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import YouTubeIcon from '@mui/icons-material/YouTube';
+
+import { RiFacebookLine } from 'react-icons/ri';
+import { AiOutlineInstagram } from 'react-icons/ai';
+import { GrLinkedinOption } from 'react-icons/gr';
+import { FaPinterestP } from 'react-icons/fa';
+import { FaTwitter } from 'react-icons/fa';
+import { AiFillYoutube } from 'react-icons/ai';
+
+
+
+
+
 function Footer() {
   return (
     <>
-      <div style={{ backgroundColor: "#f4f6f9" }}>
+      <div style={{ backgroundColor: "#f4f6f9"  }}>
         <div style={{ display: "grid", gridTemplateColumns: "794px 600px" }}>
-          <div
-            style={{ border: "1px solid red", width: "100%", height: "320px" }}
-          >
+          <div style={{ width: "100%", height: "320px" }}>
             <div
               style={{
                 display: "grid",
@@ -400,25 +403,86 @@ function Footer() {
           </div>
           <div
             style={{
-            
+              textAlign: "left",
+              marginLeft: "100px",
               width: "100%",
               height: "300px",
+              textAlign: "justify",
+              borderLeft: "1px solid #e7ecf3",
+              paddingLeft: "20px",
             }}
           >
-            <b>
-            Be the first to know
-            </b>
-            <p>Sign up to stay in the loop about the hottest deals, coolest new products, and exclusive sales events.</p>
-            <input type="text" placeholder="Email Address" /> <button>Signup</button>
-          <div style={{display:"flex" , justifyContent:"start"}}>
-            <div><FacebookIcon/></div>
-            <div><InstagramIcon/></div>
-            <div><LinkedInIcon/></div>
-            <div><PinterestIcon/></div>
-            <div><TwitterIcon/></div>
-            <div><YouTubeIcon/></div>
-
+            <p
+              style={{
+                fontSize: "12px",
+                fontWeight: "600",
+                marginBottom: "10px",
+              }}
+            >
+              Be the first to know
+            </p>
+            <p style={{ fontSize: "12px", lineHeight: "17px", width: "40%" }}>
+              Sign up to stay in the loop about the hottest deals, coolest new
+              products, and exclusive sales events.
+            </p>
+            <input
+              style={{ width: "200px", height: "38px", marginTop: "10px" }}
+              type="text"
+              placeholder="Email Address"
+            />{" "}
+            <button
+              style={{
+                width: "70px",
+                backgroundColor: "#0046be",
+                height: "38px",
+                marginTop: "10px",
+              }}
+            >
+              Signup
+            </button>
+            <div style={{ display: "flex", justifyContent: "start"  , gap:"35px" , marginTop:"10px"}}>
+              <a href="" style={{textDecoration:"none" , color:"inherit"  }}>
+                <RiFacebookLine />
+              </a>
+              <a href="" style={{textDecoration:"none" , color:"inherit"  }}>
+                <GrLinkedinOption />
+              </a>
+              <a href="" style={{textDecoration:"none" , color:"inherit"  }}>
+                <AiOutlineInstagram />
+              </a>
+              <a href="" style={{textDecoration:"none" , color:"inherit"  }}>
+                <FaPinterestP />
+              </a>
+              <a href="" style={{textDecoration:"none" , color:"inherit"  }}>
+                <FaTwitter />
+              </a>
+              <a href="" style={{textDecoration:"none" , color:"inherit"  }}>
+                <AiFillYoutube />
+              </a>
+            </div>
           </div>
+        </div>
+        <div
+          style={{
+            borderTop: "1px solid #e7ecf3",
+            marginTop: "30px",
+            textAlign: "left",
+            fontSize: "9px",
+            lineHeight: "14px",
+            marginLeft: "50px",
+          }}
+        >
+          <div style={{marginTop:"10px"}}>
+            {" "}
+            <p>
+              © Best Buy Canada Ltd. Suite #102, 425 West 6th Avenue, Vancouver,
+              BC V5Y 1L3
+            </p>
+            <p>
+              Terms & Conditions | Conditions of Use | Online Policies |
+              Interest-Based Ads | Privacy Policy | Accessibility Policy | Geek
+              Squad Terms & Conditions | Product Recalls | Credits |
+            </p>
           </div>
         </div>
       </div>
