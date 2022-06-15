@@ -41,6 +41,8 @@ let courosal = {
   logo: "https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/bltc70b31bb92ddfced/61d60327191c5560467de5a2/global-topdeals-20220107-showcase-logo-m-en.png",
   title: "Don't miss out on these great deals.",
   desc: "Find incredible savings on must-have tech essentials and more.",
+  // button: "Add to cart",
+  bg: "https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/blt8e1e4ddccfad34af/61d5f9d095fe2513b569c488/global-topdeals-20220107-showcase-bg-m.jpg?width=5760&quality=80&auto=webp",
 };
 const TopDeals = () => {
   return (
@@ -54,7 +56,7 @@ const TopDeals = () => {
       <img className="quickSupportImage" src={QuickPage} alt="" />
       <div>
         <p className="titleOfComp">Featured top deals</p>
-        <FeaturedTopDeals data={futureDeals} className="futureTopDeals" />
+        <FeaturedTopDeals data={futureDeals} />
       </div>
       <div>
         <p className="titleOfComp">Shop deals by category</p>

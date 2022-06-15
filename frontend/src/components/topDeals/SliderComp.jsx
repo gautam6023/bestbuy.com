@@ -1,60 +1,100 @@
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 import styled from "styled-components";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
+import {
+  MdOutlineArrowBackIosNew,
+  MdOutlineArrowForwardIos,
+} from "react-icons/md";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SliderCard from "./SliderCard";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/bundle";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css/autoplay";
 
 const CourosolDiv = styled.div`
-  /* width: 100%; */
-  width: 100px;
+  /* width: 700px; */
+  width: 89%;
+  /* padding: 20px; */
   margin: auto;
-  border: 1px solid white;
-  height: 100%;
+  /* background-color: red; */
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
 
-  span {
-    width: 50px;
-    color: white;
+  .swiper {
+    /* border: 1px solid white; */
+    box-sizing: border-box;
+    padding: 0 70px;
+  }
+
+  .sliderEl {
+    background-color: #ffffff;
+    height: 100%;
+    border-radius: 10px;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    background-color: #a8b4d2;
+    box-sizing: border-box;
+
+    height: 40px;
+    width: 40px;
+    /* padding: 20px; */
+    border-radius: 1000px;
+
+    &:hover {
+      background-color: #ffffff;
+      transition: 700ms;
+    }
+  }
+  .swiper-button-prev {
+    position: absolute;
+    left: 10px;
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #0046be;
   }
 `;
 
-const SliderComp = ({ settings }) => {
+// import Swiper core and required modules
+
+export const SliderComp = ({ data }) => {
+  console.log(data, "s");
   return (
     <CourosolDiv>
-      <div>
-        <h2> Single Item</h2>
-        <Slider {...settings}>
-          {/* {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((el, i) => {
-            return <span key={i}>{el}</span>;
-          })} */}
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-          <div>
-            <h3>7</h3>
-          </div>
-          <div>
-            <h3>8</h3>
-          </div>
-          <div>
-            <h3>9</h3>
-          </div>
-        </Slider>
-      </div>
+      <Swiper
+        // install Swiper modules
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+        spaceBetween={25}
+        slidesPerView={3}
+        swipeHandler={3}
+        navigation
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log("slide change")}
+        allowSlideNext={true}
+        allowSlidePrev={true}
+        autoplay={{
+          delay: 1200,
+          disableOnInteraction: true,
+        }}
+      >
+        {data.map((el) => {
+          return (
+            <SwiperSlide key={el.id} className={"sliderEl"}>
+              <SliderCard {...el} />
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
     </CourosolDiv>
   );
 };

@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { IoIosArrowForward } from "react-icons/io";
 
 const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
   /* border: 1px solid red; */
 
   div {
@@ -46,10 +48,10 @@ const Wrapper = styled.div`
   }
 `;
 
-const FeaturedTopDeals = ({ data, className }) => {
+const FeaturedTopDeals = ({ data }) => {
   console.log(data);
   return (
-    <Wrapper className={className}>
+    <Wrapper>
       {data.map((el, i) => {
         return (
           <div key={i}>
