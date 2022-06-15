@@ -1,10 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import StoreMallDirectoryIcon from "@mui/icons-material/StoreMallDirectory";
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import Menu from "../Menu";
 
+import RightStart from "../RightStart"
+import styles from './navbar.module.css'
 function Navbar() {
+  const [flag, setFlag] = useState(false);
+  const [flag1, setFlag1] = useState(false);
+  const [flag2, setFlag2] = useState(false);
+
+  const [flag3, setFlag3] = useState(false);
+
+
+  const handlerChange = () => {
+    console.log(flag);
+    setFlag(!flag);
+    setFlag1(false);
+    setFlag2(false);
+    setFlag3(false);
+  };
+  const handlerChange1 = () => {
+    console.log(flag);
+    setFlag1(!flag1);
+    setFlag(false);
+    setFlag2(false);
+    setFlag3(false);
+  };
+  const handlerChange2 = () => {
+    console.log(flag);
+    setFlag2(!flag2);
+    setFlag1(false);
+    setFlag(false);
+    setFlag3(false);
+  };
+  const handlerChange3 = () => {
+    console.log(flag);
+    setFlag3(!flag3);
+    setFlag1(false);
+    setFlag2(false);
+    setFlag(false);
+  };
+  
+
   return (
     <div
       style={{
@@ -14,11 +54,72 @@ function Navbar() {
         zIndex: "1",
       }}
     >
-      <div style={{display:"flex"  , gap:"10px" ,  backgroundColor: "rgb(0,70,190)" ,justifyContent:"end"}}>
-        <div><a class="anchortag" style={{textDecoration: "none" , color:"white" , fontWeight:"400" , fontSize:"12px" , lineHeight:"16px"}} href="">Order Status</a></div>
-        <div><a style={{textDecoration: "none" , color:"white" , fontWeight:"400" , fontSize:"12px" , lineHeight:"16px"}} href="">BLog</a></div>
-        <div><a style={{textDecoration: "none" , color:"white" , fontWeight:"400" , fontSize:"12px" , lineHeight:"16px"}} href="">Best Buy Business</a></div>
-        <div><a style={{textDecoration: "none" , color:"white" , fontWeight:"400" , fontSize:"12px" , lineHeight:"16px" , paddingRight:"138px"}} href="">Francais</a></div>
+      <div
+        style={{
+          display: "flex",
+          gap: "10px",
+          backgroundColor: "rgb(0,70,190)",
+          justifyContent: "end",
+        }}
+      >
+        <div>
+          <a
+            class="anchortag"
+            style={{
+              textDecoration: "none",
+              color: "white",
+              fontWeight: "400",
+              fontSize: "12px",
+              lineHeight: "16px",
+            }}
+            href=""
+          >
+            Order Status
+          </a>
+        </div>
+        <div>
+          <a
+            style={{
+              textDecoration: "none",
+              color: "white",
+              fontWeight: "400",
+              fontSize: "12px",
+              lineHeight: "16px",
+            }}
+            href=""
+          >
+            BLog
+          </a>
+        </div>
+        <div>
+          <a
+            style={{
+              textDecoration: "none",
+              color: "white",
+              fontWeight: "400",
+              fontSize: "12px",
+              lineHeight: "16px",
+            }}
+            href=""
+          >
+            Best Buy Business
+          </a>
+        </div>
+        <div>
+          <a
+            style={{
+              textDecoration: "none",
+              color: "white",
+              fontWeight: "400",
+              fontSize: "12px",
+              lineHeight: "16px",
+              paddingRight: "138px",
+            }}
+            href=""
+          >
+            Francais
+          </a>
+        </div>
       </div>
       <div
         style={{ backgroundColor: "#0046be", width: "100%", height: "100px" }}
@@ -80,66 +181,483 @@ function Navbar() {
                 gap: "20px",
               }}
             >
-             
-             <div style={{display:"flex"}}>
-                <StoreMallDirectoryIcon style={{ fill: "#ffffff" }} /> 
-              
-              <div> <label style={{ color: "white"  , fontSize:"15px"}}>Stores</label></div> 
+              <div style={{ display: "flex" }}>
+                <StoreMallDirectoryIcon style={{ fill: "#ffffff" }} />
+
+                <div>
+                  {" "}
+                  <label style={{ color: "white", fontSize: "15px" }}>
+                    Stores
+                  </label>
+                </div>
               </div>
-              <div style={{display:"flex"}}>
-                <AccountCircleIcon style={{ fill: "#ffffff" }} /> 
-              
-              <div> <label style={{ color: "white"  , fontSize:"15px"}}>Account</label></div> 
+              <div style={{ display: "flex" }}>
+                <AccountCircleIcon style={{ fill: "#ffffff" }} />
+
+                <div>
+                  {" "}
+                  <label style={{ color: "white", fontSize: "15px" }}>
+                    Account
+                  </label>
+                </div>
               </div>
-              <div style={{display:"flex"}}>
-                <ShoppingCartIcon style={{ fill: "#ffffff" }} /> 
-              
-              <div> <label style={{ color: "white"  , fontSize:"15px"}}>Cart</label></div> 
+              <div style={{ display: "flex" }}>
+                <ShoppingCartIcon style={{ fill: "#ffffff" }} />
+
+                <div>
+                  {" "}
+                  <label style={{ color: "white", fontSize: "15px" }}>
+                    Cart
+                  </label>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div style={{backgroundColor:"#003da6" , display:"flex" , gap:"20px" , height:"40px"}}>
-       
-        <div style={{marginLeft:"140px" , marginTop:"5px"}}> < select  style={{backgroundColor:"#003da6" , color:"white" , outline:"none"}} name="" id="">Shop
-        
-        <option value="Shop">Shop</option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        </select></div>
+      <div
+        style={{
+          backgroundColor: "#003da6",
+          display: "flex",
+          gap: "20px",
+          height: "40px",
+        }}
+      >
+        <div style={{ marginLeft: "140px", marginTop: "5px"   }}>
+          <div
+            style={{
+              backgroundColor: "#003da6",
+              color: "white", position:"relative"
+            }}
+            onClick={handlerChange}
+          >
+            {" "}
+            Shop{" "}
+            {flag ? (
+              <img
+                style={{
+                  width: "15px",
+                  height: "15px",
+                  margin:"-3px",
+                  backgroundColor: "#003da6",
+                }}
+                src="https://pngroyale.com/wp-content/uploads/2022/03/Up-Arrow-PNG-Image-with-Transparent-Background-.png"
 
+              />
+            ) : (
+              <img
+                style={{
+                  width: "15px",
+                  height: "15px",
+                  margin:"-3px",
+                  backgroundColor: "#003da6",
+                }}
+                src="https://www.freeiconspng.com/thumbs/arrow-down-icon-png/black-arrow-down-icon-png-16.png"
 
-        
-        <div style={{ marginTop:"5px"}}>
-        < select  style={{backgroundColor:"#003da6" , color:"white" , outline:"none"}} name="" id="">Brands <option value="Shop">Brands</option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option></select>
+              />
+            )}{" "}
+          </div>
+          {flag ? (
+            <div
+              style={{
+                    backgroundColor: "white",
+                width: "200px",
+                height: "320px",
+                overflowX:"hidden",
+                overflowY:"scroll",
+                position:"absolute",
+                paddingTop:"9px",
+                textAlign:"left",
+              lineHeight:"2",
+                fontWeight:"300",
+                paddingLeft:"9px"
+              }}
+            >
+                          <b style={{fontSize:"12px"}}> Shop by Category</b>
+                        <div style={{display:"flex", justifyContent:"space-between"}}>  <p style={{    lineHeight: "1.3"}} >Computers, Tablets, & Accessories  </p>    <img
+                style={{
+                  width: "15px",
+                  height: "16px",
+                 
+                  marginTop: "8px"
+                }}
+                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+              />  </div>
+                 <div style={{display:"flex", justifyContent:"space-between"}}>  <p style={{    lineHeight: "1.3"}}>Cell Phones and Accessories</p>   <img
+                style={{
+                 width: "15px",
+                  height: "16px",
+                 
+                  marginTop: "8px"
+                
+                
+                }}
+                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+              />  </div>    
+                  <div style={{display:"flex", justifyContent:"space-between"}}> 
+                  <p style={{    lineHeight: "1.3"}} >Office Supplies & Ink</p>
+                      <img
+                style={{
+                 width: "15px",
+                  height: "16px",
+                 
+                  marginTop: "8px"
+                
+                
+                }}
+                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+              />  </div>          
+             <div style={{display:"flex", justifyContent:"space-between"}}> 
+             <p style={{    lineHeight: "1.3"}} >TV & Home Theatre</p>
+                      <img
+                style={{
+                 width: "15px",
+                  height: "16px",
+                 
+                  marginTop: "8px"
+                
+                
+                }}
+                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+              />  </div>   
+                <div style={{display:"flex", justifyContent:"space-between"}}> 
+             <p style={{    lineHeight: "1.3"}} >Headphones, Speakers ,& Audio</p>
+                      <img
+                style={{
+                 width: "15px",
+                  height: "16px",
+                 
+                  marginTop: "8px"
+                
+                
+                }}
+                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+              />  </div>  
+                <div style={{display:"flex", justifyContent:"space-between"}}> 
+             <p style={{    lineHeight: "1.3"}} >Cameras & Camcorders</p>
+                      <img
+                style={{
+                 width: "15px",
+                  height: "16px",
+                 
+                  marginTop: "8px"
+                
+                
+                }}
+                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+              />  </div> 
+                    <div style={{display:"flex", justifyContent:"space-between"}}> 
+             <p style={{    lineHeight: "1.3"}} >Car Tech and GPS</p>
+                      <img
+                style={{
+                 width: "15px",
+                  height: "16px",
+                 
+                  marginTop: "8px"
+                
+                
+                }}
+                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+              />  </div> 
+    <div style={{display:"flex", justifyContent:"space-between"}}> 
+             <p style={{    lineHeight: "1.3"}} >Appliances</p>
+                      <img
+                style={{
+                 width: "15px",
+                  height: "16px",
+                 
+                  marginTop: "8px"
+                
+                
+                }}
+                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+              />  </div> 
+                <div style={{display:"flex", justifyContent:"space-between"}}> 
+             <p style={{    lineHeight: "1.3"}} >Smart Home</p>
+                      <img
+                style={{
+                 width: "15px",
+                  height: "16px",
+                 
+                  marginTop: "8px"
+                
+                
+                }}
+                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+              />  </div>
+  <div style={{display:"flex", justifyContent:"space-between"}}> 
+             <p style={{    lineHeight: "1.3"}} >Home Living</p>
+                      <img
+                style={{
+                 width: "15px",
+                  height: "16px",
+                 
+                  marginTop: "8px"
+                
+                
+                }}
+                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+              />  </div>
+<div style={{display:"flex", justifyContent:"space-between"}}> 
+             <p style={{    lineHeight: "1.3"}} >Baby & Maternity</p>
+                      <img
+                style={{
+                 width: "15px",
+                  height: "16px",
+                 
+                  marginTop: "8px"
+                
+                
+                }}
+                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+              />  </div>
+
+<div style={{display:"flex", justifyContent:"space-between"}}> 
+             <p style={{    lineHeight: "1.3"}} >Video Games & VR</p>
+                      <img
+                style={{
+                 width: "15px",
+                  height: "16px",
+                 
+                  marginTop: "8px"
+                
+                
+                }}
+                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+              />  </div>
+              <div style={{display:"flex", justifyContent:"space-between"}}> 
+             <p style={{    lineHeight: "1.3"}} >Wearable Technology</p>
+                      <img
+                style={{
+                 width: "15px",
+                  height: "16px",
+                 
+                  marginTop: "8px"
+                
+                
+                }}
+                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+              />  </div>
+                <div style={{display:"flex", justifyContent:"space-between"}}> 
+             <p style={{    lineHeight: "1.3"}} >Health & Fitness</p>
+                      <img
+                style={{
+                 width: "15px",
+                  height: "16px",
+                 
+                  marginTop: "8px"
+                
+                
+                }}
+                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+              />  </div>
+                  <div style={{display:"flex", justifyContent:"space-between"}}> 
+             <p style={{    lineHeight: "1.3"}} >Sports, Recreation, & Transportation</p>
+                      <img
+                style={{
+                 width: "15px",
+                  height: "16px",
+                 
+                  marginTop: "8px"
+                
+                
+                }}
+                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+              />  </div>
+                    <div style={{display:"flex", justifyContent:"space-between"}}> 
+             <p style={{    lineHeight: "1.3"}} >Movies & Music</p>
+                      <img
+                style={{
+                 width: "15px",
+                  height: "16px",
+                 
+                  marginTop: "8px"
+                
+                
+                }}
+                src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
+              />  </div>
+            </div>
+            
+          ) : null}
         </div>
-        <div style={{ marginTop:"5px"}}>
-  < select  style={{backgroundColor:"#003da6" , color:"white" , outline:"none"}} name="" id="">
-        Deals
-        <option value="Shop">Deals</option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option></select>
-  </div>
 
-  <div style={{ marginTop:"5px"}}>
-      < select  style={{backgroundColor:"#003da6" , color:"white" , outline:"none"}} name="" id="">
-        Services
-        <option value="Shop">Services</option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option></select>
-        </div> 
-      
+     <div style={{ marginTop: "5px"   }}>
+          <div
+            style={{
+              backgroundColor: "#003da6",
+              color: "white", position:"relative"
+            }}
+            onClick={handlerChange1}
+          >
+            {" "}
+            Brands{" "}
+            {flag1 ? (
+              <img
+                style={{
+                  width: "15px",
+                  height: "15px",
+                  margin:"-3px",
+                  backgroundColor: "#003da6",
+                }}
+                src="https://pngroyale.com/wp-content/uploads/2022/03/Up-Arrow-PNG-Image-with-Transparent-Background-.png"
+              />
+            ) : (
+              <img
+                style={{
+                  width: "15px",
+                  height: "15px",
+                  margin:"-3px",
+                  backgroundColor: "#003da6",
+                }}
+                src="https://www.freeiconspng.com/thumbs/arrow-down-icon-png/black-arrow-down-icon-png-16.png"
 
+               
+              />
+            )}{" "}
+          </div>
+          {flag1 ? (
+            <div
+              style={{
+                backgroundColor: "white",
+                width: "200px",
+                height: "320px",
+                overflowX:"hidden",
+                overflowY:"scroll",
+                position:"absolute",
+                paddingTop:"9px",
+                textAlign:"left",
+                lineHeight:"-.5",
+                fontSize:"13px",
+                paddingLeft:"9px"
 
+              }}
+            >
+            
+ 
 
+<RightStart/>
+            </div>
+          ) : null}
+        </div>
+        <div style={{ marginTop: "5px"   }}>
+          <div
+            style={{
+              backgroundColor: "#003da6",
+              color: "white", position:"relative"
+            }}
+            onClick={handlerChange2}
+          >
+            {" "}
+            Deals{" "}
+            {flag2 ? (
+              <img
+                style={{
+                  width: "15px",
+                  height: "15px",
+                  margin:"-3px",
+                  backgroundColor: "#003da6",
+                }}
+                src="https://pngroyale.com/wp-content/uploads/2022/03/Up-Arrow-PNG-Image-with-Transparent-Background-.png"
+
+              />
+            ) : (
+              <img
+                style={{
+                  width: "15px",
+                  height: "15px",
+                  margin:"-3px",
+                  backgroundColor: "#003da6",
+                }}
+                src="https://www.freeiconspng.com/thumbs/arrow-down-icon-png/black-arrow-down-icon-png-16.png"
+
+              />
+            )}{" "}
+          </div>
+          {flag2 ? (
+            <div
+              style={{
+                backgroundColor: "white",
+                width: "200px",
+                height: "120px",
+                overflowX:"hidden",
+                overflowY:"scroll",
+                position:"absolute",
+                paddingTop:"9px",
+                textAlign:"left",
+              lineHeight:"2",
+                fontWeight:"300",
+                paddingLeft:"9px"
+              }}
+            >
+       <div>Top Deals </div>
+       <div>Best Buys Outlet </div>
+
+            </div>
+          ) : null}
+        </div>
+
+        <div style={{ marginTop: "5px"   }}>
+          <div
+            style={{
+              backgroundColor: "#003da6",
+              color: "white", position:"relative"
+            }}
+            onClick={handlerChange3}
+          >
+            {" "}
+            Services{" "}
+            {flag3 ? (
+              <img
+                style={{
+                  width: "15px",
+                  height: "15px",
+                  margin:"-3px",
+                  backgroundColor: "#003da6",
+                }}
+                src="https://pngroyale.com/wp-content/uploads/2022/03/Up-Arrow-PNG-Image-with-Transparent-Background-.png"
+
+               
+              />
+            ) : (
+              <img
+                style={{
+                  width: "15px",
+                  height: "15px",
+                  margin:"-3px",
+                  backgroundColor: "#003da6",
+                }}
+                src="https://www.freeiconspng.com/thumbs/arrow-down-icon-png/black-arrow-down-icon-png-16.png"
+              />
+            )}{" "}
+          </div>
+          {flag3 ? (
+            <div
+              style={{
+                backgroundColor: "white",
+                width: "200px",
+                height: "120px",
+                overflowX:"hidden",
+                overflowY:"scroll",
+                position:"absolute",
+                paddingTop:"9px",
+                textAlign:"left",
+              lineHeight:"2",
+                fontWeight:"300",
+                paddingLeft:"9px"
+              }}
+            >
+       <div>Geek Squad Services </div>
+       <div>In-Home Advisor </div>
+<div>Best Buy Business</div>
+<div>Best Buy Health</div>
+<div>Trade-In Program</div>
+<div>Electronics Recycling</div>
+            </div>
+          ) : null}
+        </div>
       </div>
+
     </div>
   );
 }
