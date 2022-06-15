@@ -5,6 +5,9 @@ import QuickPage from "../../assets/image/quick.png";
 import FeaturedTopDeals from "../../components/topDeals/FeaturedTopDeals";
 import ShopDealsByCategory from "../../components/topDeals/ShopDealsByCategory";
 import CourosalContainer from "../../components/topDeals/CourosalContainer";
+import { useState } from "react";
+import { useEffect } from "react";
+import axios from "axios";
 let futureDeals = [
   {
     imgUrl:
@@ -37,14 +40,37 @@ let futureDeals = [
   },
 ];
 
-let courosal = {
-  logo: "https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/bltc70b31bb92ddfced/61d60327191c5560467de5a2/global-topdeals-20220107-showcase-logo-m-en.png",
-  title: "Don't miss out on these great deals.",
-  desc: "Find incredible savings on must-have tech essentials and more.",
-  // button: "Add to cart",
-  bg: "https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/blt8e1e4ddccfad34af/61d5f9d095fe2513b569c488/global-topdeals-20220107-showcase-bg-m.jpg?width=5760&quality=80&auto=webp",
-};
 const TopDeals = () => {
+  const [data, setData] = useState([]);
+
+  let courosal1 = {
+    logo: "https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/bltc70b31bb92ddfced/61d60327191c5560467de5a2/global-topdeals-20220107-showcase-logo-m-en.png",
+    title: "Don't miss out on these great deals.",
+    desc: "Find incredible savings on must-have tech essentials and more.",
+    // button: "Add to cart",
+    bg: "https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/blt8e1e4ddccfad34af/61d5f9d095fe2513b569c488/global-topdeals-20220107-showcase-bg-m.jpg?width=5760&quality=80&auto=webp",
+    data,
+    logoSize: "200px",
+  };
+
+  let courosal2 = {
+    logo: "https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/bltae328b343cf3a02a/624f50345b71147a38d9ef1b/mp-20211105-logo-picks-white.png",
+    title: "Save on the latest tech and more.",
+    desc: "Discover this week’s top Marketplace deals from our trusted sellers.",
+    // button: "Add to cart",
+
+    bg: "https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/blt8e1e4ddccfad34af/61d5f9d095fe2513b569c488/global-topdeals-20220107-showcase-bg-m.jpg?width=5760&quality=80&auto=webp",
+    data,
+  };
+
+  useEffect(() => {
+    async function data() {
+      let { data } = await axios.get("http://localhost:8080/deal");
+      console.log(data);
+      setData([...data]);
+    }
+    data();
+  }, []);
   return (
     <TopDealsDiv>
       <p className="title-heading">Top Deals</p>
@@ -62,7 +88,18 @@ const TopDeals = () => {
         <p className="titleOfComp">Shop deals by category</p>
         <ShopDealsByCategory className="shpByCate" />
       </div>
-      <CourosalContainer className="courosalContainer" {...courosal} />
+      <CourosalContainer className="courosalContainer" {...courosal1} />
+      <div className="advertiseMent">
+        <img
+          src="https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/blt1ca9ebcd9783f1c9/620aeba6f011e923b061d514/global-20220220-bar-happyhour-m-en.png?width=50p&quality=80&auto=webp"
+          alt=""
+        />
+        <div>
+          <p>Our next great deal? Help us choose</p>
+          <button>Learn More</button>
+        </div>
+      </div>
+      <CourosalContainer className="courosalContainer" {...courosal2} />
     </TopDealsDiv>
   );
 };

@@ -78,4 +78,36 @@ export const TopDealsDiv = styled.div`
       }
     }
   }
+
+  .advertiseMent {
+    background-image: url("https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/blt84cbaa144b435751/620aa480e1d7c708f6601211/global-20220220-bar-happyhour-m.jpg?width=150p&quality=80&auto=webp");
+    width: 100%;
+    height: 185px;
+    background-size: cover;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 30px;
+
+    div {
+      p {
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      button {
+        background-color: #ffffff;
+        color: #0046be;
+        height: 55px;
+        width: 154px;
+        margin-top: 30px;
+        border: 0;
+        cursor: pointer;
+        width: 30%;
+        font-weight: bold;
+      }
+    }
+  }
 `;

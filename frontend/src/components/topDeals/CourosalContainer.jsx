@@ -11,6 +11,7 @@ const Wrapper = styled.div`
   background-size: cover;
   border-radius: 10px;
   display: flex;
+  margin: 30px 0;
 
   & > div {
     /* border: 1px solid white; */
@@ -25,7 +26,7 @@ const Wrapper = styled.div`
     color: #ffffff;
     gap: 15px;
     img {
-      width: 200px;
+      width: ${(props) => (props.logoSize ? props.logoSize : "auto")};
     }
     .title {
       font-size: 32px;
@@ -61,20 +62,19 @@ const Wrapper = styled.div`
   }
 `;
 
-const CourosalContainer = ({ button, className, title, desc, logo, bg }) => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    async function data() {
-      let { data } = await axios.get("http://localhost:8080/deal");
-      console.log(data);
-      setData([...data]);
-    }
-    data();
-  }, []);
-
+const CourosalContainer = ({
+  button,
+  className,
+  title,
+  desc,
+  logo,
+  bg,
+  data,
+  logoSize,
+}) => {
+  console.log(logoSize);
   return (
-    <Wrapper bg={bg}>
+    <Wrapper bg={bg} logoSize={logoSize}>
       <div className="detailsOfCourosol">
         <img src={logo} alt="" />
         <p className="title">{title}</p>
