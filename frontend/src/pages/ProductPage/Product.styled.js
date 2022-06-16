@@ -109,6 +109,7 @@ export const ProductPageContainer = styled.div`
       box-sizing: border-box;
       padding: 0 45px;
       border-radius: 8px;
+      margin-bottom: 25px;
       justify-content: space-between;
       & > div {
         height: 100%;

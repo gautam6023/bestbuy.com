@@ -100,7 +100,7 @@ const brands = [
   "LOGITECH",
 ];
 
-const ProductPage = () => {
+const ProductContainer = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -363,4 +363,4 @@ const ProductPage = () => {
   );
 };
 
-export default ProductPage;
+export default ProductContainer;

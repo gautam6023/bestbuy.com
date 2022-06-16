@@ -11,6 +11,13 @@ const Wrapper = styled.div`
   padding: 15px;
   border-radius: 8px;
   cursor: pointer;
+  transition: 300ms;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
 
   .linkTag {
     text-decoration: none;
@@ -34,6 +41,10 @@ const Wrapper = styled.div`
 
     .title {
       font-size: 15px;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
     .ratings {
       font-size: 12px;
