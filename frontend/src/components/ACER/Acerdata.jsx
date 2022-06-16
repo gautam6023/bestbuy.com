@@ -16,6 +16,9 @@ display: block;
     // border-style: inset;
     // border-width: 1px;
     width:80%;
+    height: 1px;
+    border: 0;
+    background: #e0e6ef
 `
 
 const Head=styled.div`
