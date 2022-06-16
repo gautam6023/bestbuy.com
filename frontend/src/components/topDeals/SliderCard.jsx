@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 const Wrapper = styled.div`
   /* border: 1px solid white; */
   box-sizing: border-box;
@@ -47,7 +47,7 @@ const Wrapper = styled.div`
 const SliderCard = (el) => {
   return (
     <Wrapper>
-      <a href="#" style={{ textDecoration: "none" }}>
+      <Link to="#" style={{ textDecoration: "none" }}>
         <img src={el.imgUrl} alt="" />
         <div className="desc">
           <p className="title">{el.title}</p>
@@ -55,7 +55,7 @@ const SliderCard = (el) => {
           {el.top ? <p className="topDeal">{el.top}</p> : ""}
           <p className="price">${el.price}</p>
         </div>
-      </a>
+      </Link>
     </Wrapper>
   );
 };
