@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const TopDealsDiv = styled.div`
   /* border: 1px solid black; */
-  width: 67%;
+  width: 80rem;
   padding: 50px 0;
   margin: auto;
   display: flex;
