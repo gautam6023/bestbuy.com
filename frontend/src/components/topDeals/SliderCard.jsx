@@ -42,15 +42,6 @@ const Wrapper = styled.div`
       color: #bb0628;
       font-weight: 600;
     }
-    .topDeal {
-      background-color: #bb0628;
-      color: #ffffff;
-      font-weight: 600;
-      width: fit-content;
-      padding: 3px;
-      padding-right: 10px;
-      clip-path: polygon(0 1%, 100% 0, 97% 100%, 0% 100%);
-    }
   }
 `;
 const SliderCard = (el) => {
