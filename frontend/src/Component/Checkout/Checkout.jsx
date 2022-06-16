@@ -269,7 +269,7 @@ export default function Checkout() {
           </Box>
         </div>
       </div>
-      <button onClick={()=>{toLacalStorage()}}>click me to save data</button>
+
       <div
         style={{
           border: "1px solid black",
@@ -279,7 +279,8 @@ export default function Checkout() {
           backgroundColor: "white",
         }}
       >
-        <h1>here is div of other component for Aman Bhai</h1>
+              <button onClick={()=>{toLacalStorage()}}>click me to save data</button>
+        
       </div>
     </div>
   );
