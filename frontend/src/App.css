@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+body{
+  line-height: 1.5;
+}
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+.mainContainer{
+  /* border: 10px solid teal; */
+  width : 70vw;
+  margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@media  (max-width: 1150px) {
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .mainContainer{
+    /* border: 1px solid teal; */
+    width : 90vw;
+    margin: auto;
+  }
+  img{
+    max-width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media  (max-width: 920px) {
+
+  .mainContainer{
+    /* border: 1px solid teal; */
+    width : 100vw;
+    margin: auto;
+  }
+  img{
+    max-width: 100%;
+  }
+}
+
+/* Slick-Sider */
+
+.courosalContainer {
+  border: 1px solid black;
+  height: 400px;
+  background-image: url("https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/blt8e1e4ddccfad34af/61d5f9d095fe2513b569c488/global-topdeals-20220107-showcase-bg-m.jpg?width=5760&quality=80&auto=webp");
+  background-size: cover;
+  border-radius: 8px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .detailsOfCourosol {
+    width: 40%;
+    box-sizing: border-box;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    gap: 15px;
   }
-  to {
-    transform: rotate(360deg);
+    /* img {
+      width: 200px;
+    } */
+    .title {
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: bold;
+    }
+    .desc {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  
+  .courosol {
+    /* flex-grow: 1; */
+    width: 60%;
+    border: 1px solid red;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-}
+  .slick-list {
+    width: 60%;
+  }
+
+/* ========= */
