@@ -14,6 +14,11 @@ export const ProductPageContainer = styled.div`
     background-color: red;
     width: 25%;
     height: 100%;
+
+    //Sidebar
+    .options {
+      font-size: 14px;
+    }
   }
 
   .priceContainer {

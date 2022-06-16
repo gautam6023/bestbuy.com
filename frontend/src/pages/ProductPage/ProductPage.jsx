@@ -105,6 +105,7 @@ const ProductPage = () => {
           {/* Categories Accordian */}
           <Accordion disableGutters={true}>
             <AccordionSummary
+              className="categories"
               id="panel1-header"
               aria-aria-controls="pane1-content"
               expandIcon={<ExpandMoreIcon />}
