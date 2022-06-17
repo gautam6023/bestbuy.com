@@ -15,6 +15,7 @@ import "./assets/fonts/HumanBBY-75Bold-Web.woff";
 import "./assets/fonts/HumanBBY-75Bold-Web.woff2";
 
 // import { SimpleSlider } from "./components/topDeals/CourosalContainer";
+
 function App() {
   return (
     <div className="App">

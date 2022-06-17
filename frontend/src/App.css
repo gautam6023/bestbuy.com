@@ -69,3 +69,7 @@ body {
   padding-right: 10px;
   clip-path: polygon(0 1%, 100% 0, 97% 100%, 0% 100%);
 }
+*{
+  margin: 0;
+  padding: 0;
+}
