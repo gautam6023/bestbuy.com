@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Human BBY";
+  max-width: 100%;
+  background-color: #ffffff;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: "Human BBY";
+  /* src: url(https://www.bestbuy.ca/BBYHumanFontfiles/HumanBBY-55Regular-Web.eot); */
+  src: url(../src/assets/fonts/HumanBBY-55Regular-Web.eot);
+  src: url(https://www.bestbuy.ca/BBYHumanFontfiles/HumanBBY-55Regular-Web.woff2)
+      format("woff2"),
+    url(../src/assets/fonts/HumanBBY-55Regular-Web.woff) format("woff"),
+    url(../src/assets/fonts/Human-BBY-Web-55Regular.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@font-face {
+  font-family: "Human BBY";
+  src: url(../src/assets/fonts/Human-BBY-Web-65-Medium.eot);
+  src: url(../src/assets/fonts/Human-BBY-Web-65-Medium.woff2) format("woff2"),
+    url(../src/assets/fonts/Human-BBY-Web-65-Medium.woff) format("woff"),
+    url(../src/assets/fonts/Human-BBY-Web-65-Medium.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Human BBY";
+  src: url(../src/assets/fonts/HumanBBY-75Bold-Web.eot);
+  src: url(../src/assets/fonts/HumanBBY-75Bold-Web.woff2) format("woff2"),
+    url(../src/assets/fonts/HumanBBY-75Bold-Web.woff) format("woff"),
+    url(../src/assets/fonts/HumanBBY-75Bold-Web.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+}
+.flex {
   display: flex;
-  flex-direction: column;
+}
+
+.flexCenter {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.titleOfComp {
+  /* border: 1px solid black; */
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  /* padding: 30px 0; */
+  margin-bottom: 30px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.topDeal {
+  background-color: #bb0628;
+  color: #ffffff;
+  font-weight: 600;
+  width: fit-content;
+  padding: 2px;
+  padding-right: 10px;
+  clip-path: polygon(0 1%, 100% 0, 97% 100%, 0% 100%);
 }
