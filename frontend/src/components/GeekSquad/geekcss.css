@@ -7,7 +7,7 @@
     /* background-color: bisque; */
 }
 #first_div{
-    font-size: x-large;
+    font-size: small;
 }
 .geekbanner{
     background-image: url('https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/blt33e5681c4a3399b9/5f0ca0742cd8e87f92bdd837/geek-squad-service-evergreen-we_re-here-to-help-m.jpg?width=5760&quality=80&auto=webp');
@@ -18,15 +18,22 @@
 }
 .div1{
     width: 35%;
-    margin-top: 5%;
+    margin-top: 9%;
     /* border: 1px solid blue; */
+    line-height: 1.38vw;
+    margin-left: 3%;
     
 }
 .div1>div>img{
-    width: 50%;
-    margin-bottom: 0px;
+    width: 30%;
+    margin-bottom: 4%;
+    
 }
 .div1>h3{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.div>p{
     margin-top: 0px;
 }
 .abcd{
