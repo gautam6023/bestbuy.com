@@ -2,7 +2,7 @@
 import './App.css';
 
 import HomePage from './pages/HomePage';
-import GeekSquad from './components/GeekSquad/GeekSquad';
+import GeekSquad from './pages/GeekSquad';
 
 
 function App() {
