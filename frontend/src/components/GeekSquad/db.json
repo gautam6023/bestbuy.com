@@ -1,0 +1,148 @@
+    {
+        "geek":[
+                    {
+                        "first_div":
+                            {
+                                "img":"https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/bltc645e37ea0b1a348/6183051594e50d5a63800f45/gs-logo.png",
+
+                                "h2":"At your service.",
+                                "p":"No one stands behind you like Geek Squad. Whatever your technology support needs are, we offer services that can solve problems and provide peace of mind.",
+
+                                "img2":"https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/blt33e5681c4a3399b9/5f0ca0742cd8e87f92bdd837/geek-squad-service-evergreen-we_re-here-to-help-m.jpg?width=5760&quality=80&auto=webp"
+
+                            }
+                    }
+                ],
+                "second_div":[
+                                { "img":"https://www.bestbuy.ca/en-ca/services/geek-squad-appliance-repair-installation/blt4711ada721ea1226?icmp=ipp-gs-landing-appliances-learnmore",
+
+        "title":"Major appliances services.",
+
+        "link":"Learn more >"
+    },
+
+    { "img":"https://www.bestbuy.ca/en-ca/services/geek-squad-smart-home-network-setup/blt794a0b5391498f0f?icmp=ipp-gs-landing-smarthome-learnmore",
+
+        "title":"Smart home and networking services.",
+
+        "link":"Learn more >"
+    },
+
+    { "img":"https://www.bestbuy.ca/en-ca/services/geek-squad-tv-home-theatre-setup/blt29e79cae4586a68e?icmp=ipp-gs-landing-hometheater-learnmore",
+
+        "title":"TV and home theatre services.",
+
+        "link":"Learn more >"
+    },
+
+    { "img":"https://www.bestbuy.ca/en-ca/services/geek-squad-computer-tablet-repair-services/blt97d980ef802e4d71?icmp=ipp-gs-landing-computers-learnmore",
+
+        "title":"Laptop, desktop, and tablet services.",
+
+        "link":"Learn more >"
+    },
+
+    ],
+    //////////////////////////////////////////////////////////////////////////////
+
+
+    "3rd_div":{[
+    {
+        "img":"https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/bltec4906f6691f1aa7/6037fe931f3c9a3b23d6db61/global-evergreen-gs-support-m.png?width=1800&quality=80&auto=webp",
+
+        "title":"Chat online.",
+
+        "availabily":"Available 24/7.",
+        "chat":"Chat with an Agent >",
+        
+    },
+
+    {
+        "img":"https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/blt71e1a6ece9326d01/6036f4f2f54af27503f2d840/global-evergreen-gs-call-m.png?width=1800&quality=80&auto=webp",
+
+        "title":"Give us a call.",
+        "availabily":"Available 24/7",
+        "chat":"Call 1-800-GEEKSQUAD (1-800-433-5778) >"
+        
+
+    },
+
+    {
+        "img":"https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/blt70eebb47701bc62f/6037fe44259b2810197dc442/global-evergreen-gs-store-m.png?width=1800&quality=80&auto=webp",
+        "title":"Visit a store near you.",
+        "availabily":"Talk with an Agent at your local Best Buy store.","chat":"Find the nearest store >"
+    },
+    ///////////2nd row////////////////////
+
+    {
+        "img":"https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/blt73f085cf5f9a1ff1/6037fbd42eee966ee2e3cb60/ipp-evergreen-offer-gsp-chat-m.jpg?width=1800&quality=80&auto=webp",
+
+        "title":"Chat with Remote Technical Services.",
+
+
+        "availabily":"Our Agents are available and online 24/7 to help with challenging tech problems such as device setup, device diagnosis, software repair, and more.",
+
+
+        "chat":" Learn more >",
+    },
+
+    {
+        "img":"https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/blt5a8951f007f0737d/5f063f7e25b6aa6efeb89145/global-evergreen-gs-self-serve-m.png?width=1800&quality=80&auto=webp",
+        
+        "title":"Geek Squad Self-Service Portal.",
+
+        "availabily":"Update your account information, change your method of payment, file a protection claim, or check the status of your claim.",
+
+        "chat":"Visit Self-Service Portal > ",
+    },
+
+
+    {
+        "img":"https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/blt71db96a459d943b7/5f063fae5dfaac76f7e51e01/global-evergreen-gs-track-m.png?width=1800&quality=80&auto=webp",
+
+        "title":"Track your repair.",
+
+        "availabily":"Check the status of your repair and keep an eye on it every step of the way.",
+
+        "chat":"Track your repair > ",
+    },
+
+
+
+
+
+
+
+
+    ]}
+
+
+
+"fourth_div":[
+
+{
+    "img":"https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/blt081d29fef1dfc2c3/627d8ddcf628f26854f9063f/ipp-bby-membership-offer-xsm.jpg?width=1800&quality=80&auto=webp",
+
+"title":"Best Buy Membership.",
+
+"descrip":" Sign up for a Best Buy Membership and get access to free round-the-clock remote tech support, exclusive savings, services, and more.",
+
+"link":"Discover Best Buy Membership >"
+
+}
+
+
+
+{
+    "img":"https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/blt59466aa14d98a9df/627d8ddc8c90c334d0d42b40/ipp-bby-protection-offer-xsm.jpg?width=1800&quality=80&auto=webp",
+
+"title":"Best Buy Protection.",
+
+"descrip":"Enjoy your tech, worry-free, with protection plans that give you more peace of mind. ",
+
+"link":"Discover Best Buy Protection >"
+
+}
+
+        ]
+    }

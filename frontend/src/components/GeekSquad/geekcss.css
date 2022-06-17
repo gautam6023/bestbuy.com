@@ -1,0 +1,22 @@
+.geek{
+    width : 70vw;
+    margin: auto;
+    background-color: bisque;
+}
+#first_div{
+    font-size: x-large;
+}
+.geekbanner{
+    background-image: url('https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/blt33e5681c4a3399b9/5f0ca0742cd8e87f92bdd837/geek-squad-service-evergreen-we_re-here-to-help-m.jpg?width=5760&quality=80&auto=webp');
+    background-repeat: no-repeat;
+    background-size:cover;
+    border:1px solid rgb(236, 243, 243);
+    height: 25vw;
+}
+.div1{
+    width: 40%;
+    margin-top: 5%;
+}
+.abcd{
+    margin: 1%;
+}
