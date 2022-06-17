@@ -1,5 +1,4 @@
 import React,{useEffect,useState} from 'react'
-import './cart.css'
 import {ProdCard} from './ProdCard'
 export const Prod = () => {
 const [item,setItem]=useState([])

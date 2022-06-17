@@ -1,5 +1,5 @@
 import React from 'react'
-import './cart.css'
+
 import {Link} from 'react-router-dom'
 export const ProdCard = ({item}) => {
   const mainID = item.id
