@@ -1,13 +1,15 @@
 // import logo from './logo.svg';
 import './App.css';
 
-import HomePage from './components/HomePage';
+import HomePage from './pages/HomePage';
+import GeekSquad from './components/GeekSquad/GeekSquad';
 
 
 function App() {
   return (
-    <div className="mainContainer">
-      <HomePage />
+    <div className='App'>
+        {/* <GeekSquad /> */}
+        <HomePage />
     </div>
   );
 }

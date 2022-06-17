@@ -1,8 +1,8 @@
-import Ban1 from './Ban1';
-import Cont1 from './Cont1';
-import Htoff from './Htoff';
-import Seas from './Seas';
-import Shcat from './Shcat';
+import Ban1 from '../components/HomePage/Ban1';
+import Cont1 from '../components/HomePage/Cont1';
+import Htoff from '../components/HomePage/Htoff';
+import Seas from '../components/HomePage/Seas';
+import Shcat from '../components/HomePage/Shcat';
 
 
 
