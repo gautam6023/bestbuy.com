@@ -10,10 +10,8 @@ const MainRoutes = () => {
       <Routes>
         <Route path="/topdeals" element={<TopDeals />} />
         <Route path="/products" element={<ProductContainer />} />
+        <Route path="/products/:id" element={<ProductContainer />} />
       </Routes>
-      {/* <TopDeals />
-      <ProductContainer /> */}
-      {/* <SliderComp /> */}
     </div>
   );
 };
