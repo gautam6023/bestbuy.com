@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const A = styled.div`
   display: block;
@@ -102,12 +105,17 @@ const Li = styled.div`
 `;
 const B1 = styled.button`
   margin-top: 30px;
-  background-color: yellow;
+
+  background-color: #ffce00;
   width: 80%;
   height: 40px;
-  text-size: 20px;
+  /* font-size: 20px; */
   border: 0;
   font-weight: bold;
+
+  &:hover {
+    background-color: #fff200;
+  }
 `;
 const B2 = styled.button`
   margin-top: 20px;
@@ -268,15 +276,24 @@ const Bl = styled.button`
   }
 `;
 const Detailsitem = () => {
+  const [data, setData] = useState([]);
+  const { id } = useParams();
+
+  useEffect(() => {
+    async function getData() {
+      let { data } = await axios.get(`http://localhost:8080/deal/${id}`);
+      console.log(data);
+      setData(data);
+    }
+    getData();
+  }, []);
+
   return (
     <>
       <Big>
         <div>
-          <H1>
-            Acer Aspire TC Desktop PC (Intel Core-i5 12400/256GB SSD/8GB
-            RAM/Windows 11)
-          </H1>
-          <P1>⭐⭐⭐⭐ (62 Reviews)</P1>
+          <H1>{data.title}</H1>
+          <P1>{data.rate}</P1>
           <A>
             <hr />
           </A>
@@ -299,10 +316,7 @@ const Detailsitem = () => {
                 margin: "auto",
               }}
             >
-              <IMG
-                src="https://multimedia.bbycastatic.ca/multimedia/products/500x500/160/16001/16001654.jpg"
-                alt=""
-              />
+              <IMG src={data.imgUrl} alt="" />
               <div
                 style={{
                   display: "flex",
@@ -358,8 +372,8 @@ const Detailsitem = () => {
               }}
             >
               <div>
-                <P4>SAVE $200</P4>
-                <Pr>599.99</Pr>
+                <P4>Save {data.save}</P4>
+                <Pr>${data.price}</Pr>
                 <P5>SALE ends: June 16, 2022</P5>
               </div>
               <div style={{ display: "flex", gap: "10px", marginLeft: "20px" }}>

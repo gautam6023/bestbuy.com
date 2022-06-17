@@ -3,8 +3,8 @@ import SliderComp from "../components/topDeals/SliderComp";
 import ProductContainer from "../pages/ProductPage/ProductContainer";
 import TopDeals from "../pages/TopDeals/TopDeals";
 import { Routes, Route } from "react-router-dom";
-import { ProductPageContainer } from "../pages/ProductPage/Product.styled";
-import Detailsitem from "./pages/Product Detail Page/Detailsitem";
+// import { ProductContainer } from "../pages/ProductPage/ProductContainer";
+import Detailsitem from "../pages/Product Detail Page/Detailsitem";
 const MainRoutes = () => {
   return (
     <div>

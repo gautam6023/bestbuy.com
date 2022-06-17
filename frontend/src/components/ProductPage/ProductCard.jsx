@@ -71,10 +71,10 @@ const Wrapper = styled.div`
   }
 `;
 
-const ProductCard = ({ imgUrl, save, top, price, rate, title, end }) => {
+const ProductCard = ({ imgUrl, save, top, price, rate, title, end, id }) => {
   return (
     <Wrapper>
-      <Link to="#" className="linkTag">
+      <Link to={`/products/${id}`} className="linkTag">
         <div className="imgCon">
           <img src={imgUrl} alt="product image" />
         </div>
