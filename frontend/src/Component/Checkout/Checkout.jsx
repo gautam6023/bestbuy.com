@@ -37,17 +37,17 @@ export default function Checkout() {
         <div style={{ backgroundColor: "", margin: "2%" }}>
           <h2 style={{ fontSize: "14px" }}> Shipping</h2>
 
-          <p style={{ fontSize: "14px", lineHeight: "3" }}>
+          <div style={{ fontSize: "14px", lineHeight: "3" }}>
             {" "}
             * indicates required information{" "}
-          </p>
+          </div>
         </div>
         <div style={{ backgroundColor: "white", margin: "2%", padding: "1%" }}>
           <Box>
-            <p>
+            <div>
               {" "}
               <strong style={{ fontSize: "14px" }}>Contact Information </strong>
-            </p>
+            </div>
             <div style={{ marginLeft: "10px", marginTop: "1px" }}>
               <label
                 style={{ fontSize: "14px", lineHeight: "20px" }}
@@ -64,7 +64,7 @@ export default function Checkout() {
                   handlerChange(e);
                 }}
               />
-              <p
+              <div
                 style={{
                   fontSize: "12px",
                   lineHeight: "16px",
@@ -72,17 +72,17 @@ export default function Checkout() {
                 }}
               >
                 We'll send order updates to this email.
-              </p>
+              </div>
             </div>
           </Box>
         </div>
         <div style={{ backgroundColor: "white", margin: "2%", padding: "1%" }}>
           <Box>
             <form action="">
-              <p>
+              <div>
                 {" "}
                 <strong style={{ fontSize: "14px" }}>Shipping Address </strong>
-              </p>
+              </div>
               <div style={{ display: "flex", margin: "5px" }}>
                 <div style={{ width: "100%" }}>
                   {" "}
@@ -159,7 +159,7 @@ export default function Checkout() {
                   />
                 </div>
               </div>
-              <p
+              <div
                 style={{
                   fontSize: "12px",
                   lineHeight: "16px",
@@ -168,7 +168,7 @@ export default function Checkout() {
                 }}
               >
                 We’ll only call you if there’s an issue with the order.
-              </p>
+              </div>
               <div style={{ marginTop: "10px" }}>
                 <label
                   style={{ fontSize: "14px", lineHeight: "20px" }}
@@ -263,9 +263,9 @@ export default function Checkout() {
               </div>
             </form>
             <div style={{ backgroundColor: "#f4f6f9", marginTop: "10px" }}>
-              <p style={{ fontSize: "14px", padding: "10px" }}>
+              <div style={{ fontSize: "14px", padding: "10px" }}>
                 We only ship to Canada.
-              </p>
+              </div>
             </div>
           </Box>
         </div>

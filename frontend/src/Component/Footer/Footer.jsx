@@ -414,7 +414,7 @@ function Footer() {
               paddingLeft: "20px",
             }}
           >
-            <p
+            <div
               style={{
                 fontSize: "12px",
                 fontWeight: "600",
@@ -422,11 +422,11 @@ function Footer() {
               }}
             >
               Be the first to know
-            </p>
-            <p style={{ fontSize: "12px", lineHeight: "17px", width: "40%" }}>
+            </div>
+            <div style={{ fontSize: "12px", lineHeight: "17px", width: "40%" }}>
               Sign up to stay in the loop about the hottest deals, coolest new
               products, and exclusive sales events.
-            </p>
+            </div>
             <input
               style={{ width: "200px", height: "38px", marginTop: "10px" }}
               type="text"
@@ -476,15 +476,15 @@ function Footer() {
         >
           <div style={{marginTop:"10px"}}>
             {" "}
-            <p>
+            <div>
               © Best Buy Canada Ltd. Suite #102, 425 West 6th Avenue, Vancouver,
               BC V5Y 1L3
-            </p>
-            <p>
+            </div>
+            <div>
               Terms & Conditions | Conditions of Use | Online Policies |
               Interest-Based Ads | Privacy Policy | Accessibility Policy | Geek
               Squad Terms & Conditions | Product Recalls | Credits |
-            </p>
+            </div>
           </div>
         </div>
       </div>

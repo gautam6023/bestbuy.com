@@ -26,7 +26,7 @@ export default function Menu() {
         {({ TransitionProps }) => (
           <Fade {...TransitionProps} timeout={350}>
             <Paper>
-              <Typography sx={{ p: 2 }}>
+              <Typography sx={{ div: 2 }}>
                 <RightStart data={{title:"Tops Deals", descriptoon:"About top deals"}}/></Typography>
             </Paper>
           </Fade>

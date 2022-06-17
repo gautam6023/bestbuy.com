@@ -62,7 +62,7 @@ function Navbar() {
       >
         <div>
           <a
-            class="anchortag"
+            className="anchortag"
             style={{
               textDecoration: "none",
               color: "white",
@@ -273,9 +273,9 @@ function Navbar() {
               <b style={{ fontSize: "12px" }}> Shop by Category</b>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 {" "}
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   Computers, Tablets, & Accessories{" "}
-                </p>{" "}
+                </div>{" "}
                 <img
                   style={{
                     width: "15px",
@@ -288,9 +288,9 @@ function Navbar() {
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 {" "}
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   Cell Phones and Accessories
-                </p>{" "}
+                </div>{" "}
                 <img
                   style={{
                     width: "15px",
@@ -302,7 +302,7 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>Office Supplies & Ink</p>
+                <div style={{ lineHeight: "1.3" }}>Office Supplies & Ink</div>
                 <img
                   style={{
                     width: "15px",
@@ -314,7 +314,7 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>TV & Home Theatre</p>
+                <div style={{ lineHeight: "1.3" }}>TV & Home Theatre</div>
                 <img
                   style={{
                     width: "15px",
@@ -326,9 +326,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   Headphones, Speakers ,& Audio
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -340,7 +340,7 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>Cameras & Camcorders</p>
+                <div style={{ lineHeight: "1.3" }}>Cameras & Camcorders</div>
                 <img
                   style={{
                     width: "15px",
@@ -352,7 +352,7 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>Car Tech and GPS</p>
+                <div style={{ lineHeight: "1.3" }}>Car Tech and GPS</div>
                 <img
                   style={{
                     width: "15px",
@@ -364,7 +364,7 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>Appliances</p>
+                <div style={{ lineHeight: "1.3" }}>Appliances</div>
                 <img
                   style={{
                     width: "15px",
@@ -376,7 +376,7 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>Smart Home</p>
+                <div style={{ lineHeight: "1.3" }}>Smart Home</div>
                 <img
                   style={{
                     width: "15px",
@@ -388,7 +388,7 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>Home Living</p>
+                <div style={{ lineHeight: "1.3" }}>Home Living</div>
                 <img
                   style={{
                     width: "15px",
@@ -400,7 +400,7 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>Baby & Maternity</p>
+                <div style={{ lineHeight: "1.3" }}>Baby & Maternity</div>
                 <img
                   style={{
                     width: "15px",
@@ -413,7 +413,7 @@ function Navbar() {
               </div>
 
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>Video Games & VR</p>
+                <div style={{ lineHeight: "1.3" }}>Video Games & VR</div>
                 <img
                   style={{
                     width: "15px",
@@ -425,7 +425,7 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>Wearable Technology</p>
+                <div style={{ lineHeight: "1.3" }}>Wearable Technology</div>
                 <img
                   style={{
                     width: "15px",
@@ -437,7 +437,7 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>Health & Fitness</p>
+                <div style={{ lineHeight: "1.3" }}>Health & Fitness</div>
                 <img
                   style={{
                     width: "15px",
@@ -449,9 +449,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   Sports, Recreation, & Transportation
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -463,7 +463,7 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>Movies & Music</p>
+                <div style={{ lineHeight: "1.3" }}>Movies & Music</div>
                 <img
                   style={{
                     width: "15px",
@@ -530,9 +530,9 @@ function Navbar() {
                <b style={{ fontSize: "12px" }}>Popular Brands</b>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 {" "}
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   Acer{" "}
-                </p>{" "}
+                </div>{" "}
                 <img
                   style={{
                     width: "15px",
@@ -545,9 +545,9 @@ function Navbar() {
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 {" "}
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   Amazon
-                </p>{" "}
+                </div>{" "}
                 <img
                   style={{
                     width: "15px",
@@ -559,7 +559,7 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>Apple</p>
+                <div style={{ lineHeight: "1.3" }}>Apple</div>
                 <img
                   style={{
                     width: "15px",
@@ -571,7 +571,7 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>Asus</p>
+                <div style={{ lineHeight: "1.3" }}>Asus</div>
                 <img
                   style={{
                     width: "15px",
@@ -583,9 +583,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   Beats By Dr.Dre
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -597,9 +597,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   Bose
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -611,9 +611,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   Breville
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -625,9 +625,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   Canon
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -639,9 +639,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   Dell
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -653,9 +653,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   Dyson
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -667,9 +667,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   Fitbit
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -681,9 +681,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   GE
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -695,9 +695,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   Google
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -709,9 +709,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   GoPro
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -723,9 +723,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   HP
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -737,9 +737,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   Insignia
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -751,9 +751,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   Instant Pot
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -765,9 +765,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   JBL
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -779,9 +779,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   KitchenAid
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -793,9 +793,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   Lenovo
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -807,9 +807,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   LG
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -821,9 +821,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   Logitech
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -835,9 +835,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   Microsoft
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -849,9 +849,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   Nintendo
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -863,9 +863,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   NVIDIA
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -877,9 +877,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                 Panasonic
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -891,9 +891,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                 Philips
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -905,9 +905,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   PlayStation
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -919,9 +919,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                  Samsung
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -933,9 +933,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                  Seagate
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -947,9 +947,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                  Sharp
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -961,9 +961,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   Sony
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -975,9 +975,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   Toshiba
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -989,9 +989,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   Ultimates Ears
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -1003,9 +1003,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   WhirlPool
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",
@@ -1017,9 +1017,9 @@ function Navbar() {
                 />{" "}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <p style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3" }}>
                   Xbox
-                </p>
+                </div>
                 <img
                   style={{
                     width: "15px",

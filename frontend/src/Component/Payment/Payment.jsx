@@ -42,12 +42,12 @@ export default function Payment() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                <p style={{ textAlign: "left" }}>
+                <div style={{ textAlign: "left" }}>
                   You can apply up to 2 gift cards per order.
-                </p>
-                <p style={{ textAlign: "left" }}>
+                </div>
+                <div style={{ textAlign: "left" }}>
                   We don't accept gift cards with Best Buy Financing.
-                </p>
+                </div>
                 <div
                   style={{ width: "100%", display: "flex", marginTop: "10px" }}
                 >
@@ -118,9 +118,9 @@ export default function Payment() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                <p style={{ textAlign: "left", fontWeight: "600" }}>
+                <div style={{ textAlign: "left", fontWeight: "600" }}>
                   Card Information
-                </p>
+                </div>
                 <Box
                   sx={{
                     border: "none",
@@ -133,12 +133,12 @@ export default function Payment() {
                     style={{ width: "100%", textAlign: "left", margin: "10px" }}
                   >
                     {" "}
-                    <p style={{ fontWeight: "600", display: "block" }}>
+                    <div style={{ fontWeight: "600", display: "block" }}>
                       New Card{" "}
-                    </p>
-                    <p style={{ fontSize: "12px", lineHeight: "26px" }}>
+                    </div>
+                    <div style={{ fontSize: "12px", lineHeight: "26px" }}>
                       We accept the following cards.
-                    </p>
+                    </div>
                     <div
                       style={{
                         display: "flex",
@@ -260,7 +260,7 @@ export default function Payment() {
                       </div>
                       <div style={{ width: "25%", textAlign: "left" }}>
                         {" "}
-                      <p style={{fontSize:"12px" , marginTop:"25px"}}>This 3 or 4 digit code is on the back or front of your card.</p>
+                      <div style={{fontSize:"12px" , marginTop:"25px"}}>This 3 or 4 digit code is on the back or front of your card.</div>
 
                     
                       </div>
@@ -268,15 +268,15 @@ export default function Payment() {
                   </div>
                 </Box>
                 <div style={{borderTop:"1px solid #e4e9f1" , backgroundColor:"#ffffff"}}> 
-          <p style={{ textAlign: "left", fontWeight: "600" , marginTop:"10px" , marginLeft:"1px" }}>
+          <div style={{ textAlign: "left", fontWeight: "600" , marginTop:"10px" , marginLeft:"1px" }}>
           Billing Address
-                </p>
+                </div>
                 <div style={{backgroundColor:"white" , marginTop:"10px" , fontSize:"12px", lineHeight:"20px", border:"1px solid black" , textAlign:"left" , padding:"10px"}}>
                
-                 <p style={{fontWeight:"600" , fontSize:"16px"}}>{firstName} - {city} ,{postalCode}  </p>
-                 <p>{firstName} {lastName}  </p>
-                 <p>{address}  {city} </p>
-                 <p> {MobileNumber} </p>
+                 <div style={{fontWeight:"600" , fontSize:"16px"}}>{firstName} - {city} ,{postalCode}  </div>
+                 <div>{firstName} {lastName}  </div>
+                 <div>{address}  {city} </div>
+                 <div> {MobileNumber} </div>
                 </div>
           </div>
           <div style={{marginTop:"10px"  ,borderTop:"1px solid #ffffff"}}>
@@ -292,10 +292,10 @@ export default function Payment() {
               <Typography>
                 <div style={{textAlign:"left"}}>
                 <form action="">
-              <p>
+              <div>
                 {" "}
                 <strong style={{ fontSize: "14px" }}>Shipping Address </strong>
-              </p>
+              </div>
               <div style={{ display: "flex", margin: "5px" }}>
                 <div style={{ width: "100%" }}>
                   {" "}
@@ -372,7 +372,7 @@ export default function Payment() {
                   />
                 </div>
               </div>
-              <p
+              <div
                 style={{
                   fontSize: "12px",
                   lineHeight: "16px",
@@ -381,7 +381,7 @@ export default function Payment() {
                 }}
               >
                 We’ll only call you if there’s an issue with the order.
-              </p>
+              </div>
               <div style={{ marginTop: "10px" }}>
                 <label
                   style={{ fontSize: "14px", lineHeight: "20px" }}
@@ -497,8 +497,8 @@ export default function Payment() {
             <AccordionDetails>
               <Typography>
                 <div style={{textAlign:"left" , fontSize:"12px"}}>
-            <p>Select "Pay with PayPal" to enter your payment details on the PayPal site.</p>
-                <div style={{ display:"flex", justifyContent:"center", height:"50px", paddingTop:"10px"  ,width:"100%" , backgroundColor:"#009cde" , textAlign:"center" , color:"white"}}> <p style={{fontSize:"14px" , marginTop:"3px"}}>Pay with</p>  <img  style={{width:"80px" , height:"30px"}} src="https://www.bestbuy.ca/ch/static/media/paypal-white.31d24521.svg" alt="" /> </div>
+            <div>Select "Pay with PayPal" to enter your payment details on the PayPal site.</div>
+                <div style={{ display:"flex", justifyContent:"center", height:"50px", paddingTop:"10px"  ,width:"100%" , backgroundColor:"#009cde" , textAlign:"center" , color:"white"}}> <div style={{fontSize:"14px" , marginTop:"3px"}}>Pay with</div>  <img  style={{width:"80px" , height:"30px"}} src="https://www.bestbuy.ca/ch/static/media/paypal-white.31d24521.svg" alt="" /> </div>
                 </div>
           
               </Typography>
@@ -515,13 +515,13 @@ export default function Payment() {
               <Typography style={{}}>
                 <div style={{display:"flex"}}> 
                 <img style={{width:"70px" ,height:"30px"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUKTdZ-0crtPPgc0250NIy5AjDiM-u429CiNYpCCZvUq6F4IDNU7uuy2R6_TmX7KLy3Ho&usqp=CAU"></img>
-                <p style={{fontWeight:"600"}}>
+                <div style={{fontWeight:"600"}}>
                   Financing
-                </p>
+                </div>
               
                 </div>
                 
-                <p style={{textAlign:"left" , fontWeight:"600" , fontSize:"12px"}}>Credit provided by Fairstone Financial Inc.</p>
+                <div style={{textAlign:"left" , fontWeight:"600" , fontSize:"12px"}}>Credit provided by Fairstone Financial Inc.</div>
                </Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -529,18 +529,18 @@ export default function Payment() {
               
                
                 <div style={{borderTop:"1px solid #e4e9f1" , backgroundColor:"#ffffff"}}> 
-                <p style={{fontSize:"12px" , marginLeft:"10px" , textAlign:"left" , marginTop:"5px"}}>
+                <div style={{fontSize:"12px" , marginLeft:"10px" , textAlign:"left" , marginTop:"5px"}}>
                 Your <b> Billing Address</b> must match the address on your <b> Fairstone</b> account. If it doesn’t, please add a <b> New Address.</b>
-                </p>
-          <p style={{ textAlign: "left", fontWeight: "600" , marginTop:"10px" , marginLeft:"1px" }}>
+                </div>
+          <div style={{ textAlign: "left", fontWeight: "600" , marginTop:"10px" , marginLeft:"1px" }}>
           Billing Address
-                </p>
+                </div>
                 <div style={{backgroundColor:"white" , marginTop:"10px" , fontSize:"12px", lineHeight:"20px", border:"1px solid black" , textAlign:"left" , padding:"10px"}}>
                
-                 <p style={{fontWeight:"600" , fontSize:"16px"}}>{firstName} - {city} ,{postalCode}  </p>
-                 <p>{firstName} {lastName}  </p>
-                 <p>{address}  {city} </p>
-                 <p> {MobileNumber} </p>
+                 <div style={{fontWeight:"600" , fontSize:"16px"}}>{firstName} - {city} ,{postalCode}  </div>
+                 <div>{firstName} {lastName}  </div>
+                 <div>{address}  {city} </div>
+                 <div> {MobileNumber} </div>
                 </div>
           </div>
           <div style={{marginTop:"10px"  ,borderTop:"1px solid #ffffff"}}>
@@ -556,10 +556,10 @@ export default function Payment() {
               <Typography>
                 <div style={{textAlign:"left"}}>
                 <form action="">
-              <p>
+              <div>
                 {" "}
                 <strong style={{ fontSize: "14px" }}>Shipping Address </strong>
-              </p>
+              </div>
               <div style={{ display: "flex", margin: "5px" }}>
                 <div style={{ width: "100%" }}>
                   {" "}
@@ -636,7 +636,7 @@ export default function Payment() {
                   />
                 </div>
               </div>
-              <p
+              <div
                 style={{
                   fontSize: "12px",
                   lineHeight: "16px",
@@ -645,7 +645,7 @@ export default function Payment() {
                 }}
               >
                 We’ll only call you if there’s an issue with the order.
-              </p>
+              </div>
               <div style={{ marginTop: "10px" }}>
                 <label
                   style={{ fontSize: "14px", lineHeight: "20px" }}
@@ -752,7 +752,9 @@ export default function Payment() {
         </div>
         
       </div>
-      <div style={{ width: "40%" }}></div>
+      <div style={{ width: "40%" }}>
+                      <button onClick={()=>{toLacalStorage()}}>click me to save data</button>
+      </div>
     </div>
   );
 }

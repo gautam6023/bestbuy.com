@@ -25,7 +25,7 @@ export default function RightStart() {
         {({ TransitionProps }) => (
           <Fade {...TransitionProps} timeout={350}>
             {/* <Paper>
-              <Typography sx={{ p: 2 }}>The content of the Popper.</Typography>
+              <Typography sx={{ div: 2 }}>The content of the Popper.</Typography>
             </Paper> */}
             <div>shubham</div>
           </Fade>
