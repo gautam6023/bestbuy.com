@@ -79,23 +79,27 @@ return (
         {data.map((e,i)=>{
             return(
             <div className="abcd" key={i}>
-                <img src={e.img} alt="l;koj"></img>
+                <div className="abcdgrid">
+                <div className="imgdiv">
+                    <img src={e.img} alt="l;koj"></img>
+                </div>
                 <p style={{fontWeight:"bold"}}>{e.title}</p>
                 <p >{e.availabily}</p>
                 <a href="/" style={{textDecoration:"none" ,color:"blue"}}><p >{e.chat}</p></a>
+                </div>
             </div>
             )
         })}
         </div>
-
-        <div style={{width:"50%", margin:"auto",textAlign:"center" }}><h3>Get more from your tech with our full support</h3>
+        <div style={{width:"60%", margin:"auto",textAlign:"center" }}><h4 style={{marginTop:"18%"}}>Get more from your tech with our full support</h4>
        </div>
-       
+
     </div>
 
 
     </>
 )
+
 
 
 

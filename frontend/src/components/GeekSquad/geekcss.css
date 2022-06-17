@@ -1,7 +1,10 @@
+*{
+    font-family: "Human BBY,Arial,sans-serif";
+}
 .geek{
     width : 70vw;
     margin: auto;
-    background-color: bisque;
+    /* background-color: bisque; */
 }
 #first_div{
     font-size: x-large;
@@ -14,9 +17,32 @@
     height: 25vw;
 }
 .div1{
-    width: 40%;
+    width: 35%;
     margin-top: 5%;
+    /* border: 1px solid blue; */
+    
+}
+.div1>div>img{
+    width: 50%;
+    margin-bottom: 0px;
+}
+.div1>h3{
+    margin-top: 0px;
 }
 .abcd{
     margin: 1%;
+}
+.gridcom{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2%;
+}
+.abcdgrid{
+height: 19vw;
+}
+.imgdiv>img{
+    height: 100%;
+}
+.imgdiv{
+    height: 55%;
 }

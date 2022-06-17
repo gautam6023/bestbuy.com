@@ -4,6 +4,7 @@ import Mapcompo from './Mapcompo'
 // import MapPart from './Mapcompo'
 import UpperPart from './UpperPart'
 import Gridcompo from "./Gridcompo"
+import Lastgreek from './Lastgreek'
 
 export default function GeekSquad(){
 
@@ -13,6 +14,7 @@ export default function GeekSquad(){
                 <UpperPart />
                 <Mapcompo/>
                 <Gridcompo/>
+                <Lastgreek/>
             </div>
         </>
     )
