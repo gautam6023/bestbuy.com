@@ -3,6 +3,9 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { ADD } from "../../Redux/Card Reducer/actions";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const A = styled.div`
   display: block;
@@ -278,6 +281,17 @@ const Bl = styled.button`
 const Detailsitem = () => {
   const [data, setData] = useState([]);
   const { id } = useParams();
+  const dispatch = useDispatch();
+  const carts = useSelector((state) => state.cartreducer.carts);
+
+  const send = (e) => {
+    console.log(e);
+    dispatch(ADD(e));
+  };
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(carts));
+  }, [carts]);
+  console.log(data);
 
   useEffect(() => {
     async function getData() {
@@ -290,6 +304,7 @@ const Detailsitem = () => {
 
   return (
     <>
+      <Link to="/cart">cart</Link>
       <Big>
         <div>
           <H1>{data.title}</H1>
@@ -404,7 +419,7 @@ const Detailsitem = () => {
                 </Li>
               </div>
               <div>
-                <B1>Add To CArt</B1>
+                <B1 onClick={() => send(data)}>Add To CArt</B1>
               </div>
               <div>
                 <B2>Pick Up at Store</B2>
