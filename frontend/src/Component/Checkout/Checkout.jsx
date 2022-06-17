@@ -1,5 +1,6 @@
 import { Box } from "@mui/system";
 import React, { useState } from "react";
+import styles from "../../styles/Navbar.module.css";
 
 export default function Checkout() {
   const [data, setData] = useState({});

@@ -6,6 +6,7 @@ import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import Fade from "@mui/material/Fade";
 import Paper from "@mui/material/Paper";
+import styles from "../../styles/Navbar.module.css";
 
 export default function RightStart() {
   const [anchorEl, setAnchorEl] = React.useState(null);

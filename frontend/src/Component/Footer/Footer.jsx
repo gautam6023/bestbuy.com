@@ -6,6 +6,7 @@ import { GrLinkedinOption } from 'react-icons/gr';
 import { FaPinterestP } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
 import { AiFillYoutube } from 'react-icons/ai';
+import styles from "../../styles/Navbar.module.css";
 
 
 
@@ -15,8 +16,8 @@ function Footer() {
   return (
     <>
       <div style={{ backgroundColor: "#f4f6f9"  }}>
-        <div style={{ display: "grid", gridTemplateColumns: "794px 600px" }}>
-          <div style={{ width: "100%", height: "320px" }}>
+        <div style={{ display: "flex" }}>
+          <div style={{ width: "66%", height: "320px" }}>
             <div
               style={{
                 display: "grid",
@@ -404,8 +405,9 @@ function Footer() {
           <div
             style={{
               textAlign: "left",
-              marginLeft: "100px",
-              width: "100%",
+              marginLeft: "10%",
+              marginTop:"1%",
+              width: "34%",
               height: "300px",
               textAlign: "justify",
               borderLeft: "1px solid #e7ecf3",
@@ -441,22 +443,22 @@ function Footer() {
               Signup
             </button>
             <div style={{ display: "flex", justifyContent: "start"  , gap:"35px" , marginTop:"10px"}}>
-              <a href="" style={{textDecoration:"none" , color:"inherit"  }}>
+              <a href="https://www.facebook.com/BestBuyCanada" target={"_blank"} style={{textDecoration:"none" , color:"inherit"  }}>
                 <RiFacebookLine />
               </a>
-              <a href="" style={{textDecoration:"none" , color:"inherit"  }}>
+              <a href="https://www.instagram.com/accounts/login/?next=/bestbuycanada/" target={"_blank"} style={{textDecoration:"none" , color:"inherit"  }}>
                 <GrLinkedinOption />
               </a>
-              <a href="" style={{textDecoration:"none" , color:"inherit"  }}>
+              <a href="https://www.linkedin.com/company/best-buy/" target={"_blank"} style={{textDecoration:"none" , color:"inherit"  }}>
                 <AiOutlineInstagram />
               </a>
-              <a href="" style={{textDecoration:"none" , color:"inherit"  }}>
+              <a href="https://www.pinterest.com/bestbuycanada/" target={"_blank"} style={{textDecoration:"none" , color:"inherit"  }}>
                 <FaPinterestP />
               </a>
-              <a href="" style={{textDecoration:"none" , color:"inherit"  }}>
+              <a href="https://twitter.com/bestbuycanada" target={"_blank"} style={{textDecoration:"none" , color:"inherit"  }}>
                 <FaTwitter />
               </a>
-              <a href="" style={{textDecoration:"none" , color:"inherit"  }}>
+              <a href="https://www.youtube.com/user/CanadaBestBuy" target={"_blank"} style={{textDecoration:"none" , color:"inherit"  }}>
                 <AiFillYoutube />
               </a>
             </div>

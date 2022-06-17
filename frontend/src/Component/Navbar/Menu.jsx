@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Fade from '@mui/material/Fade';
 import Paper from '@mui/material/Paper';
 import RightStart from './RightStart';
+import styles from "../../styles/Navbar.module.css";
 
 export default function Menu() {
   const [anchorEl, setAnchorEl] = React.useState(null);

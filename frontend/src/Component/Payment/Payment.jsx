@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Acoordian from "./Acoordian";
+import styles from "../../styles/Navbar.module.css";
 
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -504,7 +505,7 @@ export default function Payment() {
             </AccordionDetails>
           </Accordion>
           </div>
-          <div>
+          <div style={{marginTop:"10px"}}>
           <Accordion>
             <AccordionSummary
               expandIcon={<RadioButtonCheckedIcon />}
@@ -517,8 +518,9 @@ export default function Payment() {
                 <p style={{fontWeight:"600"}}>
                   Financing
                 </p>
+              
                 </div>
-               
+                
                 <p style={{textAlign:"left" , fontWeight:"600" , fontSize:"12px"}}>Credit provided by Fairstone Financial Inc.</p>
                </Typography>
             </AccordionSummary>
@@ -527,6 +529,9 @@ export default function Payment() {
               
                
                 <div style={{borderTop:"1px solid #e4e9f1" , backgroundColor:"#ffffff"}}> 
+                <p style={{fontSize:"12px" , marginLeft:"10px" , textAlign:"left" , marginTop:"5px"}}>
+                Your <b> Billing Address</b> must match the address on your <b> Fairstone</b> account. If it doesn’t, please add a <b> New Address.</b>
+                </p>
           <p style={{ textAlign: "left", fontWeight: "600" , marginTop:"10px" , marginLeft:"1px" }}>
           Billing Address
                 </p>
