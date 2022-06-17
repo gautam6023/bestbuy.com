@@ -9,11 +9,11 @@ import Payment from './Component/Payment/Payment';
 function App() {
   return (
     <div className="App">
-     <Navbar/>
-     <Checkout/>
-    
- <Payment/>
- <Footer/> 
+      <Navbar />
+      <Checkout />
+
+      <Payment />
+      <Footer />
     </div>
   );
 }
