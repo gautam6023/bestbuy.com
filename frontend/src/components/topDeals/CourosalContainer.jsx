@@ -11,6 +11,9 @@ const Wrapper = styled.div`
   background-size: cover;
   border-radius: 10px;
   display: flex;
+  background-position: center center;
+  background-repeat: no-repeat;
+
   margin: 30px 0;
 
   & > div {
@@ -23,7 +26,7 @@ const Wrapper = styled.div`
     padding-right: 0;
     display: flex;
     flex-direction: column;
-    color: #ffffff;
+    color: ${(props) => (props.textColor ? props.textColor : "#ffffff")};
     gap: 15px;
     img {
       width: ${(props) => (props.logoSize ? props.logoSize : "auto")};
@@ -54,9 +57,11 @@ const Wrapper = styled.div`
     width: 60%;
     height: 45px;
     border: 0;
-    color: #0046be;
-    background-color: #ffffff;
-    font-size: 18px;
+    .link {
+      color: ${(props) => (props.btnColor ? props.btnColor : "#0046be")};
+    }
+    background-color: ${(props) => (props.btnBg ? props.btnBg : "#ffffff")};
+    font-size: 14px;
     cursor: pointer;
     font-weight: 600;
   }
@@ -71,17 +76,27 @@ const CourosalContainer = ({
   bg,
   data,
   logoSize,
+  cardShadow,
+  textColor,
+  btnBg,
+  btnColor,
 }) => {
+  let css = {
+    cardShadow,
+    textColor,
+    btnBg,
+    btnColor,
+  };
   console.log(logoSize);
   return (
-    <Wrapper bg={bg} logoSize={logoSize}>
+    <Wrapper bg={bg} logoSize={logoSize} {...css}>
       <div className="detailsOfCourosol">
         <img src={logo} alt="" />
         <p className="title">{title}</p>
         <p className="desc">{desc}</p>
         {button ? (
           <button className="button">
-            <a href="#" style={{ textDecoration: "none" }}>
+            <a className="link" href="#" style={{ textDecoration: "none" }}>
               {button}
             </a>
           </button>
@@ -90,7 +105,7 @@ const CourosalContainer = ({
         )}
       </div>
       <div className="courosol">
-        <SliderComp data={data} />
+        <SliderComp data={data} cardShadow={cardShadow} />
       </div>
     </Wrapper>
   );

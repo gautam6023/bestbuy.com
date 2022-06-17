@@ -56,11 +56,26 @@ const TopDeals = () => {
   let courosal2 = {
     logo: "https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/bltae328b343cf3a02a/624f50345b71147a38d9ef1b/mp-20211105-logo-picks-white.png",
     title: "Save on the latest tech and more.",
-    desc: "Discover this week’s top Marketplace deals from our trusted sellers.",
+    desc: "Discover this week's top Marketplace deals from our trusted sellers.",
     // button: "Add to cart",
 
     bg: "https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/blt8e1e4ddccfad34af/61d5f9d095fe2513b569c488/global-topdeals-20220107-showcase-bg-m.jpg?width=5760&quality=80&auto=webp",
     data,
+  };
+
+  let courosal3 = {
+    logo: "https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/bltb758fd90e2973508/617b44daa2b4ac1067d75d22/global-lg-evergreen-featureskulist-logo-2.png",
+    title: "Save on the latest tech and more.",
+    desc: "Discover this week's top Marketplace deals from our trusted sellers.",
+    button: "Explore Greatest Tech",
+
+    bg: "https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/blt19347504a66c4c3c/6177317b6c56425dcbf64c33/global-lg-evergreen-featureskulist-less-m.jpg?width=5760&quality=80&auto=webp",
+    data,
+
+    cardShadow: "0 4px 16px rgb(0 0 0 / 8%)",
+    textColor: "#020808",
+    btnBg: "#0046be",
+    btnColor: "#ffffff",
   };
 
   useEffect(() => {
@@ -100,6 +115,7 @@ const TopDeals = () => {
         </div>
       </div>
       <CourosalContainer className="courosalContainer" {...courosal2} />
+      <CourosalContainer className="courosalContainer" {...courosal3} />
     </TopDealsDiv>
   );
 };

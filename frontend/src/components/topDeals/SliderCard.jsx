@@ -14,6 +14,7 @@ const Wrapper = styled.div`
   gap: 25px;
   text-align: left;
   line-height: 16px;
+  box-shadow: ${(props) => (props.cardShadow ? props.cardShadow : 0)};
   img {
     width: 100%;
     border-top-left-radius: 10px;
@@ -46,7 +47,7 @@ const Wrapper = styled.div`
 `;
 const SliderCard = (el) => {
   return (
-    <Wrapper>
+    <Wrapper cardShadow={el.cardShadow}>
       <Link to="#" style={{ textDecoration: "none" }}>
         <img src={el.imgUrl} alt="" />
         <div className="desc">

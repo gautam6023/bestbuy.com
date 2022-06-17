@@ -67,7 +67,7 @@ const CourosolDiv = styled.div`
 
 // import Swiper core and required modules
 
-export const SliderComp = ({ data }) => {
+export const SliderComp = ({ data, cardShadow }) => {
   console.log(data, "s");
   return (
     <CourosolDiv>
@@ -90,7 +90,7 @@ export const SliderComp = ({ data }) => {
         {data.map((el) => {
           return (
             <SwiperSlide key={el.id} className={"sliderEl"}>
-              <SliderCard {...el} />
+              <SliderCard {...el} cardShadow={cardShadow} />
             </SwiperSlide>
           );
         })}

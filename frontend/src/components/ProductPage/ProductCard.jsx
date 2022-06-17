@@ -62,9 +62,10 @@ const Wrapper = styled.div`
       font-size: 12px;
       display: flex;
       align-items: center;
-
+      gap: 5px;
       & > span:first-child {
         color: #5d9e2f;
+        /* border: 1px solid #bb0628; */
       }
     }
   }
