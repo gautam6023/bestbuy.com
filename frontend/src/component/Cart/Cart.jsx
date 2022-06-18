@@ -6,7 +6,12 @@ import './cart.css'
 import { CartCard } from './CartCard'
 import {AiFillMinusCircle} from 'react-icons/ai'
 import {AiFillPlusCircle} from 'react-icons/ai'
+import {AiOutlineDollarCircle} from 'react-icons/ai'
 import {RiDeleteBin6Line} from 'react-icons/ri'
+import {BsCart4} from 'react-icons/bs'
+import {BiTimer} from 'react-icons/bi'
+import {GiStarAltar} from 'react-icons/gi'
+import {FaShippingFast} from 'react-icons/fa'
 export const Cart = () => {
 
     const [price, setPrice] = useState(0);
@@ -54,28 +59,19 @@ export const Cart = () => {
 <div className="cartY">
     Your Cart
 </div>
-<div className="cartParent">
+<div className="cartE">
 
             {carts.length === 0 ? (
                 <div className="cart-empty">
-                    <p>Your Cart is currently empty</p>
+                    <div><h2>Looks like it's empty!</h2>
+                    <p style={{fontSize:"16px"}}>Why not add SomeThing ?</p></div>
                     <div className="start-shopping">
-                        <Link to="/">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                fill="currentColor"
-                                className="bi bi-arrow-left"
-                                viewBox="0 0 16 16">
-                                <path fillRule="evenodd"
-                                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
-                            </svg>
-                            <span>Start Shopping</span>
-                        </Link>
+                      <Link to="/prod">  <BsCart4 size= "120px" color="#1d252c"/></Link>
                     </div>
                 </div>
             ) : (
-                
+                <div className="cartParent">
+
                 <div className="cartLeft"> <div className="cardLeftI">Sold and shipped by Best Buy Canada</div>
                     {carts.map(cartItem => {
                         return (
@@ -99,7 +95,7 @@ export const Cart = () => {
                             </div>
                             </>
                         )
-
+                        
                     })} 
                     <div className="subTotalH">
 
@@ -113,14 +109,19 @@ export const Cart = () => {
                            </div>
                 </div>
                     </div>
-
+                    <CartCard price={price} discount={discount} tax={tax} orderTotal={orderTotal} route={"/checkout"} />
+                    </div>
 
             )}
            
-            <CartCard price={price} discount={discount} tax={tax} orderTotal={orderTotal} route={"/checkout"} />
 
         </div>
-
+  <div className="valueProps">
+    <div className="cartVal"> <span className="cartIcon"><BiTimer  color="#0046be" size="40px" /></span> <span style={{margin:"16px 1px 1px 10px"}}  >Quick and Easy  <p> Store Pickup</p></span> </div>
+    <div className="cartVal"> <span  className="cartIcon"><FaShippingFast color= "#0046be" size="40px" /></span> <span style={{margin:"16px 1px 1px 10px"}}  >Free shipping  <p>over $35</p> </span></div>
+    <div className="cartVal"> <span className="cartIcon"><AiOutlineDollarCircle color="#0046be" size="40px" /></span > <span style={{margin:"16px 1px 1px 10px"}} >Low Price <p> Guarantee</p> </span> </div>
+    <div className="cartVal"> <span className="cartIcon"><GiStarAltar color="#0046be" size="40px" /></span> <span  style={{margin:"16px 1px 1px 10px"}} >Latest and <p>Greatest Tech</p>  </span></div>
+  </div>
 </div>
     )
 }

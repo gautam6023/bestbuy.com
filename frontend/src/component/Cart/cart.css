@@ -235,3 +235,35 @@
   line-height: 30px;
     
 }
+.cart-empty{
+    color: #1d252c;
+    padding: 0px 190px 0px 61px;
+    background-color: white;
+    display:flex;
+    justify-content:space-between;
+   
+}
+.valueProps {
+    background-color: white;
+    border-bottom: 1px solid #e0e6ef;
+    border-top: 1px solid #e0e6ef;
+    color: #1d252c;
+    display: flex;
+    padding: 82px 127px;
+    justify-content: space-around;
+    font-size: 16px;
+    line-height: 1px;
+     font-weight: 700; 
+    }
+  
+    .cartVal{
+    display:flex;
+    align-items: center;
+   color:#0046be;
+    justify-content:center;
+/* margin: auto; */
+}
+.cartVal:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
