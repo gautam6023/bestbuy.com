@@ -1,4 +1,4 @@
-/* .Box {
+.Box {
   margin: 0;
   padding: 0;
 }
@@ -60,12 +60,12 @@ a {
   padding: 0;
 }
 .types {
-  display: flex; */
+  display: flex;
 
   /* align-items: center; */
 }
 
-/* img {
+img {
   width: 100px;
   height: 60px;
 }
@@ -145,8 +145,8 @@ input {
   border-bottom: 0.5px solid #adadad;
   border-left: 0px;
   border-right: 0.5px solid #adadad;
-} */
-/* label {
+}
+label {
   margin-left: 0px;
   font-weight: lighter;
 }
@@ -183,22 +183,22 @@ Link {
   color: #0046be;
   font-weight: bold;
   font-size: 25px;
-} */
-/* .btns > a {
+}
+.btns > a {
   margin-left: 20px;
   font-weight: bold;
-} */
-/* button{
-    margin-top: 20px;
-    cursor: pointer;
-    border: 0px;
-    width: 170px;
-    height: 50px;
-    background-color: #0046be;
-    color: azure;
-    font-weight: bold;
-} */
-/* .scrtyicon{
-    font-size: 30px;
-    margin-top: -5px;
-} */
+}
+button {
+  margin-top: 20px;
+  cursor: pointer;
+  border: 0px;
+  width: 170px;
+  height: 50px;
+  background-color: #0046be;
+  color: azure;
+  font-weight: bold;
+}
+.scrtyicon {
+  font-size: 30px;
+  margin-top: -5px;
+}
