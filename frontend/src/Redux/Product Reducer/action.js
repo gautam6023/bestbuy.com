@@ -28,7 +28,7 @@ const getError = () => ({
 export const getData = (id) => async (dispatch) => {
   dispatch(getRequiest);
   try {
-    let { data } = await axios.get("http://localhost:8080/");
+    let { data } = await axios.get("http://localhost:8080/products");
 
     let finaldata;
     if (id !== "topdeals") {
@@ -57,7 +57,7 @@ const succsessFilter = (payload) => ({
 export const getFilterData = (params) => async (dispatch) => {
   try {
     let { data } = await axios.get("http://localhost:8080/filter", { params });
-    // dispatch(succsessFilter(data.data));
+    dispatch(succsessFilter(data.data));
     console.log(data);
   } catch (e) {
     console.log(e);
