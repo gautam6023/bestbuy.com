@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { DELETE, ADD, REMOVE } from '../../Redux/Card Reducer/actions';
+import { DELETE, ADD, REMOVE } from '../../../redux/actions';
 import './cart.css'
 import { CartCard } from './CartCard'
 import {AiFillMinusCircle} from 'react-icons/ai'
@@ -10,12 +10,12 @@ import {RiDeleteBin6Line} from 'react-icons/ri'
 export const Cart = () => {
 
     const [price, setPrice] = useState(0);
-    // console.log(price);
+    console.log(price);
     let discount = +(price * 0.05).toFixed(2);;
     let tax = +(price * 0.03).toFixed(2);
     let cartTotal = price - discount + tax
     let orderTotal = cartTotal.toFixed(2)
-    const carts = useSelector((state) => state.cartreducer.carts)
+    const carts = useSelector((state) => state.cartreducer.carts);
     console.log(carts);
 
     const dispatch = useDispatch();
@@ -101,13 +101,13 @@ export const Cart = () => {
                         )
 
                     })} 
-                    <div className="subTotalH">
+                    <div class="subTotalH">
 
-                           <div  className="subTotal">
-                            <div className="leftCol">  <span>Product Total</span>
+                           <div  class="subTotal">
+                            <div class="leftCol">  <span>Product Total</span>
                         
                             </div>
-                            <div className="rightCol" > <span>${price}</span>
+                            <div class="rightCol" > <span>${price}</span>
 
                             </div>
                            </div>

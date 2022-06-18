@@ -18,7 +18,7 @@ export const CartCard = ({price,discount,tax,orderTotal,route}) => {
            </div>
         </div>
         <div className='cartSearch'>
-        <div className="cartInput "><input style ={{height: '35px'}}type="text" /> </div>
+        <div class="cartInput "><input style ={{height: '35px'}}type="text" /> </div>
         <span><button className="cartBtn" >Search</button></span>
         <span><button className="cartBtn" style={{marginLeft:"10px" , width:"40px"}} ><MdGpsFixed size="25"/></button></span>
         </div>

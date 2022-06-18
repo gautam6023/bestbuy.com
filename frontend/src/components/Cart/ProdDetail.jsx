@@ -2,10 +2,10 @@ import {useParams} from 'react-router-dom'
 import axios from 'axios'
 import React,{useEffect,useState} from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { ADD } from '../../Redux/Card Reducer/actions'
+import { ADD } from '../../../redux/actions'
 
 
-    export const ProdDetail = () => {
+export const ProdDetail = () => {
     const dispatch = useDispatch();
     const carts = useSelector((state)=>state.cartreducer.carts);
 
@@ -13,6 +13,7 @@ import { ADD } from '../../Redux/Card Reducer/actions'
        console.log(e)
         dispatch(ADD(e));
     }
+    
     const{id} = useParams()
 
 
