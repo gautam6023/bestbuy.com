@@ -10,7 +10,7 @@ export const ProductPageContainer = styled.div`
     margin: auto;
   }
   .container {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: auto;
     display: flex;
   }
@@ -153,5 +153,16 @@ export const ProductPageContainer = styled.div`
         /* border: 1px solid red; */
       }
     }
+  }
+  .checkBoxesCon {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+  }
+  .loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 `;

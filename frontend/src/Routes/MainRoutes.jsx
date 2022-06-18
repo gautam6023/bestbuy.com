@@ -15,8 +15,8 @@ const MainRoutes = () => {
       <Navbar />
       <Routes>
         <Route path="/topdeals" element={<TopDeals />} />
-        <Route path="/products" element={<ProductContainer />} />
-        <Route path="/products/:id" element={<Detailsitem />} />
+        <Route path="/products/:id" element={<ProductContainer />} />
+        <Route path="/products/:id/:id" element={<Detailsitem />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
       <Footer />

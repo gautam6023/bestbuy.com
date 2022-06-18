@@ -1,12 +1,17 @@
 import React from "react";
 import { ProductPageContainer } from "./Product.styled";
 import ProductCard from "../../components/ProductPage/ProductCard";
+import { useSearchParams } from "react-router-dom";
 import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
   Typography,
   Checkbox,
+  FormControl,
+  FormLabel,
+  FormControlLabel,
+  FormGroup,
 } from "@mui/material";
 import axios from "axios";
 import { Switch } from "@mui/material";
@@ -14,6 +19,12 @@ import MuiAccordion from "@mui/material/Accordion";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useState } from "react";
 import { useEffect } from "react";
+import { getData } from "../../Redux/Product Reducer/action";
+import { useSelector, useDispatch } from "react-redux";
+import { CircularProgress } from "@mui/material";
+import { useParams } from "react-router-dom";
+// import { filterData } from "../../Redux/Product Reducer/action";
+import { getFilterData, sortData } from "../../Redux/Product Reducer/action";
 
 const categories = [
   {
@@ -84,6 +95,7 @@ const categories = [
 
 const brands = [
   "APPLE",
+  "AMAZON",
   "SAMSUNG",
   "ASUS",
   "HP",
@@ -100,18 +112,101 @@ const brands = [
   "LOGITECH",
 ];
 
+let offers = [
+  { title: "On Sale", value: "onSale" },
+  { title: "Top Deals", value: "topDeals" },
+  { title: "On Clearence", value: "onClearence" },
+  { title: "Refurbished", value: "refurbished" },
+  { title: "Open Box", value: "openBox" },
+  { title: "Online Only", value: "onlineOnly" },
+];
 const ProductContainer = () => {
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
+  const [filterOtions, setFilterOptions] = useState([]);
+  const [currantOffers, setCurrantOffers] = useState([]);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [filterBrands, setBrands] = useState([]);
+  const [filterClick, setFilterClick] = useState(false);
+  const { products, filterData, isLoading, isError } = useSelector(
+    (state) => state.products
+  );
+  const dispatch = useDispatch();
+  const { id } = useParams();
+  console.log(id);
+  // console.log(filterOtions);
+  useEffect(() => {
+    dispatch(getData(id));
+  }, [dispatch]);
+
+  const getFilteredOpt = (e) => {
+    setFilterClick(true);
+    const index = filterOtions.indexOf(e.target.value);
+
+    if (index === -1) {
+      setFilterOptions([...filterOtions, e.target.value]);
+    } else {
+      setFilterOptions(filterOtions.filter((el) => el != e.target.value));
+    }
+  };
+
+  const getCOffers = (e) => {
+    setFilterClick(true);
+    const index = currantOffers.indexOf(e.target.value);
+
+    if (index === -1) {
+      setCurrantOffers([...currantOffers, e.target.value]);
+    } else {
+      setCurrantOffers(currantOffers.filter((el) => el != e.target.value));
+    }
+  };
+
+  const getBrands = (e) => {
+    setFilterClick(true);
+    const index = filterBrands.indexOf(e.target.value);
+
+    if (index === -1) {
+      setBrands([...filterBrands, e.target.value]);
+    } else {
+      setBrands(filterBrands.filter((el) => el != e.target.value));
+    }
+  };
 
   useEffect(() => {
-    async function getData() {
-      let { data } = await axios.get("http://localhost:8080/deal");
-      console.log(data);
-      setData(data);
+    if (filterOtions || currantOffers || filterBrands) {
+      setSearchParams({
+        availability: filterOtions,
+        currantOffers,
+        filterBrands,
+      });
+      // console.log(searchParams);
+      let params = {
+        availability: searchParams.getAll("availability"),
+        currantOffers: searchParams.getAll("currantOffers"),
+        filterBrands: searchParams.getAll("filterBrands"),
+      };
+      console.log(params);
+      // filterData(params, data);
+      // getFilteredDataFromServer(params);
+      dispatch(getFilterData(params));
     }
-    getData();
-  }, []);
+  }, [filterOtions, searchParams, currantOffers, filterBrands]);
 
+  // async function getFilteredDataFromServer(params) {
+  //   console.log(res);
+  // }
+
+  const sortByPrice = (val) => {
+    setFilterClick(true);
+    dispatch(sortData(val));
+  };
+
+  if (isLoading)
+    return (
+      <div className="loading">
+        <CircularProgress />
+      </div>
+    );
+  if (isError) return <h1>Something went wrong</h1>;
   return (
     <ProductPageContainer>
       <div className="CONTAINER">
@@ -154,14 +249,37 @@ const ProductContainer = () => {
               </AccordionSummary>
 
               <AccordionDetails className="checkBoxesCon">
-                <Typography>
+                {/* <Typography>
                   <Checkbox />
                   <span>Get it Shipped</span>
                 </Typography>
                 <Typography>
                   <Checkbox />
                   <span>Pick Up at Nearby Store</span>
-                </Typography>
+                </Typography> */}
+                <FormControl>
+                  {/* <FormLabel>Availibility</FormLabel> */}
+                  <FormControlLabel
+                    label="Get it Shipped"
+                    control={
+                      <Checkbox
+                        value="getItShipped"
+                        checked={filterOtions.includes("getItShipped")}
+                        onChange={getFilteredOpt}
+                      />
+                    }
+                  />
+                  <FormControlLabel
+                    label="Pick Up at Nearby Store"
+                    control={
+                      <Checkbox
+                        value="pickUpAtNearbyStore"
+                        checked={filterOtions.includes("pickUpAtNearbyStore")}
+                        onChange={getFilteredOpt}
+                      />
+                    }
+                  />
+                </FormControl>
               </AccordionDetails>
             </Accordion>
             {/* Offers */}
@@ -175,7 +293,22 @@ const ProductContainer = () => {
               </AccordionSummary>
 
               <AccordionDetails className="checkBoxesCon">
-                <Typography>
+                {offers.map((el, i) => {
+                  return (
+                    <FormControlLabel
+                      label={el.title}
+                      key={i}
+                      control={
+                        <Checkbox
+                          value={el.value}
+                          checked={currantOffers.includes(el.value)}
+                          onChange={getCOffers}
+                        />
+                      }
+                    />
+                  );
+                })}
+                {/* <Typography>
                   <Checkbox />
                   <span>On Sale</span>
                 </Typography>
@@ -202,7 +335,7 @@ const ProductContainer = () => {
                 <Typography>
                   <Checkbox />
                   <span>Online Only</span>
-                </Typography>
+                </Typography> */}
               </AccordionDetails>
             </Accordion>
             {/* Price */}
@@ -283,12 +416,27 @@ const ProductContainer = () => {
               <AccordionDetails className="checkBoxesCon">
                 {brands.map((el, i) => {
                   return (
+                    <FormControlLabel
+                      label={el}
+                      key={i}
+                      control={
+                        <Checkbox
+                          value={el}
+                          checked={filterBrands.includes(el)}
+                          onChange={getBrands}
+                        />
+                      }
+                    />
+                  );
+                })}
+                {/* {brands.map((el, i) => {
+                  return (
                     <Typography key={i}>
                       <Checkbox />
                       <span>{el}</span>
                     </Typography>
                   );
-                })}
+                })} */}
               </AccordionDetails>
             </Accordion>
             {/* Ratings */}
@@ -341,18 +489,22 @@ const ProductContainer = () => {
                 <p>
                   Sort
                   <span>
-                    <select name="sortBy" id="">
-                      <option value="bestMath">Best Math</option>
+                    <select
+                      name="sortBy"
+                      id=""
+                      onChange={(e) => sortByPrice(e.target.value)}
+                    >
+                      <option value="bestMath">Best Match</option>
                       <option value="htl">Price High-Low</option>
                       <option value="lth">Price Low-High</option>
-                      <option value="highestRated">Highest Rated</option>
+                      <option value="sr">Highest Rated</option>
                     </select>
                   </span>
                 </p>
               </div>
             </div>
             <div className="productGrid">
-              {data.map((el, i) => {
+              {[...(filterClick ? filterData : products)].map((el, i) => {
                 return <ProductCard {...el} key={i} />;
               })}
             </div>

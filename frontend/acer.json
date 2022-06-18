@@ -9,7 +9,8 @@
       "price": "399.99",
       "save": "",
       "end": "Available to ship",
-      "brand": "Acer"
+      "brand": ["ACER"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"]
     },
 
     {
@@ -21,7 +22,9 @@
       "price": "899.99",
       "save": "300",
       "end": "Available to ship",
-      "brand": "Acer"
+      "brand": ["ACER"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 3,
@@ -32,7 +35,9 @@
       "price": "599.99",
       "save": "200",
       "end": "Available to ship",
-      "brand": "Acer"
+      "brand": ["ACER"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 4,
@@ -43,7 +48,9 @@
       "price": "969.99",
       "save": "230",
       "end": "Available to ship",
-      "brand": "Acer"
+      "brand": ["ACER"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 11,
@@ -54,7 +61,9 @@
       "price": "1,199.99",
       "save": "400",
       "end": "Available to ship",
-      "brand": "Acer"
+      "brand": ["ACER"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 12,
@@ -65,7 +74,9 @@
       "price": "279.99",
       "save": "",
       "end": "Available to ship",
-      "brand": "Acer"
+      "brand": ["ACER"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 13,
@@ -76,7 +87,9 @@
       "price": "1,199.95",
       "save": "300",
       "end": "Available to ship",
-      "brand": "Acer"
+      "brand": ["ACER"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 14,
@@ -87,7 +100,9 @@
       "price": "729.99",
       "save": "170",
       "end": "Available to ship",
-      "brand": "Acer"
+      "brand": ["ACER"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 15,
@@ -98,7 +113,9 @@
       "price": "249.99",
       "save": "90",
       "end": "Available to ship",
-      "brand": "Acer"
+      "brand": ["ACER"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 16,
@@ -109,7 +126,9 @@
       "price": "849.99",
       "save": "150",
       "end": "Available to ship",
-      "brand": "Acer"
+      "brand": ["ACER"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 17,
@@ -120,7 +139,9 @@
       "price": "300",
       "save": "",
       "end": "Sold out online",
-      "brand": "Acer"
+      "brand": ["ACER"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 18,
@@ -131,7 +152,9 @@
       "price": "349.99",
       "save": "50",
       "end": "Available to ship",
-      "brand": "Acer"
+      "brand": ["ACER"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 19,
@@ -142,7 +165,9 @@
       "price": "499.99",
       "save": "",
       "end": "Available to ship",
-      "brand": "Acer"
+      "brand": ["ACER"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 20,
@@ -153,7 +178,9 @@
       "price": "299",
       "save": "",
       "end": "Available to ship",
-      "brand": "Acer"
+      "brand": ["ACER"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 1,
@@ -164,7 +191,9 @@
       "price": "459.99",
       "save": "95",
       "end": "Available to ship",
-      "brand": "Amazon"
+      "brand": ["AMAZON"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 2,
@@ -175,7 +204,9 @@
       "price": "44.99",
       "save": "15",
       "end": "Available to ship",
-      "brand": "Amazon"
+      "brand": ["AMAZON"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 3,
@@ -186,7 +217,9 @@
       "price": "34.99",
       "save": "15",
       "end": "Available to ship",
-      "brand": "Amazon"
+      "brand": ["AMAZON"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 4,
@@ -197,7 +230,9 @@
       "price": "59.99",
       "save": "5",
       "end": "Available to ship",
-      "brand": "Amazon"
+      "brand": ["AMAZON"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 5,
@@ -208,7 +243,9 @@
       "price": "124.99",
       "save": "25",
       "end": "Available to ship",
-      "brand": "Amazon"
+      "brand": ["AMAZON"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 6,
@@ -219,7 +256,9 @@
       "price": "54.99",
       "save": "15",
       "end": "Available to ship",
-      "brand": "Amazon"
+      "brand": ["AMAZON"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 7,
@@ -230,7 +269,9 @@
       "price": "359.99",
       "save": "",
       "end": "Available to ship",
-      "brand": "Amazon"
+      "brand": ["AMAZON"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 8,
@@ -241,7 +282,9 @@
       "price": "29.99",
       "save": "5",
       "end": "Available to ship",
-      "brand": "Amazon"
+      "brand": ["AMAZON"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 9,
@@ -252,7 +295,9 @@
       "price": "959.99",
       "save": "315",
       "end": "Available to ship",
-      "brand": "Amazon"
+      "brand": ["AMAZON"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 10,
@@ -263,7 +308,9 @@
       "price": "179",
       "save": "",
       "end": "Available to ship",
-      "brand": "Amazon"
+      "brand": ["AMAZON"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 11,
@@ -274,7 +321,9 @@
       "price": "39.99",
       "save": "5",
       "end": "Available to ship",
-      "brand": "Amazon"
+      "brand": ["AMAZON"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 12,
@@ -285,7 +334,9 @@
       "price": "69.99",
       "save": "15",
       "end": "Available to ship",
-      "brand": "Amazon"
+      "brand": ["AMAZON"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals", "onClearence", "openBox"]
     },
     {
       "id": 13,
@@ -296,7 +347,9 @@
       "price": "94.99",
       "save": "25",
       "end": "Available to ship",
-      "brand": "Amazon"
+      "brand": ["AMAZON"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals"]
     },
     {
       "id": 14,
@@ -307,7 +360,9 @@
       "price": "429.99",
       "save": "",
       "end": "Available to ship",
-      "brand": "Amazon"
+      "brand": ["AMAZON"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals"]
     },
     {
       "id": 15,
@@ -318,7 +373,9 @@
       "price": "39.99",
       "save": "5",
       "end": "Available to ship",
-      "brand": "Amazon"
+      "brand": ["AMAZON"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals"]
     },
     {
       "id": 16,
@@ -329,7 +386,9 @@
       "price": "109.99",
       "save": "",
       "end": "Available to ship",
-      "brand": "Amazon"
+      "brand": ["AMAZON"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals"]
     },
     {
       "id": 17,
@@ -340,7 +399,9 @@
       "price": "174.99",
       "save": "35",
       "end": "Available to ship",
-      "brand": "Amazon"
+      "brand": ["AMAZON"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals"]
     },
     {
       "id": 18,
@@ -351,7 +412,9 @@
       "price": "199.99",
       "save": "",
       "end": "Available to ship",
-      "brand": "Amazon"
+      "brand": ["AMAZON"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals"]
     },
     {
       "id": 19,
@@ -362,7 +425,9 @@
       "price": "189.99",
       "save": "70",
       "end": "Available to ship",
-      "brand": "Amazon"
+      "brand": ["AMAZON"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals"]
     },
     {
       "id": 20,
@@ -373,7 +438,9 @@
       "price": "54.99",
       "save": "",
       "end": "Available to ship",
-      "brand": "Amazon"
+      "brand": ["AMAZON"],
+      "availability": ["getItShipped", "pickUpAtNearbyStore"],
+      "currantOffers": ["onSale", "topDeals"]
     }
   ]
 }
