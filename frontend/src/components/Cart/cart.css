@@ -252,7 +252,7 @@
     padding: 82px 127px;
     justify-content: space-around;
     font-size: 16px;
-    line-height: 1px;
+    /* line-height: 1px; */
      font-weight: 700; 
     }
   
