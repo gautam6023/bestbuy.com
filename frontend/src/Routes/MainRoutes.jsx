@@ -16,7 +16,7 @@ const MainRoutes = () => {
       <Routes>
         <Route path="/topdeals" element={<TopDeals />} />
         <Route path="/products/:id" element={<ProductContainer />} />
-        <Route path="/products/:id/:id" element={<Detailsitem />} />
+        <Route path="/products/single/:id" element={<Detailsitem />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
       <Footer />

@@ -29,7 +29,7 @@ const Wrapper = styled.div`
       justify-content: center;
 
       img {
-        width: 100%;
+        width: 200px;
         /* aspect-ratio: 1; */
       }
     }
@@ -71,10 +71,10 @@ const Wrapper = styled.div`
   }
 `;
 
-const ProductCard = ({ imgUrl, save, top, price, rate, title, end, id }) => {
+const ProductCard = ({ imgUrl, save, top, price, rate, title, end, _id }) => {
   return (
     <Wrapper>
-      <Link to={`/products/${id}`} className="linkTag">
+      <Link to={`/products/single/${_id}`} className="linkTag">
         <div className="imgCon">
           <img src={imgUrl} alt="product image" />
         </div>
