@@ -143,9 +143,9 @@ export const ProductPageContainer = styled.div`
     .productGrid {
       margin: 10px;
       /* border: 1px solid black; */
-
+      width: 100%;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, 14rem);
       grid-template-rows: auto;
       column-gap: 24px;
       row-gap: 34px;

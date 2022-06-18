@@ -295,9 +295,9 @@ const Detailsitem = () => {
 
   useEffect(() => {
     async function getData() {
-      let { data } = await axios.get(`http://localhost:8080/deal/${id}`);
+      let { data } = await axios.get(`http://localhost:8080/${id}`);
       console.log(data);
-      setData(data);
+      setData(data.data);
     }
     getData();
   }, []);
