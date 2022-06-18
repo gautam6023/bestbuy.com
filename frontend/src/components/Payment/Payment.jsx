@@ -12,6 +12,7 @@ import { MdLabel } from "react-icons/md";
 import { Box } from "@mui/material";
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import { borderTop } from "@mui/system";
+import { CartCard } from "../Cart/CartCard";
 export default function Payment() {
   const [data,setData] = useState({})
   const handlerChange = (e) => {
@@ -752,8 +753,18 @@ export default function Payment() {
         </div>
         
       </div>
-      <div style={{ width: "40%" }}>
-                      <button onClick={()=>{toLacalStorage()}}>click me to save data</button>
+      <div style={{ width: "40%"  , display:"flex"}}>
+                     
+                                    
+              <CartCard
+          price={10}
+          discount={10}
+          tax={10}
+          orderTotal={10}
+          route={"#"}
+          onClick={()=>{toLacalStorage()}}
+
+        />
       </div>
     </div>
   );

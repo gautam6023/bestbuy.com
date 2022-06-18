@@ -1,6 +1,7 @@
 import { Box } from "@mui/system";
 import React, { useState } from "react";
 import styles from "../../styles/Navbar.module.css";
+import { CartCard } from "../Cart/CartCard";
 
 export default function Checkout() {
   const [data, setData] = useState({});
@@ -278,9 +279,20 @@ export default function Checkout() {
           borderRightColor: "red",
           height: "700px",
           backgroundColor: "white",
+          display:"flex"
         }}
       >
-              <button onClick={()=>{toLacalStorage()}}>click me to save data</button>
+              
+              <CartCard
+          price={10}
+          discount={10}
+          tax={10}
+          orderTotal={10}
+          route={"/payment"}
+          onClick={()=>{toLacalStorage()}}
+
+        />
+
         
       </div>
     </div>

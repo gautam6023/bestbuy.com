@@ -1,20 +1,12 @@
 import styled from "styled-components";
-import { FaMapMarkerAlt } from "react-icons/fa";
+import { BiCurrentLocation } from "react-icons/bi";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { ADD } from "../../Redux/Card Reducer/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { BiCurrentLocation } from "react-icons/bi";
 
-
-<style>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-  />
-</style>;
 
 const B3 = styled.button`
   background-color: #ffce00;
@@ -48,9 +40,9 @@ const Detailsitem = () => {
 
   useEffect(() => {
     async function getData() {
-      let { data } = await axios.get(`http://localhost:8080/${id}`);
+      let { data } = await axios.get(`http://localhost:8080/deal/${id}`);
       console.log(data);
-      setData(data.data);
+      setData(data);
     }
     getData();
   }, []);
