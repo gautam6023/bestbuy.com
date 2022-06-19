@@ -9,7 +9,7 @@ import { IoLocationOutline } from "react-icons/io5";
 import { IoIosArrowForward } from "react-icons/io";
 import { VscHistory } from "react-icons/vsc";
 import { IoLockClosedOutline } from "react-icons/io5";
-import "./main.css";
+// import "./main.css";
 import { userAuth } from "../../Redux/Product Reducer/action";
 import { useDispatch } from "react-redux";
 

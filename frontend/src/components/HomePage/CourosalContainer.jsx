@@ -3,17 +3,15 @@ import { useEffect } from "react";
 import axios from "axios";
 import SliderComp from "./SliderComp";
 
-
-
 const CourosalContainer = ({ className, title, desc, logo }) => {
   const [data, setData] = useState([]);
 
   const settings = {
     dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 3,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     initialSlide: 0,
     responsive: [
       {
@@ -55,7 +53,7 @@ const CourosalContainer = ({ className, title, desc, logo }) => {
     <div className={className}>
       <div className="detailsOfCourosol">
         <img src={logo} alt="" />
-        <p className="title">{title}</p>
+        <p className="dtitle">{title}</p>
         <p className="desc">{desc}</p>
       </div>
       <div className="courosol">

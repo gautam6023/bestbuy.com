@@ -328,7 +328,10 @@ function Navbar() {
               <b style={{ fontSize: "12px" }}> Shop by Category</b>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 {" "}
-                <div style={{ lineHeight: "1.3" }}>
+                <div
+                  style={{ lineHeight: "1.3", cursor: "pointer" }}
+                  onClick={() => navigate("products/topdeals")}
+                >
                   Computers, Tablets, & Accessories{" "}
                 </div>{" "}
                 <img
@@ -343,7 +346,7 @@ function Navbar() {
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 {" "}
-                <div style={{ lineHeight: "1.3" }}>
+                <div style={{ lineHeight: "1.3", cursor: "pointer" }}>
                   Cell Phones and Accessories
                 </div>{" "}
                 <img
