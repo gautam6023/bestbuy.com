@@ -1,9 +1,33 @@
 import { Box } from "@mui/system";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import styles from "../../styles/Navbar.module.css";
 import { CartCard } from "../Cart/CartCard";
+import { CartCheckout } from "../Cart/CartCheckout";
 
 export default function Checkout() {
+  const [price, setPrice] = useState(0);
+
+  let discount = +(price * 0.05).toFixed(2);
+  let tax = +(price * 0.03).toFixed(2);
+  let cartTotal = price - discount + tax;
+  let orderTotal = cartTotal.toFixed(2);
+  const carts = useSelector((state) => state.cartreducer.carts);
+
+  const dispatch = useDispatch();
+
+  const total = () => {
+    let price = 0;
+    carts.map((ele, k) => {
+      price = ele.price * ele.qnty + price;
+    });
+    setPrice(Math.round(price * 100) / 100);
+  };
+  localStorage.setItem("total", JSON.stringify(price));
+
+  useEffect(() => {
+    total();
+  }, [total]);
   const [data, setData] = useState({});
 
   const handlerChange = (e) => {
@@ -13,9 +37,9 @@ export default function Checkout() {
       [d.name]: d.value,
     });
   };
-  const toLacalStorage = () =>{
-    localStorage.setItem("formData" , JSON.stringify(data))
-  }
+  const toLacalStorage = () => {
+    localStorage.setItem("formData", JSON.stringify(data));
+  };
   return (
     <div
       style={{
@@ -27,7 +51,6 @@ export default function Checkout() {
     >
       <div
         style={{
-          border: "1px solid red",
           width: "75%",
           textAlign: "left",
           marginLeft: "5%",
@@ -221,18 +244,14 @@ export default function Checkout() {
                   </label>{" "}
                   <br />
                   <select
-                   
                     id=""
                     style={{ width: "90%", height: "40px", marginTop: "10px" }}
-                   
                     name="province"
                     onClick={(e) => {
                       handlerChange(e);
                     }}
                   >
-                    <option>
-                      Select
-                    </option>
+                    <option>Select</option>
                     <option value="Alberta">Alberta</option>
                     <option value="British_Columbia">British Columbia</option>
                     <option value="Manitoba">Manitoba</option>
@@ -274,26 +293,24 @@ export default function Checkout() {
 
       <div
         style={{
-          border: "1px solid black",
+         
           width: "40%",
           borderRightColor: "red",
           height: "700px",
           backgroundColor: "white",
-          display:"flex"
+          display: "flex",
         }}
       >
-              
-              <CartCard
-          price={10}
-          discount={10}
-          tax={10}
-          orderTotal={10}
+        <CartCheckout
+          price={price}
+          discount={discount}
+          tax={tax}
+          orderTotal={orderTotal}
           route={"/payment"}
-          onClick={()=>{toLacalStorage()}}
-
+          onClick={
+            localStorage.setItem("formData", JSON.stringify(data))
+          }
         />
-
-        
       </div>
     </div>
   );

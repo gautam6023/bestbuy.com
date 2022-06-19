@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Acoordian from "./Acoordian";
 import styles from "../../styles/Navbar.module.css";
 
@@ -13,7 +13,37 @@ import { Box } from "@mui/material";
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import { borderTop } from "@mui/system";
 import { CartCard } from "../Cart/CartCard";
+import { useDispatch, useSelector } from "react-redux";
+import { CartCheckout } from "../Cart/CartCheckout";
 export default function Payment() {
+  const [price, setPrice] = useState(0);
+  console.log(price);
+  let discount = +(price * 0.05).toFixed(2);
+  let tax = +(price * 0.03).toFixed(2);
+  let cartTotal = price - discount + tax;
+  let orderTotal = cartTotal.toFixed(2);
+  const carts = useSelector((state) => state.cartreducer.carts);
+  console.log(carts);
+
+  const dispatch = useDispatch();
+  const  alertMessage = () =>{
+    alert("Payment Succesfull Item Ordered")
+  }
+
+
+
+  const total = () => {
+    let price = 0;
+    carts.map((ele, k) => {
+      price = ele.price * ele.qnty + price;
+    });
+    setPrice(Math.round(price * 100) / 100);
+  };
+  localStorage.setItem("total", JSON.stringify(price));
+
+  useEffect(() => {
+    total();
+  }, [total]);
   const [data,setData] = useState({})
   const handlerChange = (e) => {
     const d = e.target;
@@ -738,6 +768,7 @@ export default function Payment() {
                     }}
                   />
                 </div>
+               
               </div>
             </form>
                 </div>
@@ -756,16 +787,19 @@ export default function Payment() {
       <div style={{ width: "40%"  , display:"flex"}}>
                      
                                     
-              <CartCard
-          price={10}
-          discount={10}
-          tax={10}
-          orderTotal={10}
-          route={"#"}
-          onClick={()=>{toLacalStorage()}}
+      <CartCheckout
+           price={price}
+           discount={discount}
+           tax={tax}
+           orderTotal={orderTotal}
+          route={"/"}
+          onClick={ ()=>{alertMessage()}
+            
+          }
 
         />
-      </div>
+      </div> 
     </div>
   );
 }
+
