@@ -274,7 +274,9 @@ const Detailsitem = () => {
                     height: "40px",
                     outline: "none",
                     border: "none",
+                    marginLeft:"20%",
                     marginTop: "10%",
+                   
                   }}
                   onClick={()=>{
                     ADD(data)
@@ -296,6 +298,7 @@ const Detailsitem = () => {
                     height: "40px",
                     outline: "none",
                     border: "none",
+                    marginLeft:"20%",
                   }}
                 >
                   Pick Up at Store
@@ -310,11 +313,11 @@ const Detailsitem = () => {
                 }}
               >
                 <img
-                  style={{ width: "70px", height: "50px" }}
-                  src="http://assets.stickpng.com/images/5ec94e027978a50004b7b44e.png"
+                  style={{ width: "50px", height: "30px"  , marginLeft:"3%"}}
+                  src="https://logodownload.org/wp-content/uploads/2020/05/best-buy-logo-1.png"
                   alt=""
                 />
-                <p style={{ marginTop: "3%" }}>Sold and shipped by Best Buy</p>
+                <p style={{ marginTop: "0%" }}>Sold and shipped by Best Buy</p>
               </div>
               <div
                 style={{

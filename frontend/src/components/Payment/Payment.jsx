@@ -64,6 +64,8 @@ export default function Payment() {
     postalCode,
     province,
   } = JSON.parse(localStorage.getItem("formData"));
+
+  const [aFlag,setAflag]=useState(true)
   return (
     <div style={{ display: "flex", backgroundColor: "#ffffff",margin:"auto" , marginTop:"50px" , marginBottom:"30px"  , width:"70%" }}>
       <div style={{ width: "60%", marginLeft: "5%" }}>
@@ -71,7 +73,7 @@ export default function Payment() {
           Payment
         </h2>
         <div style={{ width: "100%", marginTop: "10px" }}>
-          <Accordion>
+          <Accordion   >
             <AccordionSummary
               expandIcon={<MdLabel />}
               aria-controls="panel1a-content"
@@ -147,7 +149,7 @@ export default function Payment() {
           </Accordion>
         </div>
         <div style={{ marginTop: "5px" }}>
-          <Accordion>
+          <Accordion expanded={ aFlag   ? "true" : ""}  >
             <AccordionSummary
               expandIcon={<RadioButtonCheckedIcon />}
               aria-controls="panel1a-content"
@@ -349,7 +351,7 @@ export default function Payment() {
                 <div
                   style={{ marginTop: "10px", borderTop: "1px solid #ffffff" }}
                 >
-                  <Accordion>
+                  <Accordion >
                     <AccordionSummary
                       expandIcon={<RadioButtonUncheckedIcon />}
                       aria-controls="panel1a-content"
@@ -610,7 +612,7 @@ export default function Payment() {
           </Accordion>
 
           <div style={{ marginTop: "10px", borderTop: "1px solid #ffffff" }}>
-            <Accordion>
+            <Accordion onClick={()=>{setAflag(false)}}>
               <AccordionSummary
                 expandIcon={<RadioButtonUncheckedIcon />}
                 aria-controls="panel1a-content"
@@ -660,7 +662,7 @@ export default function Payment() {
             </Accordion>
           </div>
           <div style={{ marginTop: "10px" }}>
-            <Accordion>
+            <Accordion onClick={()=>{setAflag(false)}}>
               <AccordionSummary
                 expandIcon={<RadioButtonCheckedIcon />}
                 aria-controls="panel1a-content"
