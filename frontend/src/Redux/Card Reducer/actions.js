@@ -30,7 +30,7 @@ const REMOVE = (iteam) => {
 
 async function getProductsData(dispatch) {
   try {
-    let res = await fetch("https://localhost:8080/deal");
+    let res = await fetch("https://bestbuybackend.herokuapp.com/");
     let products = await res.json();
     //    console.log(products);
     dispatch({

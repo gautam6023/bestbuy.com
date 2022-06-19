@@ -39,7 +39,9 @@ const Detailsitem = () => {
 
   useEffect(() => {
     async function getData() {
-      let { data } = await axios.get(`http://localhost:8080/products/${id}`);
+      let { data } = await axios.get(
+        `https://bestbuybackend.herokuapp.com/products/${id}`
+      );
       console.log(data);
       setData(data.data);
     }
@@ -61,7 +63,7 @@ const Detailsitem = () => {
 
   return (
     <>
-      <div style={{ width: "80%", margin: "auto" }}>
+      <div style={{ width: "80%", margin: "auto", marginTop: "30px" }}>
         <div>
           <h1 style={{ fontWeight: "400", textAlign: "left" }}>{data.title}</h1>
           <div
@@ -85,7 +87,16 @@ const Detailsitem = () => {
           }}
         >
           <div style={{ width: "70%" }}>
-            <div>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                marginTop: "3%",
+                marginBottom: "3%",
+
+                height: "500px",
+              }}
+            >
               <img src={data.imgUrl} alt="" />
             </div>
             <div style={{ display: "flex" }}>

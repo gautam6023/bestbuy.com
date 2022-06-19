@@ -36,7 +36,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "http://localhost:8080/api/users";
+      const url = "https://bestbuybackend.herokuapp.com/api/users";
       const res = await axios.post(url, data);
       navigate("/Signin");
       console.log(res);
@@ -52,14 +52,14 @@ const Signup = () => {
   };
   return (
     <div className={styles.Box}>
-      <div className={styles.Navdiv}>
+      {/* <div className={styles.Navdiv}>
         <img
           className={styles.imgs}
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHFsACrLJwsbFpPdb7-hzK71ROgmb7PMFUgSbNTgBaBCli_Pop"
           alt=""
           srcset=""
         />
-      </div>
+      </div> */}
       <div className={styles.snav}>
         <FaChevronLeft />
         <Link to="/Signin">
@@ -80,6 +80,7 @@ const Signup = () => {
               value={data.firstName}
               required
             />
+
             <br />
             <br />
             <label className={styles.labels}>Last Name</label>
@@ -118,6 +119,7 @@ const Signup = () => {
                 value={data.password}
                 required
               />
+
               <br />
               <br />
               {toggle ? (
@@ -133,6 +135,9 @@ const Signup = () => {
                 </div>
               )}
             </div>
+            <p className={styles.passEx}>
+              Atlist 8 char(ex:1234#Abc(spacial char,capital & small letter))
+            </p>
 
             <div className={styles.checkdiv}>
               <input type="checkbox" name="" id="" className={styles.check} />

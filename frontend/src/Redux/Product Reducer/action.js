@@ -31,7 +31,9 @@ const getError = () => ({
 export const getData = (id) => async (dispatch) => {
   dispatch(getRequiest);
   try {
-    let { data } = await axios.get("http://localhost:8080/products");
+    let { data } = await axios.get(
+      "https://bestbuybackend.herokuapp.com/products"
+    );
 
     let finaldata;
     if (id !== "topdeals") {
@@ -61,7 +63,10 @@ const succsessFilter = (payload) => ({
 
 export const getFilterData = (params) => async (dispatch) => {
   try {
-    let { data } = await axios.get("http://localhost:8080/filter", { params });
+    let { data } = await axios.get(
+      "https://bestbuybackend.herokuapp.com/filter",
+      { params }
+    );
     dispatch(succsessFilter(data.data));
     console.log(data);
   } catch (e) {
@@ -104,7 +109,7 @@ export const Login = (payload) => ({
 
 export const userAuth = (data, navigate) => async (dispatch) => {
   try {
-    const url = "http://localhost:8080/api/auth";
+    const url = "https://bestbuybackend.herokuapp.com/api/auth";
     const res = await axios.post(url, data);
 
     let token = res.data.message;
@@ -113,6 +118,7 @@ export const userAuth = (data, navigate) => async (dispatch) => {
     localStorage.setItem("user", JSON.stringify(user));
     console.log(res);
     alert(res.data.message);
+
     if (token) {
       navigate("/");
     }

@@ -1078,7 +1078,12 @@ function Navbar() {
                 cursor: "pointer",
               }}
             >
-              <div onClick={() => navigate("/products/topdeals")}>
+              <div
+                onClick={() => {
+                  navigate("/products/topdeals");
+                  setFlag(false);
+                }}
+              >
                 Top Deals{" "}
               </div>
               <div>Best Buys Outlet </div>

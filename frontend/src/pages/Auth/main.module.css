@@ -1,220 +1,212 @@
-.Box{
-    margin: 0;
-    padding: 0;
+.Box {
+  margin: 0;
+  padding: 0;
+}
+.aTag {
+  text-decoration: none;
+  cursor: pointer;
+}
+.Navdiv {
+  width: 100%;
+  height: 70px;
+  background-color: #0046be;
+}
+.iconss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+.mainp {
+  margin-top: 200px;
+}
+.scurty {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  background-color: white;
+}
+.signupbtn {
+  color: black;
+  background-color: #ffce00;
+  border: 0;
+  height: 40px;
+  width: 150px;
+  font-weight: bold;
+}
+.types > div {
+  margin: 10px;
+}
+.check {
+  height: 30px;
+  width: 30px;
+  margin-top: -40px;
+}
+.checkdiv {
+  display: flex;
+  align-items: center;
+  width: 350px;
+}
+.head {
+  font-weight: bold;
+}
+.ftypes {
+  margin-left: 50px;
+}
+.fp {
+  font-weight: lighter;
+  font-size: 12px;
+  padding-bottom: 20px;
+}
+.types > div > p {
+  margin: 0;
+  padding: 0;
+}
+.types {
+  display: flex;
 
-}
-.aTag{
-    text-decoration: none;
-    cursor: pointer;
-}
-.Navdiv{
-    width: 100%;
-    height: 70px;
-    background-color:#0046be;
-}
-.iconss{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-    width: 50px;
-    height: 50px;
-}
-.mainp{
-    margin-top: 200px;
-}
-.scurty{
-   
-    display: flex;
-    align-items: center;
-    height: 100px;
-    background-color: white;
-}
-.signupbtn{
-    color: black;
-    background-color: 
-    #ffce00;
-    border: 0;
-    height: 40px;
-    width: 150px;
-    font-weight: bold;
-}
-.types>div{
-    margin: 10px;
-}
-.check{
-    height: 30px;
-    width: 30px;
-    margin-top: -40px;
-
-}
-.checkdiv{
-    display: flex;
-    align-items: center;
-    width: 350px;
-}
-.head{
-    font-weight: bold;
-    
-}
-.ftypes{
-    margin-left: 50px;
-}
-.fp{
-    font-weight: lighter;
-    font-size: 12px;
-    padding-bottom: 20px;
-}
-.types>div>p{
-    margin: 0;
-    padding: 0;
-}
-.types{
-    
-   display: flex;
-   
-   /* align-items: center; */
+  /* align-items: center; */
 }
 
-.imgs{
-    width: 100px;
-    height: 60px;
+.imgs {
+  width: 100px;
+  height: 60px;
 }
-.Flexdiv{
- 
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    background-color: #f5f7f9;
+.Flexdiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #f5f7f9;
 }
-.Flexdiv>div{
-    margin-top: 50px;
-    margin-left: -50px;
-    margin-bottom: 30px;
-    width: 500px;
-    
+.Flexdiv > div {
+  margin-top: 50px;
+  margin-left: -50px;
+  margin-bottom: 30px;
+  width: 500px;
 }
-#btnid{
-    background-color: #f5f7f9;
-    width: 250px;
-    color: #0046be;
-    cursor: pointer;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    border: 0;
+#btnid {
+  background-color: #f5f7f9;
+  width: 250px;
+  color: #0046be;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border: 0;
 }
-.iconflex{
-    display: flex;
-    align-items: center;
+.iconflex {
+  display: flex;
+  align-items: center;
 }
-.iconp{
-    color: #0046be;
-    font-weight: bold;
-    font-size: 20px;
+.iconp {
+  color: #0046be;
+  font-weight: bold;
+  font-size: 20px;
 }
-.inputs{
-    width: 300px;
-    height: 40px;
-    background-color: white;
-    border: 0.5px solid #adadad;
-    cursor: pointer;
+.inputs {
+  width: 300px;
+  height: 40px;
+  background-color: white;
+  border: 0.5px solid #adadad;
+  cursor: pointer;
 }
 
-#pwipt{
-    border: none;
-    
+#pwipt {
+  border: none;
 }
-.inputFlex{
-    box-sizing: border-box;
-    width: 305px;
-    height: 44px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 0.5px solid #adadad;
+.inputFlex {
+  box-sizing: border-box;
+  width: 305px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid #adadad;
 }
-.acflex{
-    display: flex;
-    justify-content: left;
-    
+.acflex {
+  display: flex;
+  justify-content: left;
 }
-.acicon{
-    margin-top: 13px;
-    padding: 5px;
-    font-size: 20px;
+.acicon {
+  margin-top: 13px;
+  padding: 5px;
+  font-size: 20px;
 }
-.inputFlex>div{
-    cursor: pointer;
-    width: 50px;
-    height: 38px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    background-color:  #e8f0fe;
-    color: #0046be;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 2px;
-    border-top: 0.5px solid #adadad;
-    border-bottom: 0.5px solid #adadad;
-    border-left: 0px;
-    border-right: 0.5px solid #adadad;
+.inputFlex > div {
+  cursor: pointer;
+  width: 50px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #e8f0fe;
+  color: #0046be;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px;
+  border-top: 0.5px solid #adadad;
+  border-bottom: 0.5px solid #adadad;
+  border-left: 0px;
+  border-right: 0.5px solid #adadad;
 }
-.labels{
-     margin-left:0px ; 
-    font-weight: lighter;
+.labels {
+  margin-left: 0px;
+  font-weight: lighter;
 }
-.H1{
-    font-size: 50px;
-    color: #0046be;
+.H1 {
+  font-size: 50px;
+  color: #0046be;
 }
-.H2{
-    padding-top: 100px;
+.H2 {
+  padding-top: 100px;
 }
 
-.btns{
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+.btns {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
-.btns>a{
-    margin-top: 10px;
+.btns > a {
+  margin-top: 10px;
 }
-.snav{
-    width: 100%;
-    height: 70px;
-    background-color: white;
-    padding-left: 20px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    
+.snav {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  padding-left: 20px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
-.icon{
-    color: #0046be;
-    font-weight: bold;
-    font-size: 25px;
+.icon {
+  color: #0046be;
+  font-weight: bold;
+  font-size: 25px;
 }
-.btns>a{
-margin-left: 20px;
-font-weight: bold;
-
+.btns > a {
+  margin-left: 20px;
+  font-weight: bold;
 }
-.buttons{
-    margin-top: 20px;
-    cursor: pointer;
-    border: 0px;
-    width: 170px;
-    height: 50px;
-    background-color: #0046be;
-    color: azure;
-    font-weight: bold;
+.buttons {
+  margin-top: 20px;
+  cursor: pointer;
+  border: 0px;
+  width: 170px;
+  height: 50px;
+  background-color: #0046be;
+  color: azure;
+  font-weight: bold;
 }
-.scrtyicon{
-    font-size: 30px;
-    margin-top: -5px;
+.scrtyicon {
+  font-size: 30px;
+  margin-top: -5px;
+}
+.passEx {
+  font-size: 16px;
+  margin: 10px 0;
+  font-weight: lighter;
 }
