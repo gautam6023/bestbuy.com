@@ -77,9 +77,10 @@ const Detailsitem = () => {
           }}
         >
           <div style={{ width: "70%" }}>
-            <div>
+            <div style={{ display:"flex" ,  justifyContent:"center" , marginTop:"3%"  , marginBottom:"3%"}}>
               <img
-                src="https://multimedia.bbycastatic.ca/multimedia/products/500x500/160/16001/16001654.jpg"
+   
+                src="https://multimedia.bbycastatic.ca/multimedia/products/500x500/151/15153/15153925.jpg"
                 alt=""
               />
             </div>

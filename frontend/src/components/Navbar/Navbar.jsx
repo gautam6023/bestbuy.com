@@ -337,7 +337,7 @@ function Navbar() {
                 {" "}
                 <div
                   style={{ lineHeight: "1.3", cursor: "pointer" }}
-                  onClick={() => navigate("products/topdeals")}
+                  onClick={() => {navigate("products/topdeals") ; setFlag(!flag)     }}
                 >
                   Computers, Tablets, & Accessories{" "}
                 </div>{" "}
