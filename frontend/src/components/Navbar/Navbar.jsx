@@ -11,6 +11,7 @@ import RightStart from "./RightStart";
 import styles from "../../styles/Navbar.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { Logout } from "../../Redux/Product Reducer/action";
+import { Badge } from "@mui/material";
 
 const Wrapper = styled.div`
   position: relative;
@@ -35,6 +36,9 @@ const Wrapper = styled.div`
 
 function Navbar() {
   const username = useSelector((state) => state.products.username);
+  const badge = useSelector((state) => state.cartreducer.carts);
+
+  console.log(badge, badge.length,"badge")
   // const [username, setUserName] = useState("");
   const [check, setCheck] = useState(false);
   const dispatch = useDispatch();
@@ -253,7 +257,10 @@ function Navbar() {
               </Wrapper>
               <Link to="/cart">
                 <div style={{ display: "flex" }}>
-                  <ShoppingCartIcon style={{ fill: "#ffffff" }} />
+
+                  <Badge badgeContent={ badge.length} color="primary">
+                    <ShoppingCartIcon style={{ fill: "#ffffff" }} />
+                  </Badge>
 
                   <div>
                     {" "}

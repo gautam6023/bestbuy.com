@@ -10,7 +10,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
 import { MdLabel } from "react-icons/md";
 import { Box } from "@mui/material";
-import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
+import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
 import { borderTop } from "@mui/system";
 import { CartCard } from "../Cart/CartCard";
 import { useDispatch, useSelector } from "react-redux";
@@ -26,11 +26,9 @@ export default function Payment() {
   console.log(carts);
 
   const dispatch = useDispatch();
-  const  alertMessage = () =>{
-    alert("Payment Succesfull Item Ordered")
-  }
-
-
+  const alertMessage = () => {
+    alert("Payment Succesfull Item Ordered");
+  };
 
   const total = () => {
     let price = 0;
@@ -44,7 +42,7 @@ export default function Payment() {
   useEffect(() => {
     total();
   }, [total]);
-  const [data,setData] = useState({})
+  const [data, setData] = useState({});
   const handlerChange = (e) => {
     const d = e.target;
     setData({
@@ -52,12 +50,22 @@ export default function Payment() {
       [d.name]: d.value,
     });
   };
-  const toLacalStorage = () =>{
-    localStorage.setItem("formData" , JSON.stringify(data))
-  }
-  const {MobileNumber,address,city,email,exMobileNumber,firstName,lastName,postalCode,province}  = JSON.parse(localStorage.getItem("formData")) ;
+  const toLacalStorage = () => {
+    localStorage.setItem("formData", JSON.stringify(data));
+  };
+  const {
+    MobileNumber,
+    address,
+    city,
+    email,
+    exMobileNumber,
+    firstName,
+    lastName,
+    postalCode,
+    province,
+  } = JSON.parse(localStorage.getItem("formData"));
   return (
-    <div style={{ display: "flex", backgroundColor: "#ffffff" }}>
+    <div style={{ display: "flex", backgroundColor: "#ffffff",margin:"auto" , marginTop:"50px" , marginBottom:"30px"  , width:"70%" }}>
       <div style={{ width: "60%", marginLeft: "5%" }}>
         <h2 style={{ fontSize: "20px", fontWeight: "600", textAlign: "left" }}>
           Payment
@@ -161,7 +169,7 @@ export default function Payment() {
                   }}
                 >
                   <div
-                    style={{ width: "100%", textAlign: "left", margin: "10px" }}
+                    style={{ width: "150%", textAlign: "left", margin: "10px"  }}
                   >
                     {" "}
                     <div style={{ fontWeight: "600", display: "block" }}>
@@ -281,525 +289,737 @@ export default function Payment() {
                         </label>{" "}
                         <br />
                         <input
-                        style={{
-                          width: "90%",
-                          height: "40px",
-                        }}
-                        type="text"
-                        name="city"
-                      />
+                          style={{
+                            width: "90%",
+                            height: "40px",
+                          }}
+                          type="text"
+                          name="city"
+                        />
                       </div>
                       <div style={{ width: "25%", textAlign: "left" }}>
                         {" "}
-                      <div style={{fontSize:"12px" , marginTop:"25px"}}>This 3 or 4 digit code is on the back or front of your card.</div>
-
-                    
+                        <div style={{ fontSize: "12px", marginTop: "25px" }}>
+                          This 3 or 4 digit code is on the back or front of your
+                          card.
+                        </div>
                       </div>
                     </div>
                   </div>
                 </Box>
-                <div style={{borderTop:"1px solid #e4e9f1" , backgroundColor:"#ffffff"}}> 
-          <div style={{ textAlign: "left", fontWeight: "600" , marginTop:"10px" , marginLeft:"1px" }}>
-          Billing Address
-                </div>
-                <div style={{backgroundColor:"white" , marginTop:"10px" , fontSize:"12px", lineHeight:"20px", border:"1px solid black" , textAlign:"left" , padding:"10px"}}>
-               
-                 <div style={{fontWeight:"600" , fontSize:"16px"}}>{firstName} - {city} ,{postalCode}  </div>
-                 <div>{firstName} {lastName}  </div>
-                 <div>{address}  {city} </div>
-                 <div> {MobileNumber} </div>
-                </div>
-          </div>
-          <div style={{marginTop:"10px"  ,borderTop:"1px solid #ffffff"}}>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<RadioButtonUncheckedIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Typography style={{color:"blue" }}>New Address</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                <div style={{textAlign:"left"}}>
-                <form action="">
-              <div>
-                {" "}
-                <strong style={{ fontSize: "14px" }}>Shipping Address </strong>
-              </div>
-              <div style={{ display: "flex", margin: "5px" }}>
-                <div style={{ width: "100%" }}>
-                  {" "}
-                  <label
-                    style={{ fontSize: "14px", lineHeight: "20px" }}
-                    htmlFor=""
-                  >
-                    *First Name
-                  </label>{" "}
-                  <br />
-                  <input
-                    style={{ width: "90%", height: "40px", marginTop: "10px" }}
-                    type="text"
-                    name="firstName"
-                    onChange={(e) => {
-                      handlerChange(e);
-                    }}
-                  />
-                </div>
-                <div style={{ width: "100%" }}>
-                  {" "}
-                  <label
-                    style={{ fontSize: "14px", lineHeight: "20px" }}
-                    htmlFor=""
-                  >
-                    *Last Name
-                  </label>{" "}
-                  <br />
-                  <input
-                    style={{ width: "90%", height: "40px", marginTop: "10px" }}
-                    type="text"
-                    name="lastName"
-                    onChange={(e) => {
-                      handlerChange(e);
-                    }}
-                  />
-                </div>
-              </div>
-              <div style={{ display: "flex", margin: "5px" }}>
-                <div style={{ width: "100%" }}>
-                  {" "}
-                  <label
-                    style={{ fontSize: "14px", lineHeight: "20px" }}
-                    htmlFor=""
-                  >
-                    *Phone Number
-                  </label>{" "}
-                  <br />
-                  <input
-                    style={{ width: "90%", height: "40px", marginTop: "10px" }}
-                    type="number"
-                    name="MobileNumber"
-                    onChange={(e) => {
-                      handlerChange(e);
-                    }}
-                  />
-                </div>
-                <div style={{ width: "100%" }}>
-                  {" "}
-                  <label
-                    style={{ fontSize: "14px", lineHeight: "20px" }}
-                    htmlFor=""
-                  >
-                    *Ext. (Optional)
-                  </label>{" "}
-                  <br />
-                  <input
-                    style={{ width: "90%", height: "40px", marginTop: "10px" }}
-                    type="number"
-                    name="exMobileNumber"
-                    onChange={(e) => {
-                      handlerChange(e);
-                    }}
-                  />
-                </div>
-              </div>
-              <div
-                style={{
-                  fontSize: "12px",
-                  lineHeight: "16px",
-                  marginTop: "10px",
-                  marginLeft: "6px",
-                }}
-              >
-                We’ll only call you if there’s an issue with the order.
-              </div>
-              <div style={{ marginTop: "10px" }}>
-                <label
-                  style={{ fontSize: "14px", lineHeight: "20px" }}
-                  htmlFor=""
-                >
-                  *Address
-                </label>{" "}
-                <br />
-                <input
+                <div
                   style={{
-                    width: "94%",
-                    marginLeft: "5px",
-                    height: "40px",
-                    marginTop: "10px",
+                    borderTop: "1px solid #e4e9f1",
+                    backgroundColor: "#ffffff",
                   }}
-                  type="text"
-                  name="address"
-                  onChange={(e) => {
-                    handlerChange(e);
-                  }}
-                />
-              </div>
-              <div style={{ display: "flex", margin: "5px" }}>
-                <div style={{ width: "50%" }}>
-                  {" "}
-                  <label
-                    style={{ fontSize: "14px", lineHeight: "20px" }}
-                    htmlFor=""
-                  >
-                    *City
-                  </label>{" "}
-                  <br />
-                  <input
-                    style={{ width: "90%", height: "40px", marginTop: "10px" }}
-                    type="text"
-                    name="city"
-                    onChange={(e) => {
-                      handlerChange(e);
-                    }}
-                  />
-                </div>
-                <div style={{ width: "25%" }}>
-                  {" "}
-                  <label
-                    style={{ fontSize: "14px", lineHeight: "20px" }}
-                    htmlFor=""
-                  >
-                    *Province
-                  </label>{" "}
-                  <br />
-                  <select
-                   
-                    id=""
-                    style={{ width: "90%", height: "40px", marginTop: "10px" }}
-                   
-                    name="province"
-                    onClick={(e) => {
-                      handlerChange(e);
-                    }}
-                  >
-                    <option>
-                      Select
-                    </option>
-                    <option value="Alberta">Alberta</option>
-                    <option value="British_Columbia">British Columbia</option>
-                    <option value="Manitoba">Manitoba</option>
-                    <option value="New_Brunswick">New Brunswick</option>
-                    <option value="new-foundland_and_labrodor">
-                      New Foundland & Labrador
-                    </option>
-                    <option value="nova_scotia">Nova Scotiva</option>
-                  </select>
-                </div>
-                <div style={{ width: "25%" }}>
-                  {" "}
-                  <label
-                    style={{ fontSize: "14px", lineHeight: "20px" }}
-                    htmlFor=""
-                  >
-                    *Postal Code
-                  </label>{" "}
-                  <br />
-                  <input
-                    style={{ width: "82%", height: "40px", marginTop: "10px" }}
-                    type="number"
-                    name="postalCode"
-                    onChange={(e) => {
-                      handlerChange(e);
-                    }}
-                  />
-                </div>
-              </div>
-            </form>
-                </div>
-          
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          </div>
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-         
-          <div style={{marginTop:"10px" ,borderTop:"1px solid #ffffff"}}>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<RadioButtonUncheckedIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Typography style={{color:"blue" }}> <img  style={{width:"100px" , height:"30px"}} src="https://www.bestbuy.ca/ch/static/media/paypallogo.04b82a13.svg" alt="" /></Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                <div style={{textAlign:"left" , fontSize:"12px"}}>
-            <div>Select "Pay with PayPal" to enter your payment details on the PayPal site.</div>
-                <div style={{ display:"flex", justifyContent:"center", height:"50px", paddingTop:"10px"  ,width:"100%" , backgroundColor:"#009cde" , textAlign:"center" , color:"white"}}> <div style={{fontSize:"14px" , marginTop:"3px"}}>Pay with</div>  <img  style={{width:"80px" , height:"30px"}} src="https://www.bestbuy.ca/ch/static/media/paypal-white.31d24521.svg" alt="" /> </div>
-                </div>
-          
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          </div>
-          <div style={{marginTop:"10px"}}>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<RadioButtonCheckedIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Typography style={{}}>
-                <div style={{display:"flex"}}> 
-                <img style={{width:"70px" ,height:"30px"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUKTdZ-0crtPPgc0250NIy5AjDiM-u429CiNYpCCZvUq6F4IDNU7uuy2R6_TmX7KLy3Ho&usqp=CAU"></img>
-                <div style={{fontWeight:"600"}}>
-                  Financing
-                </div>
-              
-                </div>
-                
-                <div style={{textAlign:"left" , fontWeight:"600" , fontSize:"12px"}}>Credit provided by Fairstone Financial Inc.</div>
-               </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-              
-               
-                <div style={{borderTop:"1px solid #e4e9f1" , backgroundColor:"#ffffff"}}> 
-                <div style={{fontSize:"12px" , marginLeft:"10px" , textAlign:"left" , marginTop:"5px"}}>
-                Your <b> Billing Address</b> must match the address on your <b> Fairstone</b> account. If it doesn’t, please add a <b> New Address.</b>
-                </div>
-          <div style={{ textAlign: "left", fontWeight: "600" , marginTop:"10px" , marginLeft:"1px" }}>
-          Billing Address
-                </div>
-                <div style={{backgroundColor:"white" , marginTop:"10px" , fontSize:"12px", lineHeight:"20px", border:"1px solid black" , textAlign:"left" , padding:"10px"}}>
-               
-                 <div style={{fontWeight:"600" , fontSize:"16px"}}>{firstName} - {city} ,{postalCode}  </div>
-                 <div>{firstName} {lastName}  </div>
-                 <div>{address}  {city} </div>
-                 <div> {MobileNumber} </div>
-                </div>
-          </div>
-          <div style={{marginTop:"10px"  ,borderTop:"1px solid #ffffff"}}>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<RadioButtonUncheckedIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Typography style={{color:"blue" }}>New Address</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                <div style={{textAlign:"left"}}>
-                <form action="">
-              <div>
-                {" "}
-                <strong style={{ fontSize: "14px" }}>Shipping Address </strong>
-              </div>
-              <div style={{ display: "flex", margin: "5px" }}>
-                <div style={{ width: "100%" }}>
-                  {" "}
-                  <label
-                    style={{ fontSize: "14px", lineHeight: "20px" }}
-                    htmlFor=""
-                  >
-                    *First Name
-                  </label>{" "}
-                  <br />
-                  <input
-                    style={{ width: "90%", height: "40px", marginTop: "10px" }}
-                    type="text"
-                    name="firstName"
-                    onChange={(e) => {
-                      handlerChange(e);
-                    }}
-                  />
-                </div>
-                <div style={{ width: "100%" }}>
-                  {" "}
-                  <label
-                    style={{ fontSize: "14px", lineHeight: "20px" }}
-                    htmlFor=""
-                  >
-                    *Last Name
-                  </label>{" "}
-                  <br />
-                  <input
-                    style={{ width: "90%", height: "40px", marginTop: "10px" }}
-                    type="text"
-                    name="lastName"
-                    onChange={(e) => {
-                      handlerChange(e);
-                    }}
-                  />
-                </div>
-              </div>
-              <div style={{ display: "flex", margin: "5px" }}>
-                <div style={{ width: "100%" }}>
-                  {" "}
-                  <label
-                    style={{ fontSize: "14px", lineHeight: "20px" }}
-                    htmlFor=""
-                  >
-                    *Phone Number
-                  </label>{" "}
-                  <br />
-                  <input
-                    style={{ width: "90%", height: "40px", marginTop: "10px" }}
-                    type="number"
-                    name="MobileNumber"
-                    onChange={(e) => {
-                      handlerChange(e);
-                    }}
-                  />
-                </div>
-                <div style={{ width: "100%" }}>
-                  {" "}
-                  <label
-                    style={{ fontSize: "14px", lineHeight: "20px" }}
-                    htmlFor=""
-                  >
-                    *Ext. (Optional)
-                  </label>{" "}
-                  <br />
-                  <input
-                    style={{ width: "90%", height: "40px", marginTop: "10px" }}
-                    type="number"
-                    name="exMobileNumber"
-                    onChange={(e) => {
-                      handlerChange(e);
-                    }}
-                  />
-                </div>
-              </div>
-              <div
-                style={{
-                  fontSize: "12px",
-                  lineHeight: "16px",
-                  marginTop: "10px",
-                  marginLeft: "6px",
-                }}
-              >
-                We’ll only call you if there’s an issue with the order.
-              </div>
-              <div style={{ marginTop: "10px" }}>
-                <label
-                  style={{ fontSize: "14px", lineHeight: "20px" }}
-                  htmlFor=""
                 >
-                  *Address
-                </label>{" "}
-                <br />
-                <input
-                  style={{
-                    width: "94%",
-                    marginLeft: "5px",
-                    height: "40px",
-                    marginTop: "10px",
-                  }}
-                  type="text"
-                  name="address"
-                  onChange={(e) => {
-                    handlerChange(e);
-                  }}
-                />
-              </div>
-              <div style={{ display: "flex", margin: "5px" }}>
-                <div style={{ width: "50%" }}>
-                  {" "}
-                  <label
-                    style={{ fontSize: "14px", lineHeight: "20px" }}
-                    htmlFor=""
-                  >
-                    *City
-                  </label>{" "}
-                  <br />
-                  <input
-                    style={{ width: "90%", height: "40px", marginTop: "10px" }}
-                    type="text"
-                    name="city"
-                    onChange={(e) => {
-                      handlerChange(e);
-                    }}
-                  />
-                </div>
-                <div style={{ width: "25%" }}>
-                  {" "}
-                  <label
-                    style={{ fontSize: "14px", lineHeight: "20px" }}
-                    htmlFor=""
-                  >
-                    *Province
-                  </label>{" "}
-                  <br />
-                  <select
-                   
-                    id=""
-                    style={{ width: "90%", height: "40px", marginTop: "10px" }}
-                   
-                    name="province"
-                    onClick={(e) => {
-                      handlerChange(e);
+                  <div
+                    style={{
+                      textAlign: "left",
+                      fontWeight: "600",
+                      marginTop: "10px",
+                      marginLeft: "1px",
                     }}
                   >
-                    <option>
-                      Select
-                    </option>
-                    <option value="Alberta">Alberta</option>
-                    <option value="British_Columbia">British Columbia</option>
-                    <option value="Manitoba">Manitoba</option>
-                    <option value="New_Brunswick">New Brunswick</option>
-                    <option value="new-foundland_and_labrodor">
-                      New Foundland & Labrador
-                    </option>
-                    <option value="nova_scotia">Nova Scotiva</option>
-                  </select>
-                </div>
-                <div style={{ width: "25%" }}>
-                  {" "}
-                  <label
-                    style={{ fontSize: "14px", lineHeight: "20px" }}
-                    htmlFor=""
-                  >
-                    *Postal Code
-                  </label>{" "}
-                  <br />
-                  <input
-                    style={{ width: "82%", height: "40px", marginTop: "10px" }}
-                    type="number"
-                    name="postalCode"
-                    onChange={(e) => {
-                      handlerChange(e);
+                    Billing Address
+                  </div>
+                  <div
+                    style={{
+                      backgroundColor: "white",
+                      marginTop: "10px",
+                      fontSize: "12px",
+                      lineHeight: "20px",
+                      border: "1px solid black",
+                      textAlign: "left",
+                      padding: "10px",
                     }}
-                  />
+                  >
+                    <div style={{ fontWeight: "600", fontSize: "16px" }}>
+                      {firstName} - {city} ,{postalCode}{" "}
+                    </div>
+                    <div>
+                      {firstName} {lastName}{" "}
+                    </div>
+                    <div>
+                      {address} {city}{" "}
+                    </div>
+                    <div> {MobileNumber} </div>
+                  </div>
                 </div>
-               
-              </div>
-            </form>
+                <div
+                  style={{ marginTop: "10px", borderTop: "1px solid #ffffff" }}
+                >
+                  <Accordion>
+                    <AccordionSummary
+                      expandIcon={<RadioButtonUncheckedIcon />}
+                      aria-controls="panel1a-content"
+                      id="panel1a-header"
+                    >
+                      <Typography style={{ color: "blue" }}>
+                        New Address
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>
+                        <div style={{ textAlign: "left" }}>
+                          <form action="">
+                            <div>
+                              {" "}
+                              <strong style={{ fontSize: "14px" }}>
+                                Shipping Address{" "}
+                              </strong>
+                            </div>
+                            <div style={{ display: "flex", margin: "5px" }}>
+                              <div style={{ width: "100%" }}>
+                                {" "}
+                                <label
+                                  style={{
+                                    fontSize: "14px",
+                                    lineHeight: "20px",
+                                  }}
+                                  htmlFor=""
+                                >
+                                  *First Name
+                                </label>{" "}
+                                <br />
+                                <input
+                                  style={{
+                                    width: "90%",
+                                    height: "40px",
+                                    marginTop: "10px",
+                                  }}
+                                  type="text"
+                                  name="firstName"
+                                  onChange={(e) => {
+                                    handlerChange(e);
+                                  }}
+                                />
+                              </div>
+                              <div style={{ width: "100%" }}>
+                                {" "}
+                                <label
+                                  style={{
+                                    fontSize: "14px",
+                                    lineHeight: "20px",
+                                  }}
+                                  htmlFor=""
+                                >
+                                  *Last Name
+                                </label>{" "}
+                                <br />
+                                <input
+                                  style={{
+                                    width: "90%",
+                                    height: "40px",
+                                    marginTop: "10px",
+                                  }}
+                                  type="text"
+                                  name="lastName"
+                                  onChange={(e) => {
+                                    handlerChange(e);
+                                  }}
+                                />
+                              </div>
+                            </div>
+                            <div style={{ display: "flex", margin: "5px" }}>
+                              <div style={{ width: "100%" }}>
+                                {" "}
+                                <label
+                                  style={{
+                                    fontSize: "14px",
+                                    lineHeight: "20px",
+                                  }}
+                                  htmlFor=""
+                                >
+                                  *Phone Number
+                                </label>{" "}
+                                <br />
+                                <input
+                                  style={{
+                                    width: "90%",
+                                    height: "40px",
+                                    marginTop: "10px",
+                                  }}
+                                  type="number"
+                                  name="MobileNumber"
+                                  onChange={(e) => {
+                                    handlerChange(e);
+                                  }}
+                                />
+                              </div>
+                              <div style={{ width: "100%" }}>
+                                {" "}
+                                <label
+                                  style={{
+                                    fontSize: "14px",
+                                    lineHeight: "20px",
+                                  }}
+                                  htmlFor=""
+                                >
+                                  *Ext. (Optional)
+                                </label>{" "}
+                                <br />
+                                <input
+                                  style={{
+                                    width: "90%",
+                                    height: "40px",
+                                    marginTop: "10px",
+                                  }}
+                                  type="number"
+                                  name="exMobileNumber"
+                                  onChange={(e) => {
+                                    handlerChange(e);
+                                  }}
+                                />
+                              </div>
+                            </div>
+                            <div
+                              style={{
+                                fontSize: "12px",
+                                lineHeight: "16px",
+                                marginTop: "10px",
+                                marginLeft: "6px",
+                              }}
+                            >
+                              We’ll only call you if there’s an issue with the
+                              order.
+                            </div>
+                            <div style={{ marginTop: "10px" }}>
+                              <label
+                                style={{ fontSize: "14px", lineHeight: "20px" }}
+                                htmlFor=""
+                              >
+                                *Address
+                              </label>{" "}
+                              <br />
+                              <input
+                                style={{
+                                  width: "94%",
+                                  marginLeft: "5px",
+                                  height: "40px",
+                                  marginTop: "10px",
+                                }}
+                                type="text"
+                                name="address"
+                                onChange={(e) => {
+                                  handlerChange(e);
+                                }}
+                              />
+                            </div>
+                            <div style={{ display: "flex", margin: "5px" }}>
+                              <div style={{ width: "50%" }}>
+                                {" "}
+                                <label
+                                  style={{
+                                    fontSize: "14px",
+                                    lineHeight: "20px",
+                                  }}
+                                  htmlFor=""
+                                >
+                                  *City
+                                </label>{" "}
+                                <br />
+                                <input
+                                  style={{
+                                    width: "90%",
+                                    height: "40px",
+                                    marginTop: "10px",
+                                  }}
+                                  type="text"
+                                  name="city"
+                                  onChange={(e) => {
+                                    handlerChange(e);
+                                  }}
+                                />
+                              </div>
+                              <div style={{ width: "25%" }}>
+                                {" "}
+                                <label
+                                  style={{
+                                    fontSize: "14px",
+                                    lineHeight: "20px",
+                                  }}
+                                  htmlFor=""
+                                >
+                                  *Province
+                                </label>{" "}
+                                <br />
+                                <select
+                                  id=""
+                                  style={{
+                                    width: "90%",
+                                    height: "40px",
+                                    marginTop: "10px",
+                                  }}
+                                  name="province"
+                                  onClick={(e) => {
+                                    handlerChange(e);
+                                  }}
+                                >
+                                  <option>Select</option>
+                                  <option value="Alberta">Alberta</option>
+                                  <option value="British_Columbia">
+                                    British Columbia
+                                  </option>
+                                  <option value="Manitoba">Manitoba</option>
+                                  <option value="New_Brunswick">
+                                    New Brunswick
+                                  </option>
+                                  <option value="new-foundland_and_labrodor">
+                                    New Foundland & Labrador
+                                  </option>
+                                  <option value="nova_scotia">
+                                    Nova Scotiva
+                                  </option>
+                                </select>
+                              </div>
+                              <div style={{ width: "25%" }}>
+                                {" "}
+                                <label
+                                  style={{
+                                    fontSize: "14px",
+                                    lineHeight: "20px",
+                                  }}
+                                  htmlFor=""
+                                >
+                                  *Postal Code
+                                </label>{" "}
+                                <br />
+                                <input
+                                  style={{
+                                    width: "82%",
+                                    height: "40px",
+                                    marginTop: "10px",
+                                  }}
+                                  type="number"
+                                  name="postalCode"
+                                  onChange={(e) => {
+                                    handlerChange(e);
+                                  }}
+                                />
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
                 </div>
-          
               </Typography>
             </AccordionDetails>
           </Accordion>
+
+          <div style={{ marginTop: "10px", borderTop: "1px solid #ffffff" }}>
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<RadioButtonUncheckedIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography style={{ color: "blue" }}>
+                  {" "}
+                  <img
+                    style={{ width: "100px", height: "30px" }}
+                    src="https://www.bestbuy.ca/ch/static/media/paypallogo.04b82a13.svg"
+                    alt=""
+                  />
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                  <div style={{ textAlign: "left", fontSize: "12px" , margin:"auto" , justifyContent:"center" }}>
+                    <div>
+                      Select "Pay with PayPal" to enter your payment details on
+                      the PayPal site.
+                    </div>
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        height: "50px",
+                        paddingTop: "10px",
+                        width: "100%",
+                        backgroundColor: "#009cde",
+                        textAlign: "center",
+                        color: "white",
+                      }}
+                    >
+                      {" "}
+                      <div style={{ fontSize: "14px", marginTop: "3px" }}>
+                        Pay with
+                      </div>{" "}
+                      <img
+                        style={{ width: "80px", height: "30px" }}
+                        src="https://www.bestbuy.ca/ch/static/media/paypal-white.31d24521.svg"
+                        alt=""
+                      />{" "}
+                    </div>
+                  </div>
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
           </div>
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
+          <div style={{ marginTop: "10px" }}>
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<RadioButtonCheckedIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography style={{}}>
+                  <div style={{ display: "flex" }}>
+                    <img
+                      style={{ width: "70px", height: "30px" }}
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUKTdZ-0crtPPgc0250NIy5AjDiM-u429CiNYpCCZvUq6F4IDNU7uuy2R6_TmX7KLy3Ho&usqp=CAU"
+                    ></img>
+                    <div style={{ fontWeight: "600" }}>Financing</div>
+                  </div>
+
+                  <div
+                    style={{
+                      textAlign: "left",
+                      fontWeight: "600",
+                      fontSize: "12px",
+                    }}
+                  >
+                    Credit provided by Fairstone Financial Inc.
+                  </div>
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                  <div
+                    style={{
+                      borderTop: "1px solid #e4e9f1",
+                      backgroundColor: "#ffffff",
+                    }}
+                  >
+                    <div
+                      style={{
+                        fontSize: "12px",
+                        marginLeft: "10px",
+                        textAlign: "left",
+                        marginTop: "5px",
+                      }}
+                    >
+                      Your <b> Billing Address</b> must match the address on
+                      your <b> Fairstone</b> account. If it doesn’t, please add
+                      a <b> New Address.</b>
+                    </div>
+                    <div
+                      style={{
+                        textAlign: "left",
+                        fontWeight: "600",
+                        marginTop: "10px",
+                        marginLeft: "1px",
+                      }}
+                    >
+                      Billing Address
+                    </div>
+                    <div
+                      style={{
+                        backgroundColor: "white",
+                        marginTop: "10px",
+                        fontSize: "12px",
+                        lineHeight: "20px",
+                        border: "1px solid black",
+                        textAlign: "left",
+                        padding: "10px",
+                      }}
+                    >
+                      <div style={{ fontWeight: "600", fontSize: "16px" }}>
+                        {firstName} - {city} ,{postalCode}{" "}
+                      </div>
+                      <div>
+                        {firstName} {lastName}{" "}
+                      </div>
+                      <div>
+                        {address} {city}{" "}
+                      </div>
+                      <div> {MobileNumber} </div>
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      marginTop: "10px",
+                      borderTop: "1px solid #ffffff",
+                    }}
+                  >
+                    <Accordion>
+                      <AccordionSummary
+                        expandIcon={<RadioButtonUncheckedIcon />}
+                        aria-controls="panel1a-content"
+                        id="panel1a-header"
+                      >
+                        <Typography style={{ color: "blue" }}>
+                          New Address
+                        </Typography>
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        <Typography>
+                          <div style={{ textAlign: "left" }}>
+                            <form action="">
+                              <div>
+                                {" "}
+                                <strong style={{ fontSize: "14px" }}>
+                                  Shipping Address{" "}
+                                </strong>
+                              </div>
+                              <div style={{ display: "flex", margin: "5px" }}>
+                                <div style={{ width: "100%" }}>
+                                  {" "}
+                                  <label
+                                    style={{
+                                      fontSize: "14px",
+                                      lineHeight: "20px",
+                                    }}
+                                    htmlFor=""
+                                  >
+                                    *First Name
+                                  </label>{" "}
+                                  <br />
+                                  <input
+                                    style={{
+                                      width: "90%",
+                                      height: "40px",
+                                      marginTop: "10px",
+                                    }}
+                                    type="text"
+                                    name="firstName"
+                                    onChange={(e) => {
+                                      handlerChange(e);
+                                    }}
+                                  />
+                                </div>
+                                <div style={{ width: "100%" }}>
+                                  {" "}
+                                  <label
+                                    style={{
+                                      fontSize: "14px",
+                                      lineHeight: "20px",
+                                    }}
+                                    htmlFor=""
+                                  >
+                                    *Last Name
+                                  </label>{" "}
+                                  <br />
+                                  <input
+                                    style={{
+                                      width: "90%",
+                                      height: "40px",
+                                      marginTop: "10px",
+                                    }}
+                                    type="text"
+                                    name="lastName"
+                                    onChange={(e) => {
+                                      handlerChange(e);
+                                    }}
+                                  />
+                                </div>
+                              </div>
+                              <div style={{ display: "flex", margin: "5px" }}>
+                                <div style={{ width: "100%" }}>
+                                  {" "}
+                                  <label
+                                    style={{
+                                      fontSize: "14px",
+                                      lineHeight: "20px",
+                                    }}
+                                    htmlFor=""
+                                  >
+                                    *Phone Number
+                                  </label>{" "}
+                                  <br />
+                                  <input
+                                    style={{
+                                      width: "90%",
+                                      height: "40px",
+                                      marginTop: "10px",
+                                    }}
+                                    type="number"
+                                    name="MobileNumber"
+                                    onChange={(e) => {
+                                      handlerChange(e);
+                                    }}
+                                  />
+                                </div>
+                                <div style={{ width: "100%" }}>
+                                  {" "}
+                                  <label
+                                    style={{
+                                      fontSize: "14px",
+                                      lineHeight: "20px",
+                                    }}
+                                    htmlFor=""
+                                  >
+                                    *Ext. (Optional)
+                                  </label>{" "}
+                                  <br />
+                                  <input
+                                    style={{
+                                      width: "90%",
+                                      height: "40px",
+                                      marginTop: "10px",
+                                    }}
+                                    type="number"
+                                    name="exMobileNumber"
+                                    onChange={(e) => {
+                                      handlerChange(e);
+                                    }}
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                style={{
+                                  fontSize: "12px",
+                                  lineHeight: "16px",
+                                  marginTop: "10px",
+                                  marginLeft: "6px",
+                                }}
+                              >
+                                We’ll only call you if there’s an issue with the
+                                order.
+                              </div>
+                              <div style={{ marginTop: "10px" }}>
+                                <label
+                                  style={{
+                                    fontSize: "14px",
+                                    lineHeight: "20px",
+                                  }}
+                                  htmlFor=""
+                                >
+                                  *Address
+                                </label>{" "}
+                                <br />
+                                <input
+                                  style={{
+                                    width: "94%",
+                                    marginLeft: "5px",
+                                    height: "40px",
+                                    marginTop: "10px",
+                                  }}
+                                  type="text"
+                                  name="address"
+                                  onChange={(e) => {
+                                    handlerChange(e);
+                                  }}
+                                />
+                              </div>
+                              <div style={{ display: "flex", margin: "5px" }}>
+                                <div style={{ width: "50%" }}>
+                                  {" "}
+                                  <label
+                                    style={{
+                                      fontSize: "14px",
+                                      lineHeight: "20px",
+                                    }}
+                                    htmlFor=""
+                                  >
+                                    *City
+                                  </label>{" "}
+                                  <br />
+                                  <input
+                                    style={{
+                                      width: "90%",
+                                      height: "40px",
+                                      marginTop: "10px",
+                                    }}
+                                    type="text"
+                                    name="city"
+                                    onChange={(e) => {
+                                      handlerChange(e);
+                                    }}
+                                  />
+                                </div>
+                                <div style={{ width: "25%" }}>
+                                  {" "}
+                                  <label
+                                    style={{
+                                      fontSize: "14px",
+                                      lineHeight: "20px",
+                                    }}
+                                    htmlFor=""
+                                  >
+                                    *Province
+                                  </label>{" "}
+                                  <br />
+                                  <select
+                                    id=""
+                                    style={{
+                                      width: "90%",
+                                      height: "40px",
+                                      marginTop: "10px",
+                                    }}
+                                    name="province"
+                                    onClick={(e) => {
+                                      handlerChange(e);
+                                    }}
+                                  >
+                                    <option>Select</option>
+                                    <option value="Alberta">Alberta</option>
+                                    <option value="British_Columbia">
+                                      British Columbia
+                                    </option>
+                                    <option value="Manitoba">Manitoba</option>
+                                    <option value="New_Brunswick">
+                                      New Brunswick
+                                    </option>
+                                    <option value="new-foundland_and_labrodor">
+                                      New Foundland & Labrador
+                                    </option>
+                                    <option value="nova_scotia">
+                                      Nova Scotiva
+                                    </option>
+                                  </select>
+                                </div>
+                                <div style={{ width: "25%" }}>
+                                  {" "}
+                                  <label
+                                    style={{
+                                      fontSize: "14px",
+                                      lineHeight: "20px",
+                                    }}
+                                    htmlFor=""
+                                  >
+                                    *Postal Code
+                                  </label>{" "}
+                                  <br />
+                                  <input
+                                    style={{
+                                      width: "82%",
+                                      height: "40px",
+                                      marginTop: "10px",
+                                    }}
+                                    type="number"
+                                    name="postalCode"
+                                    onChange={(e) => {
+                                      handlerChange(e);
+                                    }}
+                                  />
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </Typography>
+                      </AccordionDetails>
+                    </Accordion>
+                  </div>
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
           </div>
         </div>
-        
       </div>
-      <div style={{ width: "40%"  , display:"flex"}}>
-                     
-                                    
-      <CartCheckout
-           price={price}
-           discount={discount}
-           tax={tax}
-           orderTotal={orderTotal}
-          route={"/"}
-          onClick={ ()=>{alertMessage()}
-            
-          }
-
+      <div style={{ width: "40%", display: "flex" }}>
+        <CartCheckout
+          price={price}
+          discount={discount}
+          tax={tax}
+          orderTotal={orderTotal}
+          route={"/otp"}
+          
         />
-      </div> 
+      </div>
     </div>
   );
 }
-
