@@ -5,7 +5,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { useNavigate } from "react-router-dom";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Menu from "./Menu";
-
+import {Link} from "react-router-dom"
 import RightStart from "./RightStart";
 import styles from "../../styles/Navbar.module.css";
 function Navbar() {
@@ -201,6 +201,7 @@ function Navbar() {
                   </label>
                 </div>
               </div>
+              <Link to="/cart">
               <div style={{ display: "flex" }}>
                 <ShoppingCartIcon style={{ fill: "#ffffff" }} />
 
@@ -211,6 +212,7 @@ function Navbar() {
                   </label>
                 </div>
               </div>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 .cartGp{
+    margin-top: 80px;
     background: #f4f6f9;
 }
 .cartY{
@@ -252,7 +253,7 @@
     padding: 82px 127px;
     justify-content: space-around;
     font-size: 16px;
-    /* line-height: 1px; */
+     margin-bottom: 70px;
      font-weight: 700; 
     }
   
