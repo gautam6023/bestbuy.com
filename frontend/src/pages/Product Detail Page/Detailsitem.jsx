@@ -46,6 +46,19 @@ const Detailsitem = () => {
     getData();
   }, []);
 
+  //Aman
+  // const dispatch = useDispatch();
+  // const carts = useSelector((state)=>state.cartreducer.carts);
+
+  // const send = (e)=> {
+  //    console.log(e)
+  //     dispatch(ADD(e));
+  // }
+
+  // const{id} = useParams()
+
+  // const[data,setdata] = useState({})
+
   return (
     <>
       <div style={{ width: "80%", margin: "auto" }}>
@@ -271,15 +284,10 @@ const Detailsitem = () => {
                     marginTop: "10%",
                   }}
                   onClick={() => {
-                    ADD(data);
+                    send(ADD(data));
                   }}
                 >
-                  <Link
-                    to="/cart"
-                    style={{ textDecoration: "none", color: "black" }}
-                  >
-                    Add To Cart
-                  </Link>
+                  Add To Cart
                 </B3>
               </div>
               <div
