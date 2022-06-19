@@ -6,6 +6,8 @@ import {
   SORTDATA_HTL,
   SORTDATA_LTH,
   SORTDATA_RATINGD,
+  LOGIN,
+  LOGOUT,
 } from "./action";
 
 const initState = {
@@ -13,6 +15,7 @@ const initState = {
   isLoading: false,
   products: [],
   filterData: [],
+  username: "",
 };
 
 export const productReducer = (state = initState, action) => {
@@ -68,6 +71,17 @@ export const productReducer = (state = initState, action) => {
         filterData: [
           ...state.products.sort((a, b) => b.rate.length - a.rate.length),
         ],
+      };
+
+    case LOGIN:
+      return {
+        ...state,
+        username: action.payload,
+      };
+    case LOGOUT:
+      return {
+        ...state,
+        username: "",
       };
 
     default:
