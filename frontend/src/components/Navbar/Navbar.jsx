@@ -252,6 +252,7 @@ function Navbar() {
                   width: "15px",
                   height: "15px",
                   margin: "-3px",
+                  fill: "white",
                   backgroundColor: "#003da6",
                 }}
                 src="https://www.freeiconspng.com/thumbs/arrow-down-icon-png/black-arrow-down-icon-png-16.png"
