@@ -7,7 +7,6 @@ import { ADD } from "../../Redux/Card Reducer/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-
 const B3 = styled.button`
   background-color: #ffce00;
 
@@ -40,22 +39,18 @@ const Detailsitem = () => {
 
   useEffect(() => {
     async function getData() {
-      let { data } = await axios.get(`http://localhost:8080/deal/${id}`);
+      let { data } = await axios.get(`http://localhost:8080/products/${id}`);
       console.log(data);
-      setData(data);
+      setData(data.data);
     }
     getData();
   }, []);
 
   return (
     <>
-     
       <div style={{ width: "80%", margin: "auto" }}>
         <div>
-          <h1 style={{ fontWeight: "400", textAlign: "left" }}>
-            Acer Aspire TC Desktop PC (AMD R3-3200G/1TB HDD/8GB RAM/Windows 10)
-            - Open Box
-          </h1>
+          <h1 style={{ fontWeight: "400", textAlign: "left" }}>{data.title}</h1>
           <div
             style={{
               display: "flex",
@@ -78,10 +73,7 @@ const Detailsitem = () => {
         >
           <div style={{ width: "70%" }}>
             <div>
-              <img
-                src="https://multimedia.bbycastatic.ca/multimedia/products/500x500/160/16001/16001654.jpg"
-                alt=""
-              />
+              <img src={data.imgUrl} alt="" />
             </div>
             <div style={{ display: "flex" }}>
               <div style={{ width: "60%", textAlign: "left" }}>
@@ -191,9 +183,10 @@ const Detailsitem = () => {
                 textAlign: "left",
                 marginLeft: "2%",
                 margintTop: "2%",
+                color: "#bb0628",
               }}
             >
-              $509
+              ${data.price}
             </div>
             <div
               style={{
@@ -274,15 +267,19 @@ const Detailsitem = () => {
                     height: "40px",
                     outline: "none",
                     border: "none",
-                    marginLeft:"20%",
+                    marginLeft: "20%",
                     marginTop: "10%",
-                   
                   }}
-                  onClick={()=>{
-                    ADD(data)
+                  onClick={() => {
+                    ADD(data);
                   }}
                 >
-                  <Link to="/cart" style={{textDecoration:"none" ,color:"black"}}>Add To Cart</Link> 
+                  <Link
+                    to="/cart"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    Add To Cart
+                  </Link>
                 </B3>
               </div>
               <div
@@ -298,7 +295,7 @@ const Detailsitem = () => {
                     height: "40px",
                     outline: "none",
                     border: "none",
-                    marginLeft:"20%",
+                    marginLeft: "20%",
                   }}
                 >
                   Pick Up at Store
@@ -312,12 +309,7 @@ const Detailsitem = () => {
                   marginTop: "5%",
                 }}
               >
-                <img
-                  style={{ width: "50px", height: "30px"  , marginLeft:"3%"}}
-                  src="https://logodownload.org/wp-content/uploads/2020/05/best-buy-logo-1.png"
-                  alt=""
-                />
-                <p style={{ marginTop: "0%" }}>Sold and shipped by Best Buy</p>
+                <p style={{ marginTop: "3%" }}>Sold and shipped by Best Buy</p>
               </div>
               <div
                 style={{
