@@ -8,8 +8,8 @@ import GeekSquad from './pages/GeekSquad';
 function App() {
   return (
     <div className='App'>
-        <GeekSquad />
-        {/* <HomePage /> */}
+        {/* <GeekSquad /> */}
+        <HomePage />
     </div>
   );
 }

@@ -14,7 +14,7 @@ export default function HomePage(){
         desc: "Find incredible savings on must-have tech essentials and more.",
       };
       return (
-        <div className="mainContainer">
+        <div className="mainContainer" >
           <Cont1 />
           <Ban1 />
           <Htoff />
