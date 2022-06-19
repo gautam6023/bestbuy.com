@@ -7,6 +7,11 @@
     text-decoration: none;
     cursor: pointer;
 }
+.passEx{
+    font-size: 10px;
+    font-weight: lighter;
+    
+}
 .Navdiv{
     width: 100%;
     height: 70px;

@@ -74,7 +74,7 @@ const Signup = () => {
                   <div className={styles.inptd} onClick={() => handleClick(true)}>Hide</div>
                 )}
               </div>
-             
+              <p className={styles.passEx}>Atlist 8 char(ex:1234#Abc(spacial char,capital & small letter))</p>
               <div className={styles.checkdiv}>
                 <input type="checkbox" name="" id="" className={styles.check} />
                 <p className={styles.fp}>Sign up for our newsletter to stay in

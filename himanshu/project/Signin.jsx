@@ -76,6 +76,7 @@ const Signin = () => {
                   <div className={styles.inptd} onClick={() => handleClick(true)}>Hide</div>
                 )}
               </div>
+              <p className={styles.passEx}>Atlist 8 char(ex:1234#Abc(spacial char,capital & small letter))</p>
               <div className={styles.btns}>
                 <button className={styles.buttons} type='submit'>Sign In</button>
                 <a className={styles.aTag} href="">Forget Password?</a>
