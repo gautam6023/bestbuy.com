@@ -49,7 +49,7 @@ const Detailsitem = () => {
 
   return (
     <>
-      <Link to="/cart">cart</Link>
+     
       <div style={{ width: "80%", margin: "auto" }}>
         <div>
           <h1 style={{ fontWeight: "400", textAlign: "left" }}>
@@ -282,7 +282,7 @@ const Detailsitem = () => {
                     ADD(data)
                   }}
                 >
-                  Add To Cart
+                  <Link to="/cart" style={{textDecoration:"none" ,color:"black"}}>Add To Cart</Link> 
                 </B3>
               </div>
               <div

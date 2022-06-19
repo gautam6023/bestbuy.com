@@ -41,12 +41,17 @@ export default function Checkout() {
     localStorage.setItem("formData", JSON.stringify(data));
   };
   return (
+    
     <div
       style={{
         display: "flex",
         backgroundColor: "#f4f6f9",
         height: "auto",
         flexFlow: "row",
+        margin: "auto",
+        marginTop: "50px",
+        marginBottom: "30px",
+        width: "80%",
       }}
     >
       <div
@@ -293,7 +298,6 @@ export default function Checkout() {
 
       <div
         style={{
-         
           width: "40%",
           borderRightColor: "red",
           height: "700px",
@@ -307,9 +311,7 @@ export default function Checkout() {
           tax={tax}
           orderTotal={orderTotal}
           route={"/payment"}
-          onClick={
-            localStorage.setItem("formData", JSON.stringify(data))
-          }
+          onClick={localStorage.setItem("formData", JSON.stringify(data))}
         />
       </div>
     </div>
