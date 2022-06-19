@@ -1,55 +1,50 @@
-*{
-    font-family: "Human BBY,Arial,sans-serif";
+.geek {
+  width: 70vw;
+  margin: auto;
+  /* background-color: bisque; */
 }
-.geek{
-    width : 70vw;
-    margin: auto;
-    /* background-color: bisque; */
+#first_div {
+  font-size: small;
 }
-#first_div{
-    font-size: small;
+.geekbanner {
+  background-image: url("https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/blt33e5681c4a3399b9/5f0ca0742cd8e87f92bdd837/geek-squad-service-evergreen-we_re-here-to-help-m.jpg?width=5760&quality=80&auto=webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid rgb(236, 243, 243);
+  height: 25vw;
 }
-.geekbanner{
-    background-image: url('https://merchandising-assets.bestbuy.ca/bltc8653f66842bff7f/blt33e5681c4a3399b9/5f0ca0742cd8e87f92bdd837/geek-squad-service-evergreen-we_re-here-to-help-m.jpg?width=5760&quality=80&auto=webp');
-    background-repeat: no-repeat;
-    background-size:cover;
-    border:1px solid rgb(236, 243, 243);
-    height: 25vw;
+.div1 {
+  width: 35%;
+  margin-top: 9%;
+  /* border: 1px solid blue; */
+  line-height: 1.38vw;
+  margin-left: 3%;
 }
-.div1{
-    width: 35%;
-    margin-top: 9%;
-    /* border: 1px solid blue; */
-    line-height: 1.38vw;
-    margin-left: 3%;
-    
+.div1 > div > img {
+  width: 30%;
+  margin-bottom: 4%;
 }
-.div1>div>img{
-    width: 30%;
-    margin-bottom: 4%;
-    
+.div1 > h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
-.div1>h3{
-    margin-top: 0px;
-    margin-bottom: 0px;
+.div > p {
+  margin-top: 0px;
 }
-.div>p{
-    margin-top: 0px;
+.abcd {
+  margin: 1%;
 }
-.abcd{
-    margin: 1%;
+.gridcom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2%;
 }
-.gridcom{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 2%;
+.abcdgrid {
+  height: 19vw;
 }
-.abcdgrid{
-height: 19vw;
+.imgdiv > img {
+  height: 100%;
 }
-.imgdiv>img{
-    height: 100%;
-}
-.imgdiv{
-    height: 55%;
+.imgdiv {
+  height: 55%;
 }

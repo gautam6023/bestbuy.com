@@ -1,14 +1,44 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import StoreMallDirectoryIcon from "@mui/icons-material/StoreMallDirectory";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { useNavigate } from "react-router-dom";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import styled from "styled-components";
 import Menu from "./Menu";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 import RightStart from "./RightStart";
 import styles from "../../styles/Navbar.module.css";
+import { useSelector, useDispatch } from "react-redux";
+import { Logout } from "../../Redux/Product Reducer/action";
+
+const Wrapper = styled.div`
+  position: relative;
+  .logoutOpt {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    background-color: #ffffff;
+    top: 40px;
+  }
+
+  &:hover {
+    .logoutOpt {
+      visibility: ${(props) => (props.username ? "visible" : "hidden")};
+      opacity: ${(props) => (props.username ? 1 : 0)};
+      cursor: pointer;
+    }
+  }
+`;
+
 function Navbar() {
+  const username = useSelector((state) => state.products.username);
+  // const [username, setUserName] = useState("");
+  const [check, setCheck] = useState(false);
+  const dispatch = useDispatch();
+
   const navigate = useNavigate();
   const [flag, setFlag] = useState(false);
   const [flag1, setFlag1] = useState(false);
@@ -191,27 +221,47 @@ function Navbar() {
                   </label>
                 </div>
               </div>
-              <div style={{ display: "flex" }}>
+              <Wrapper
+                username={username}
+                style={{ display: "flex" }}
+                onClick={() => {
+                  navigate("/signup");
+                }}
+              >
                 <AccountCircleIcon style={{ fill: "#ffffff" }} />
 
                 <div>
                   {" "}
-                  <label style={{ color: "white", fontSize: "15px" }}>
-                    Account
+                  <label
+                    style={{
+                      color: "white",
+                      fontSize: "15px",
+                      cursor: "pointer",
+                    }}
+                  >
+                    {username ? username : "Account"}
                   </label>
+                  <div
+                    className="logoutOpt"
+                    onClick={() => {
+                      dispatch(Logout());
+                    }}
+                  >
+                    Logout
+                  </div>
                 </div>
-              </div>
+              </Wrapper>
               <Link to="/cart">
-              <div style={{ display: "flex" }}>
-                <ShoppingCartIcon style={{ fill: "#ffffff" }} />
+                <div style={{ display: "flex" }}>
+                  <ShoppingCartIcon style={{ fill: "#ffffff" }} />
 
-                <div>
-                  {" "}
-                  <label style={{ color: "white", fontSize: "15px" }}>
-                    Cart
-                  </label>
+                  <div>
+                    {" "}
+                    <label style={{ color: "white", fontSize: "15px" }}>
+                      Cart
+                    </label>
+                  </div>
                 </div>
-              </div>
               </Link>
             </div>
           </div>

@@ -12,6 +12,9 @@ export const SORTDATA_HTL = "SORTDATA_HTL";
 export const SORTDATA_LTH = "SORTDATA_LTH";
 export const SORTDATA_RATINGD = "SORTDATA_RATINGD";
 
+export const LOGIN = "LOGIN";
+export const LOGOUT = "LOGOUT";
+
 const getRequiest = () => ({
   type: GET_REQUIEST,
 });
@@ -90,4 +93,38 @@ export const sortData = (val) => (dispatch) => {
     default:
       return "Not a valid";
   }
+};
+
+export const Login = (payload) => ({
+  type: LOGIN,
+  payload,
+});
+
+export const userAuth = (data, navigate) => async (dispatch) => {
+  try {
+    const url = "http://localhost:8080/api/auth";
+    const res = await axios.post(url, data);
+
+    let token = res.data.message;
+    let user = res.data.userdata;
+    localStorage.setItem("token", token);
+    localStorage.setItem("user", JSON.stringify(user));
+    console.log(res);
+    alert(res.data.message);
+    navigate("/");
+    // window.location = "/";
+
+    dispatch(Login(user.firstName));
+    console.log(res.message);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+const logout = () => ({
+  type: LOGOUT,
+});
+
+export const Logout = () => (dispatch) => {
+  dispatch(logout());
 };
