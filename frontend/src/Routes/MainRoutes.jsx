@@ -11,10 +11,11 @@ import Footer from "../components/Footer/Footer";
 import Checkout from "../components/Checkout/Checkout";
 import Payment from "../components/Payment/Payment";
 import HomePage from "../pages/HomePage";
-import GeekSquad from "../pages/GeekSquad";
+// import GeekSquad from "../pages/GeekSquad";
 import Signin from "../pages/Auth/Signin";
 import Signup from "../pages/Auth/Signup";
 import { Otp } from "../components/Payment/Otp";
+import GeekSquad from "../pages/GeekSquad";
 const MainRoutes = () => {
   return (
     <div>
@@ -30,8 +31,7 @@ const MainRoutes = () => {
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/otp" element={<Otp />} />
-
-        
+        <Route path="/geeksquad" element={<GeekSquad />} />
       </Routes>
       <Footer />
     </div>

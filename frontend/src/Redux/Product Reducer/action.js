@@ -35,6 +35,8 @@ export const getData = (id) => async (dispatch) => {
 
     let finaldata;
     if (id !== "topdeals") {
+      if (id == "APPLE") {
+      }
       let filter = data.data.filter((el) => {
         return el.brand[0] === id;
       });
@@ -110,7 +112,7 @@ export const userAuth = (data, navigate) => async (dispatch) => {
     localStorage.setItem("token", token);
     localStorage.setItem("user", JSON.stringify(user));
     console.log(res);
-    // alert(res.data.message);
+    alert(res.data.message);
     if (token) {
       navigate("/");
     }

@@ -65,15 +65,24 @@ export default function Payment() {
     province,
   } = JSON.parse(localStorage.getItem("formData"));
 
-  const [aFlag,setAflag]=useState(true)
+  const [aFlag, setAflag] = useState(true);
   return (
-    <div style={{ display: "flex", backgroundColor: "#ffffff",margin:"auto" , marginTop:"50px" , marginBottom:"30px"  , width:"70%" }}>
+    <div
+      style={{
+        display: "flex",
+        backgroundColor: "#ffffff",
+        margin: "auto",
+        marginTop: "50px",
+        marginBottom: "30px",
+        width: "70%",
+      }}
+    >
       <div style={{ width: "60%", marginLeft: "5%" }}>
         <h2 style={{ fontSize: "20px", fontWeight: "600", textAlign: "left" }}>
           Payment
         </h2>
         <div style={{ width: "100%", marginTop: "10px" }}>
-          <Accordion   >
+          <Accordion>
             <AccordionSummary
               expandIcon={<MdLabel />}
               aria-controls="panel1a-content"
@@ -149,7 +158,7 @@ export default function Payment() {
           </Accordion>
         </div>
         <div style={{ marginTop: "5px" }}>
-          <Accordion expanded={ aFlag   ? "true" : ""}  >
+          <Accordion expanded={aFlag ? "true" : ""}>
             <AccordionSummary
               expandIcon={<RadioButtonCheckedIcon />}
               aria-controls="panel1a-content"
@@ -159,7 +168,12 @@ export default function Payment() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                <div style={{ textAlign: "left", fontWeight: "600" }}>
+                <div
+                  style={{
+                    textAlign: "left",
+                    fontWeight: "600",
+                  }}
+                >
                   Card Information
                 </div>
                 <Box
@@ -171,10 +185,16 @@ export default function Payment() {
                   }}
                 >
                   <div
-                    style={{ width: "150%", textAlign: "left", margin: "10px"  }}
+                    style={{ width: "50%", textAlign: "left", margin: "10px" }}
                   >
                     {" "}
-                    <div style={{ fontWeight: "600", display: "block" }}>
+                    <div
+                      style={{
+                        fontWeight: "600",
+                        display: "block",
+                        border: "1px solid",
+                      }}
+                    >
                       New Card{" "}
                     </div>
                     <div style={{ fontSize: "12px", lineHeight: "26px" }}>
@@ -185,6 +205,7 @@ export default function Payment() {
                         display: "flex",
                         marginTop: "10px",
                         gap: "10px",
+                        width: "50%",
                       }}
                     >
                       <img
@@ -351,7 +372,7 @@ export default function Payment() {
                 <div
                   style={{ marginTop: "10px", borderTop: "1px solid #ffffff" }}
                 >
-                  <Accordion >
+                  <Accordion>
                     <AccordionSummary
                       expandIcon={<RadioButtonUncheckedIcon />}
                       aria-controls="panel1a-content"
@@ -612,7 +633,11 @@ export default function Payment() {
           </Accordion>
 
           <div style={{ marginTop: "10px", borderTop: "1px solid #ffffff" }}>
-            <Accordion onClick={()=>{setAflag(false)}}>
+            <Accordion
+              onClick={() => {
+                setAflag(false);
+              }}
+            >
               <AccordionSummary
                 expandIcon={<RadioButtonUncheckedIcon />}
                 aria-controls="panel1a-content"
@@ -629,7 +654,14 @@ export default function Payment() {
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
-                  <div style={{ textAlign: "left", fontSize: "12px" , margin:"auto" , justifyContent:"center" }}>
+                  <div
+                    style={{
+                      textAlign: "left",
+                      fontSize: "12px",
+                      margin: "auto",
+                      justifyContent: "center",
+                    }}
+                  >
                     <div>
                       Select "Pay with PayPal" to enter your payment details on
                       the PayPal site.
@@ -662,7 +694,11 @@ export default function Payment() {
             </Accordion>
           </div>
           <div style={{ marginTop: "10px" }}>
-            <Accordion onClick={()=>{setAflag(false)}}>
+            <Accordion
+              onClick={() => {
+                setAflag(false);
+              }}
+            >
               <AccordionSummary
                 expandIcon={<RadioButtonCheckedIcon />}
                 aria-controls="panel1a-content"
@@ -1018,8 +1054,7 @@ export default function Payment() {
           discount={discount}
           tax={tax}
           orderTotal={orderTotal}
-          route={"/otp"}
-          
+          route={"/"}
         />
       </div>
     </div>

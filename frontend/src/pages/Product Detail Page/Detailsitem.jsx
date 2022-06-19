@@ -284,7 +284,7 @@ const Detailsitem = () => {
                     marginTop: "10%",
                   }}
                   onClick={() => {
-                    send(ADD(data));
+                    send(data);
                   }}
                 >
                   Add To Cart

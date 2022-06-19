@@ -46,7 +46,7 @@ const cartreducer = (state = initState, action) => {
   switch (action.type) {
     case "ADD_TO_CART":
       const IteamIndex = state.carts.findIndex(
-        (iteam) => iteam.id === action.payload.id
+        (iteam) => iteam._id === action.payload._id
       );
 
       if (IteamIndex >= 0) {
@@ -69,7 +69,7 @@ const cartreducer = (state = initState, action) => {
       }
 
     case "REMOVE_FROM_CART":
-      const data = state.carts.filter((el) => el.id !== action.payload);
+      const data = state.carts.filter((el) => el._id !== action.payload);
 
       return {
         ...state,
@@ -78,7 +78,7 @@ const cartreducer = (state = initState, action) => {
 
     case "REMOVE_MINUS_ONE":
       const IteamIndex_Dec = state.carts.findIndex(
-        (iteam) => iteam.id === action.payload.id
+        (iteam) => iteam._id === action.payload._id
       );
 
       if (state.carts[IteamIndex_Dec].qnty >= 1) {
@@ -90,7 +90,7 @@ const cartreducer = (state = initState, action) => {
           carts: [...state.carts],
         };
       } else if (state.carts[IteamIndex_Dec].qnty === 1) {
-        const data = state.carts.filter((el) => el.id !== action.payload);
+        const data = state.carts.filter((el) => el._id !== action.payload);
 
         return {
           ...state,
