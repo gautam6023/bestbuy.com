@@ -53,7 +53,7 @@ export default function Htoff() {
       <div className="hoffersin">
         {data.map((e, i) => (
           <div className="mapHoff" key={i}>
-            <a href="" style={{ textDecoration: "none" }}>
+            <div href="" style={{ textDecoration: "none" }}>
               <div className="imgDiv">
                 <img src={e.hoffimg} alt="pic" srcset="" />
               </div>
@@ -66,7 +66,7 @@ export default function Htoff() {
               <a href="">
                 <p id="link">{e.link}</p>
               </a>
-            </a>
+            </div>
           </div>
         ))}
       </div>

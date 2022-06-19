@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   line-height: 16px;
   box-shadow: ${(props) => (props.cardShadow ? props.cardShadow : 0)};
   img {
-    width: 100%;
+    width: 90%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
@@ -26,22 +26,40 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     /* align-items: center; */
-    gap: 10px;
+    gap: 8px;
 
     .title {
       color: #1d252c;
+      font-size: 14px;
 
       &:hover {
         text-decoration: underline;
       }
     }
     .review {
-      font-size: 16px;
+      font-size: 12px;
     }
     .price {
       font-size: 18px;
       color: #bb0628;
       font-weight: 600;
+    }
+    .save {
+      font-size: 12px;
+      font-weight: bold;
+      color: #bb0628;
+      margin-bottom: 0;
+    }
+
+    .topDealSlider {
+      background-color: #bb0628;
+      color: #ffffff;
+      font-weight: 600;
+      width: fit-content;
+
+      font-size: 12px;
+      padding: 0 5px;
+      clip-path: polygon(0 1%, 100% 0, 97% 100%, 0% 100%);
     }
   }
 `;
@@ -53,7 +71,9 @@ const SliderCard = (el) => {
         <div className="desc">
           <p className="title">{el.title}</p>
           <p className="review">{el.rate}</p>
-          {el.top ? <p className="topDeal">{el.top}</p> : ""}
+          <p>{el.review}</p>
+          {el.top ? <p className="topDealSlider">{el.top}</p> : ""}
+          {el.save ? <p className="save">{el.save}</p> : ""}
           <p className="price">${el.price}</p>
         </div>
       </Link>
