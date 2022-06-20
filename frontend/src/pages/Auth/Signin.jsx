@@ -66,7 +66,7 @@ const Signin = () => {
           className={styles.imgs}
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHFsACrLJwsbFpPdb7-hzK71ROgmb7PMFUgSbNTgBaBCli_Pop"
           alt=""
-          srcset=""
+       
         />
       </div> */}
       <div className={styles.snav}>
