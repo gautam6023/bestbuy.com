@@ -1,7 +1,7 @@
 
 
 <h2># Bestbuy.com Clone</h2>
-<h3>BestBuy.com is an e-com website that deals in Tech-Gadgets and Tech-accessories. We, a team of 6 members built this webpage using React-js within a time span of 5 days.</h3>
+
 <hr><br>
 
 <h2>Tech Stack<h2/>
