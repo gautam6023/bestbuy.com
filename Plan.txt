@@ -1,3 +1,8 @@
 Home page
 Top Deals
 Deal of the Day
+product details
+cart page
+cart checkout
+cart Payment
+signUp & Login
