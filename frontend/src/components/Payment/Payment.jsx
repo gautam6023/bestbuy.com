@@ -179,20 +179,16 @@ export default function Payment() {
                 <Box
                   sx={{
                     border: "none",
-                    "&:hover": {
-                      border: "1px solid black",
-                    },
                   }}
                 >
                   <div
-                    style={{ width: "50%", textAlign: "left", margin: "10px" }}
+                    style={{ width: "70%", textAlign: "left", margin: "10px" }}
                   >
                     {" "}
                     <div
                       style={{
                         fontWeight: "600",
                         display: "block",
-                        border: "1px solid",
                       }}
                     >
                       New Card{" "}

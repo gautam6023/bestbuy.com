@@ -131,7 +131,7 @@ export const Cart = () => {
                             className="cartCardBin"
                             size="20"
                             color="blue"
-                            onClick={() => dlt(cartItem.id)}
+                            onClick={() => dlt(cartItem._id)}
                           />{" "}
                           <div style={{ display: "inline", fontSize: "12px" }}>
                             Remove
