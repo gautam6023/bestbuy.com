@@ -45,6 +45,6 @@
   <li><a href="https://github.com/Debasree-3031999">Debasree Ghosh</a></li>
  <hr><hr>
   
-<h2>Ather</h2>
+<h2>Auther</h2>
   <h2><a href="https://github.com/Debasree-3031999">@ Debasree Ghosh</a></h2>
 
