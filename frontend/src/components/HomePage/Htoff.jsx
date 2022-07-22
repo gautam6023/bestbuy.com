@@ -55,7 +55,7 @@ export default function Htoff() {
           <div className="mapHoff" key={i}>
             <div href="" style={{ textDecoration: "none" }}>
               <div className="imgDiv">
-                <img src={e.hoffimg} alt="pic" srcset="" />
+                <img src={e.hoffimg} alt="pic" />
               </div>
               <div className="titletxt">
                 <p>{e.title}</p>

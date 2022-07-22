@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   margin: 30px 0;
 
   & > div {
-    /* border: 1px solid white; */
+    /* bor: 1px solid white; */
   }
   .detailsOfCourosol {
     width: 35%;

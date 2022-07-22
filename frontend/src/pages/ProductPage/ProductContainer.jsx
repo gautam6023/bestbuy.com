@@ -131,10 +131,11 @@ const ProductContainer = () => {
     (state) => state.products
   );
   const dispatch = useDispatch();
-  const { id } = useParams();
+  let { id } = useParams();
   console.log(id);
   // console.log(filterOtions);
   useEffect(() => {
+    if (!id) id = "topdeals";
     dispatch(getData(id));
   }, [dispatch]);
 

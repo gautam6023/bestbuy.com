@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Signin from "./Signin";
-// import "./main.css"
+import styles from "./main.module.css";
 import { FaChevronLeft } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { IoLocationOutline } from "react-icons/io5";
@@ -36,7 +36,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "http://localhost:8080/api/users";
+      const url = "https://bestbuybackend.herokuapp.com/api/users";
       const res = await axios.post(url, data);
       navigate("/Signin");
       console.log(res);
@@ -51,38 +51,42 @@ const Signup = () => {
     }
   };
   return (
-    <div className="Box">
-      <div className="Navdiv">
+    <div className={styles.Box}>
+      {/* <div className={styles.Navdiv}>
         <img
+          className={styles.imgs}
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHFsACrLJwsbFpPdb7-hzK71ROgmb7PMFUgSbNTgBaBCli_Pop"
           alt=""
-          srcset=""
+       
         />
-      </div>
-      <div className="snav">
+      </div> */}
+      <div className={styles.snav}>
         <FaChevronLeft />
         <Link to="/Signin">
-          <p className="backp">Back to previous page</p>
+          <p className={styles.backp}>Back to previous page</p>
         </Link>
       </div>
-      <div className="Flexdiv">
+      <div className={styles.Flexdiv}>
         <div>
-          <h1>Create an Account</h1>
+          <h1 className={styles.H1}>Create an Account</h1>
           <form action="" onSubmit={handleSubmit}>
-            <label>First Name</label>
+            <label className={styles.labels}>First Name</label>
             <br />
             <input
+              className={styles.inputs}
               type="text"
               name="firstName"
               onChange={handleChange}
               value={data.firstName}
               required
             />
+
             <br />
             <br />
-            <label>Last Name</label>
+            <label className={styles.labels}>Last Name</label>
             <br />
             <input
+              className={styles.inputs}
               type="text"
               name="lastName"
               onChange={handleChange}
@@ -91,9 +95,10 @@ const Signup = () => {
             />
             <br />
             <br />
-            <label>Email Address</label>
+            <label className={styles.labels}>Email Address</label>
             <br />
             <input
+              className={styles.inputs}
               type="email"
               name="email"
               onChange={handleChange}
@@ -102,104 +107,114 @@ const Signup = () => {
             />
             <br />
             <br />
-            <label>Password</label>
+            <label className={styles.labels}>Password</label>
             <br />
-            <div className="inputFlex">
+            <div className={styles.inputFlex}>
               <input
+                className={styles.inputs}
                 type={inputType}
-                id="pwipt"
+                id={styles.pwipt}
                 name="password"
                 onChange={handleChange}
                 value={data.password}
                 required
               />
+
               <br />
               <br />
               {toggle ? (
-                <div className="inptd" onClick={() => handleClick(false)}>
+                <div
+                  className={styles.inptd}
+                  onClick={() => handleClick(false)}
+                >
                   Show
                 </div>
               ) : (
-                <div className="inptd" onClick={() => handleClick(true)}>
+                <div className={styles.inptd} onClick={() => handleClick(true)}>
                   Hide
                 </div>
               )}
             </div>
+            <p className={styles.passEx}>
+              Atlist 8 char(ex:1234#Abc(spacial char,capital & small letter))
+            </p>
 
-            <div className="checkdiv">
-              <input type="checkbox" name="" id="" className="check" />
-              <p className="fp">
+            <div className={styles.checkdiv}>
+              <input type="checkbox" name="" id="" className={styles.check} />
+              <p className={styles.fp}>
                 Sign up for our newsletter to stay in the loop about hot deals,
                 new products, and more. Don’t worry, you can unsubscribe at any
                 time.
               </p>
             </div>
-            <div className="btndiv">
-              <button className="signupbtn" type="submit">
+            <div className={styles.btndiv}>
+              <button className={styles.signupbtn} type="submit">
                 Create Account
               </button>
-              <p className="fp">
+              <p className={styles.fp}>
                 By continuing you agree to our{" "}
                 <a href="#">Terms and Conditions</a> and{" "}
                 <a href="#">Privacy Policy</a>.
               </p>
             </div>
-            <div className="acflex">
+            <div className={styles.acflex}>
               <div>
-                <VscAccount className="acicon" />
+                <VscAccount className={styles.acicon} />
               </div>
               <div>
                 <p>Already have an account?</p>
-                <div className="iconflex">
+                <div className={styles.iconflex}>
                   <Link to="/Signin">
-                    <p className="iconp">Signin</p>
+                    <p className={styles.iconp}>Signin</p>
                   </Link>
-                  <IoIosArrowForward className="icon" />
+                  <IoIosArrowForward className={styles.icon} />
                 </div>
               </div>
             </div>
           </form>
         </div>
         <div>
-          <p className="mainp">Here are some of the benefits you’ll enjoy:</p>
-          <div className="types">
-            <div className="iconss">
-              <IoCartOutline className="icon" />
+          <p className={styles.mainp}>
+            Here are some of the benefits you’ll enjoy:
+          </p>
+          <div className={styles.types}>
+            <div className={styles.iconss}>
+              <IoCartOutline className={styles.icon} />
             </div>
             <div>
-              <p className="head">Fast checkout.</p>
+              <p className={styles.head}>Fast checkout.</p>
               <p>Your payment info is saved and ready.</p>
             </div>
           </div>
-          <div className="types">
-            <div className="iconss">
-              <IoLocationOutline className="icon" />
+          <div className={styles.types}>
+            <div className={styles.iconss}>
+              <IoLocationOutline className={styles.icon} />
             </div>
             <div>
-              <p className="head">Easy tracking.</p>
+              <p className={styles.head}>Easy tracking.</p>
               <p>Keep an eye on your order.</p>
             </div>
           </div>
-          <div className="types">
-            <div className="iconss">
-              <VscHistory className="icon" />
+          <div className={styles.types}>
+            <div className={styles.iconss}>
+              <VscHistory className={styles.icon} />
             </div>
             <div>
-              <p className="head">Quick recap.</p>
+              <p className={styles.head}>Quick recap.</p>
               <p>Your order history is a click away.</p>
             </div>
           </div>
         </div>
       </div>
-      <div className="scurty">
-        <div className="types ftypes">
-          <div className="iconss ">
+      <div className={styles.scurty}>
+        <div className={`${styles.types} ${styles.ftypes}`}>
+          <div className={styles.iconss}>
             {" "}
-            <IoLockClosedOutline className="scrtyicon" />
+            <IoLockClosedOutline className={styles.scrtyicon} />
           </div>
           <div>
-            <p className="head">Security & Privacy</p>
-            <p className="fp">
+            <p className={styles.head}>Security & Privacy</p>
+            <p className={styles.fp}>
               Every transaction on BestBuy.ca is secure. Any personal
               information you give us will be handled according to our Privacy
               Policy.

@@ -38,7 +38,7 @@ function Navbar() {
   const username = useSelector((state) => state.products.username);
   const badge = useSelector((state) => state.cartreducer.carts);
 
-  console.log(badge, badge.length,"badge")
+  console.log(badge, badge.length, "badge");
   // const [username, setUserName] = useState("");
   const [check, setCheck] = useState(false);
   const dispatch = useDispatch();
@@ -257,8 +257,7 @@ function Navbar() {
               </Wrapper>
               <Link to="/cart">
                 <div style={{ display: "flex" }}>
-
-                  <Badge badgeContent={ badge.length} color="primary">
+                  <Badge badgeContent={badge.length} color="primary">
                     <ShoppingCartIcon style={{ fill: "#ffffff" }} />
                   </Badge>
 
@@ -282,7 +281,7 @@ function Navbar() {
           height: "40px",
         }}
       >
-        <div style={{ marginLeft: "9%", marginTop: "5px" }}>
+        <div style={{ marginLeft: "9%", marginTop: "5px", cursor: "pointer" }}>
           <div
             style={{
               backgroundColor: "#003da6",
@@ -337,7 +336,9 @@ function Navbar() {
                 {" "}
                 <div
                   style={{ lineHeight: "1.3", cursor: "pointer" }}
-                  onClick={() => {navigate("products/topdeals") ; setFlag(!flag)     }}
+
+                  onClick={() => navigate("products/ACER")}
+
                 >
                   Computers, Tablets, & Accessories{" "}
                 </div>{" "}
@@ -543,7 +544,7 @@ function Navbar() {
           ) : null}
         </div>
 
-        <div style={{ marginTop: "5px" }}>
+        <div style={{ marginTop: "5px", cursor: "pointer" }}>
           <div
             style={{
               backgroundColor: "#003da6",
@@ -889,7 +890,6 @@ function Navbar() {
                   style={{
                     width: "15px",
                     height: "16px",
-
                     marginTop: "8px",
                   }}
                   src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png"
@@ -1030,7 +1030,7 @@ function Navbar() {
             </div>
           ) : null}
         </div>
-        <div style={{ marginTop: "5px" }}>
+        <div style={{ marginTop: "5px", cursor: "pointer" }}>
           <div
             style={{
               backgroundColor: "#003da6",
@@ -1077,15 +1077,23 @@ function Navbar() {
                 lineHeight: "2",
                 fontWeight: "300",
                 paddingLeft: "9px",
+                cursor: "pointer",
               }}
             >
-              <div>Top Deals </div>
+              <div
+                onClick={() => {
+                  navigate("/products/topdeals");
+                  setFlag(false);
+                }}
+              >
+                Top Deals{" "}
+              </div>
               <div>Best Buys Outlet </div>
             </div>
           ) : null}
         </div>
 
-        <div style={{ marginTop: "5px" }}>
+        <div style={{ marginTop: "5px", cursor: "pointer" }}>
           <div
             style={{
               backgroundColor: "#003da6",
@@ -1132,9 +1140,12 @@ function Navbar() {
                 lineHeight: "2",
                 fontWeight: "300",
                 paddingLeft: "9px",
+                cursor: "pointer",
               }}
             >
-              <div>Geek Squad Services </div>
+              <div onClick={() => navigate("/geeksquad")}>
+                Geek Squad Services{" "}
+              </div>
               <div>In-Home Advisor </div>
               <div>Best Buy Business</div>
               <div>Best Buy Health</div>

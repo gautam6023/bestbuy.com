@@ -7,7 +7,6 @@ import { ADD } from "../../Redux/Card Reducer/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-
 const B3 = styled.button`
   background-color: #ffce00;
 
@@ -40,22 +39,33 @@ const Detailsitem = () => {
 
   useEffect(() => {
     async function getData() {
-      let { data } = await axios.get(`http://localhost:8080/deal/${id}`);
+      let { data } = await axios.get(
+        `https://bestbuybackend.herokuapp.com/products/${id}`
+      );
       console.log(data);
-      setData(data);
+      setData(data.data);
     }
     getData();
   }, []);
 
+  //Aman
+  // const dispatch = useDispatch();
+  // const carts = useSelector((state)=>state.cartreducer.carts);
+
+  // const send = (e)=> {
+  //    console.log(e)
+  //     dispatch(ADD(e));
+  // }
+
+  // const{id} = useParams()
+
+  // const[data,setdata] = useState({})
+
   return (
     <>
-     
-      <div style={{ width: "80%", margin: "auto" }}>
+      <div style={{ width: "80%", margin: "auto", marginTop: "30px" }}>
         <div>
-          <h1 style={{ fontWeight: "400", textAlign: "left" }}>
-            Acer Aspire TC Desktop PC (AMD R3-3200G/1TB HDD/8GB RAM/Windows 10)
-            - Open Box
-          </h1>
+          <h1 style={{ fontWeight: "400", textAlign: "left" }}>{data.title}</h1>
           <div
             style={{
               display: "flex",
@@ -77,12 +87,26 @@ const Detailsitem = () => {
           }}
         >
           <div style={{ width: "70%" }}>
+<<<<<<< HEAD
             <div style={{ display:"flex" ,  justifyContent:"center" , marginTop:"3%"  , marginBottom:"3%"}}>
               <img
    
                 src="https://multimedia.bbycastatic.ca/multimedia/products/500x500/151/15153/15153925.jpg"
                 alt=""
               />
+=======
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                marginTop: "3%",
+                marginBottom: "3%",
+
+                height: "500px",
+              }}
+            >
+              <img src={data.imgUrl} alt="" />
+>>>>>>> 51df730a4341509f3ab44385bf3abfd7c863055c
             </div>
             <div style={{ display: "flex" }}>
               <div style={{ width: "60%", textAlign: "left" }}>
@@ -192,9 +216,10 @@ const Detailsitem = () => {
                 textAlign: "left",
                 marginLeft: "2%",
                 margintTop: "2%",
+                color: "#bb0628",
               }}
             >
-              $509
+              ${data.price}
             </div>
             <div
               style={{
@@ -275,15 +300,14 @@ const Detailsitem = () => {
                     height: "40px",
                     outline: "none",
                     border: "none",
-                    marginLeft:"20%",
+                    marginLeft: "20%",
                     marginTop: "10%",
-                   
                   }}
-                  onClick={()=>{
-                    ADD(data)
+                  onClick={() => {
+                    send(data);
                   }}
                 >
-                  <Link to="/cart" style={{textDecoration:"none" ,color:"black"}}>Add To Cart</Link> 
+                  Add To Cart
                 </B3>
               </div>
               <div
@@ -299,7 +323,7 @@ const Detailsitem = () => {
                     height: "40px",
                     outline: "none",
                     border: "none",
-                    marginLeft:"20%",
+                    marginLeft: "20%",
                   }}
                 >
                   Pick Up at Store
@@ -313,12 +337,7 @@ const Detailsitem = () => {
                   marginTop: "5%",
                 }}
               >
-                <img
-                  style={{ width: "50px", height: "30px"  , marginLeft:"3%"}}
-                  src="https://logodownload.org/wp-content/uploads/2020/05/best-buy-logo-1.png"
-                  alt=""
-                />
-                <p style={{ marginTop: "0%" }}>Sold and shipped by Best Buy</p>
+                <p style={{ marginTop: "3%" }}>Sold and shipped by Best Buy</p>
               </div>
               <div
                 style={{

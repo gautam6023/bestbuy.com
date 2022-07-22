@@ -59,7 +59,7 @@ export default function Seas() {
           <div className="smapHoff" key={i}>
             <a href="/" style={{ textDecoration: "none" }}>
               <div className="simgDiv">
-                <img src={e.seaimg} alt="pic" srcset="" />
+                <img src={e.seaimg} alt="pic" />
               </div>
               <div className="stitletxt">
                 <p>{e.title}</p>
