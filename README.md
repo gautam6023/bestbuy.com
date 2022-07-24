@@ -8,8 +8,12 @@
   <li>HTML</li>
   <li>CSS</li>
   <li>JavaScript</li>
-  <li>React-DOM</li>
+  <li>React.Js</li>
   <li>Node.js</li>
+  <li>MongoDB</li>
+  <li>Redux</li>
+  <li>Material UI</li>
+  
   <hr><br>
 <h2>Features :</h2><br>
   <li>Homepage - The landing Page</li>
@@ -46,5 +50,5 @@
  <hr><hr>
   
 <h2>Author</h2>
-  <h2><a href="https://github.com/Debasree-3031999">@ Debasree Ghosh</a></h2>
+  <li><a href="https://github.com/Debasree-3031999">@ Debasree Ghosh</a></li>
 
