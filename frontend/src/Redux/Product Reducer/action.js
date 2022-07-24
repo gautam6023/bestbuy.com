@@ -29,7 +29,7 @@ const getError = () => ({
 });
 
 export const getData = (id) => async (dispatch) => {
-  dispatch(getRequiest);
+  dispatch(getRequiest());
   try {
     let { data } = await axios.get(
       "https://bestbuybackend.herokuapp.com/products"
@@ -37,8 +37,6 @@ export const getData = (id) => async (dispatch) => {
 
     let finaldata;
     if (id !== "topdeals") {
-      if (id == "APPLE") {
-      }
       let filter = data.data.filter((el) => {
         return el.brand[0] === id;
       });
@@ -52,7 +50,7 @@ export const getData = (id) => async (dispatch) => {
     dispatch(getSuccess(finaldata));
   } catch (e) {
     console.log(e);
-    dispatch(getError);
+    dispatch(getError());
   }
 };
 
@@ -68,7 +66,7 @@ export const getFilterData = (params) => async (dispatch) => {
       { params }
     );
     dispatch(succsessFilter(data.data));
-    console.log(data);
+    console.log(params);
   } catch (e) {
     console.log(e);
   }

@@ -131,11 +131,10 @@ const ProductContainer = () => {
     (state) => state.products
   );
   const dispatch = useDispatch();
-  let { id } = useParams();
+  const { id } = useParams();
   console.log(id);
   // console.log(filterOtions);
   useEffect(() => {
-    if (!id) id = "topdeals";
     dispatch(getData(id));
   }, [dispatch]);
 
@@ -201,13 +200,21 @@ const ProductContainer = () => {
     dispatch(sortData(val));
   };
 
-  if (isLoading)
-    return (
-      <div className="loading">
-        <CircularProgress />
-      </div>
-    );
-  if (isError) return <h1>Something went wrong</h1>;
+  // if (isLoading)
+  //   return (
+  //     <div
+  //       className="loading"
+  //       style={{
+  //         position: "absolute",
+  //         top: "50%",
+  //         left: "50%",
+  //         transform: "translate(-50%, -50%)",
+  //       }}
+  //     >
+  //       <CircularProgress />
+  //     </div>
+  //   );
+  // if (isError) return <h1 className="error">Something went wrong</h1>;
   return (
     <ProductPageContainer>
       <div className="CONTAINER">

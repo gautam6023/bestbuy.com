@@ -87,14 +87,6 @@ const Detailsitem = () => {
           }}
         >
           <div style={{ width: "70%" }}>
-<<<<<<< HEAD
-            <div style={{ display:"flex" ,  justifyContent:"center" , marginTop:"3%"  , marginBottom:"3%"}}>
-              <img
-   
-                src="https://multimedia.bbycastatic.ca/multimedia/products/500x500/151/15153/15153925.jpg"
-                alt=""
-              />
-=======
             <div
               style={{
                 display: "flex",
@@ -106,7 +98,6 @@ const Detailsitem = () => {
               }}
             >
               <img src={data.imgUrl} alt="" />
->>>>>>> 51df730a4341509f3ab44385bf3abfd7c863055c
             </div>
             <div style={{ display: "flex" }}>
               <div style={{ width: "60%", textAlign: "left" }}>

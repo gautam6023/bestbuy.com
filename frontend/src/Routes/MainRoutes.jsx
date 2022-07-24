@@ -22,7 +22,7 @@ const MainRoutes = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/products/topdeals" element={<TopDeals />} />
+        <Route path="/topdeals" element={<TopDeals />} />
         <Route path="/products/:id" element={<ProductContainer />} />
         <Route path="/products/single/:id" element={<Detailsitem />} />
         <Route path="/cart" element={<Cart />} />
