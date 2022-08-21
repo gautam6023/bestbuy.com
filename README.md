@@ -1,6 +1,6 @@
 
 
-# Inspired Bestbuy.com
+# Inspired from Bestbuy.com
 
 This is our project for Unit-6 Construct week at Masai Shcool.
 Our main objective is to complete all main functionality of this e-commerce web application, such as User Authentication, Add to Cart/ Buy and filter the products.
@@ -16,7 +16,7 @@ BestBuy.com is an e-commerce web application that widely provides Tech-Gadgets a
 - Icons : [Font Awesome](https://fontawesome.com/)
 - References : [MDN Docs](https://developer.mozilla.org/en-US/) | [W3School](https://www.w3schools.com/)
 
-## Tech Stack\
+## Tech Stack
 
 - React.Js
 - Redux
