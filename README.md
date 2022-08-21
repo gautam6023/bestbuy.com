@@ -2,7 +2,7 @@
 
 # Inspired from Bestbuy.com
 
-This is our project for Unit-6 Construct week at Masai Shcool.
+This is Collabrated project and accociated with Masai Shcool. 
 Our main objective is to complete all main functionality of this e-commerce web application, such as User Authentication, Add to Cart/ Buy and filter the products.
 
 - [Click here](https://bestbuy-com-clone.vercel.app/) to see preview of our project.
