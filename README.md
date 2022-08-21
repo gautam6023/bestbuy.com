@@ -47,8 +47,8 @@
   <li><a href="https://github.com/AtulKumar69">Atul Kumar Panigrahi</a></li>
   <li><a href="https://github.com/Himanshu0316">Himanshu</a></li>
   <li><a href="https://github.com/Debasree-3031999">Debasree Ghosh</a></li>
- <hr><hr>
+ <hr>
   
 <h2>Author</h2>
-  <li><a href="https://github.com/Debasree-3031999">@ Debasree Ghosh</a></li>
+  <li><a href="https://github.com/Debasree-3031999">@Debasree Ghosh</a></li>
 
