@@ -28,12 +28,14 @@
   background-color: white;
 }
 .signupbtn {
+  cursor: pointer;
   color: black;
   background-color: #ffce00;
   border: 0;
   height: 40px;
   width: 150px;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 .types > div {
   margin: 10px;
@@ -42,6 +44,7 @@
   height: 30px;
   width: 30px;
   margin-top: -40px;
+  margin-right: 10px;
 }
 .checkdiv {
   display: flex;
