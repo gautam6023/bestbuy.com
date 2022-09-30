@@ -32,7 +32,7 @@ export const getData = (id) => async (dispatch) => {
   dispatch(getRequiest());
   try {
     let { data } = await axios.get(
-      "https://bestbuybackend.herokuapp.com/products"
+      "https://bestbuy-backend.onrender.com/products"
     );
 
     let finaldata;
@@ -62,7 +62,7 @@ const succsessFilter = (payload) => ({
 export const getFilterData = (params) => async (dispatch) => {
   try {
     let { data } = await axios.get(
-      "https://bestbuybackend.herokuapp.com/filter",
+      "https://bestbuy-backend.onrender.com/filter",
       { params }
     );
     dispatch(succsessFilter(data.data));
@@ -107,7 +107,7 @@ export const Login = (payload) => ({
 
 export const userAuth = (data, navigate) => async (dispatch) => {
   try {
-    const url = "https://bestbuybackend.herokuapp.com/api/auth";
+    const url = "https://bestbuy-backend.onrender.com/api/auth";
     const res = await axios.post(url, data);
 
     let token = res.data.message;

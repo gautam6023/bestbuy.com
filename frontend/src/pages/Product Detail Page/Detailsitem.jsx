@@ -40,7 +40,7 @@ const Detailsitem = () => {
   useEffect(() => {
     async function getData() {
       let { data } = await axios.get(
-        `https://bestbuybackend.herokuapp.com/products/${id}`
+        `https://bestbuy-backend.onrender.com/products/${id}`
       );
       console.log(data);
       setData(data.data);

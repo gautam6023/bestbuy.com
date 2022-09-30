@@ -36,7 +36,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "https://bestbuybackend.herokuapp.com/api/users";
+      const url = "https://bestbuy-backend.onrender.com/api/users";
       const res = await axios.post(url, data);
       navigate("/Signin");
       console.log(res);
