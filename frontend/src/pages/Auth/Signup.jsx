@@ -36,7 +36,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "https://bestbuy-backend.onrender.com/api/users";
+      const url = `${process.env.REACT_APP_API}/api/users`;
       const res = await axios.post(url, data);
       navigate("/Signin");
       console.log(res);

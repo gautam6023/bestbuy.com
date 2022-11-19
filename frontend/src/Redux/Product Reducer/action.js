@@ -31,9 +31,7 @@ const getError = () => ({
 export const getData = (id) => async (dispatch) => {
   dispatch(getRequiest());
   try {
-    let { data } = await axios.get(
-      "https://bestbuy-backend.onrender.com/products"
-    );
+    let { data } = await axios.get(`${process.env.REACT_APP_API}/products`);
 
     let finaldata;
     if (id !== "topdeals") {
@@ -61,10 +59,9 @@ const succsessFilter = (payload) => ({
 
 export const getFilterData = (params) => async (dispatch) => {
   try {
-    let { data } = await axios.get(
-      "https://bestbuy-backend.onrender.com/filter",
-      { params }
-    );
+    let { data } = await axios.get(`${process.env.REACT_APP_API}/query`, {
+      params,
+    });
     dispatch(succsessFilter(data.data));
     console.log(params);
   } catch (e) {
@@ -107,7 +104,7 @@ export const Login = (payload) => ({
 
 export const userAuth = (data, navigate) => async (dispatch) => {
   try {
-    const url = "https://bestbuy-backend.onrender.com/api/auth";
+    const url = `${process.env.REACT_APP_API}/api/auth`;
     const res = await axios.post(url, data);
 
     let token = res.data.message;

@@ -94,7 +94,7 @@ const categories = [
 ];
 
 const brands = [
-  "APPLE",
+  "IPHONE",
   "AMAZON",
   "SAMSUNG",
   "ASUS",
@@ -124,7 +124,7 @@ const ProductContainer = () => {
   // const [data, setData] = useState([]);
   const [filterOtions, setFilterOptions] = useState([]);
   const [currantOffers, setCurrantOffers] = useState([]);
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams({});
   const [filterBrands, setBrands] = useState([]);
   const [filterClick, setFilterClick] = useState(false);
   const { products, filterData, isLoading, isError } = useSelector(
@@ -137,6 +137,33 @@ const ProductContainer = () => {
   useEffect(() => {
     dispatch(getData(id));
   }, [dispatch]);
+
+  useEffect(() => {
+    if (filterOtions.length || currantOffers.length || filterBrands.length) {
+      console.log(
+        filterOtions,
+        currantOffers,
+        filterBrands,
+        "Check in useEffect"
+      );
+
+      setSearchParams({
+        availability: filterOtions,
+        currantOffers,
+        filterBrands,
+      });
+      // console.log(searchParams);
+      let params = {
+        availability: [...searchParams.getAll("availability")],
+        currantOffers: [...searchParams.getAll("currantOffers")],
+        filterBrands: [...searchParams.getAll("filterBrands")],
+      };
+      console.log(params);
+      // filterData(params, data);
+      // getFilteredDataFromServer(params);
+      dispatch(getFilterData(params));
+    }
+  }, [filterOtions, searchParams, currantOffers, filterBrands]);
 
   const getFilteredOpt = (e) => {
     setFilterClick(true);
@@ -170,26 +197,6 @@ const ProductContainer = () => {
       setBrands(filterBrands.filter((el) => el != e.target.value));
     }
   };
-
-  useEffect(() => {
-    if (filterOtions || currantOffers || filterBrands) {
-      setSearchParams({
-        availability: filterOtions,
-        currantOffers,
-        filterBrands,
-      });
-      // console.log(searchParams);
-      let params = {
-        availability: searchParams.getAll("availability"),
-        currantOffers: searchParams.getAll("currantOffers"),
-        filterBrands: searchParams.getAll("filterBrands"),
-      };
-      console.log(params);
-      // filterData(params, data);
-      // getFilteredDataFromServer(params);
-      dispatch(getFilterData(params));
-    }
-  }, [filterOtions, searchParams, currantOffers, filterBrands]);
 
   // async function getFilteredDataFromServer(params) {
   //   console.log(res);

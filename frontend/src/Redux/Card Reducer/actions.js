@@ -30,7 +30,7 @@ const REMOVE = (iteam) => {
 
 async function getProductsData(dispatch) {
   try {
-    let res = await fetch("https://bestbuy-backend.onrender.com/");
+    let res = await fetch("${process.env.REACT_APP_API}/");
     let products = await res.json();
     //    console.log(products);
     dispatch({
