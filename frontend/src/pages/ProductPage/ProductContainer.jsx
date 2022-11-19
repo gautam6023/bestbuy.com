@@ -162,6 +162,8 @@ const ProductContainer = () => {
       // filterData(params, data);
       // getFilteredDataFromServer(params);
       dispatch(getFilterData(params));
+    } else {
+      setFilterClick(false);
     }
   }, [filterOtions, searchParams, currantOffers, filterBrands]);
 
