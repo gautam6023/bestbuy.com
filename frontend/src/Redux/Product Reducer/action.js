@@ -69,28 +69,31 @@ export const getFilterData = (params) => async (dispatch) => {
   }
 };
 
-const htl = () => ({
+const htl = (payload) => ({
   type: SORTDATA_HTL,
+  payload,
 });
 
-const lth = () => ({
+const lth = (payload) => ({
   type: SORTDATA_LTH,
+  payload,
 });
 
-const sortByRating = () => ({
+const sortByRating = (payload) => ({
   type: SORTDATA_RATINGD,
+  payload,
 });
 
-export const sortData = (val) => (dispatch) => {
+export const sortData = (val, payload) => (dispatch) => {
   switch (val) {
     case "htl":
-      dispatch(htl());
+      dispatch(htl(payload));
       break;
     case "lth":
-      dispatch(lth());
+      dispatch(lth(payload));
       break;
     case "sr":
-      dispatch(sortByRating());
+      dispatch(sortByRating(payload));
       break;
     default:
       return "Not a valid";

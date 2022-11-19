@@ -130,12 +130,17 @@ const ProductContainer = () => {
   const { products, filterData, isLoading, isError } = useSelector(
     (state) => state.products
   );
+  // const [sort, setSort] = useState(searchParams.get("sortby") || "");
   const dispatch = useDispatch();
   const { id } = useParams();
   console.log(id);
-  // console.log(filterOtions);
+  // console.log(sort, "sortBy");
   useEffect(() => {
     dispatch(getData(id));
+
+    // if (sort) {
+    //   sortByPrice(sort);
+    // }
   }, [dispatch]);
 
   useEffect(() => {
@@ -159,6 +164,7 @@ const ProductContainer = () => {
         filterBrands: [...searchParams.getAll("filterBrands")],
       };
       console.log(params);
+
       // filterData(params, data);
       // getFilteredDataFromServer(params);
       dispatch(getFilterData(params));
@@ -206,7 +212,10 @@ const ProductContainer = () => {
 
   const sortByPrice = (val) => {
     setFilterClick(true);
-    dispatch(sortData(val));
+
+    const payload = filterClick ? filterData : products;
+
+    dispatch(sortData(val, payload));
   };
 
   // if (isLoading)
@@ -509,9 +518,16 @@ const ProductContainer = () => {
                     <select
                       name="sortBy"
                       id=""
-                      onChange={(e) => sortByPrice(e.target.value)}
+                      onChange={(e) => {
+                        sortByPrice(e.target.value);
+                        // setSort(e.target.value);
+                        // setSearchParams({
+                        //   ...searchParams,
+                        //   sortby: e.target.value,
+                        // });
+                      }}
                     >
-                      <option value="bestMath">Best Match</option>
+                      <option value="">Best Match</option>
                       <option value="htl">Price High-Low</option>
                       <option value="lth">Price Low-High</option>
                       <option value="sr">Highest Rated</option>

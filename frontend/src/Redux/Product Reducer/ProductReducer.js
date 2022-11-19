@@ -56,20 +56,20 @@ export const productReducer = (state = initState, action) => {
     case SORTDATA_HTL:
       return {
         ...state,
-        filterData: [...state.products.sort((a, b) => +b.price - +a.price)],
+        filterData: [...action.payload.sort((a, b) => +b.price - +a.price)],
       };
 
     case SORTDATA_LTH:
       return {
         ...state,
-        filterData: [...state.products.sort((a, b) => +a.price - +b.price)],
+        filterData: [...action.payload.sort((a, b) => +a.price - +b.price)],
       };
 
     case SORTDATA_RATINGD:
       return {
         ...state,
         filterData: [
-          ...state.products.sort((a, b) => b.rate.length - a.rate.length),
+          ...action.payload.sort((a, b) => b.rate.length - a.rate.length),
         ],
       };
 
